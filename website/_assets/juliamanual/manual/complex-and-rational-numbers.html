@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Complex and Rational Numbers · The Julia Language</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link href="../assets/julia-manual.css" rel="stylesheet" type="text/css"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar">
+    <p style="text-align: center;">JuliaMono edition</p>
+<a class="docs-logo" href="../index.html"><img class="docs-light-only" src="../assets/logo.svg" alt="The Julia Language logo"/><img class="docs-dark-only" src="../assets/logo-dark.svg" alt="The Julia Language logo"/></a><form class="docs-search" action="../search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../index.html">Home</a></li><li><input class="collapse-toggle" id="menuitem-3" type="checkbox" checked/><label class="tocitem" for="menuitem-3"><span class="docs-label">Manual</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="getting-started.html">Getting Started</a></li><li><a class="tocitem" href="variables.html">Variables</a></li><li><a class="tocitem" href="integers-and-floating-point-numbers.html">Integers and Floating-Point Numbers</a></li><li><a class="tocitem" href="mathematical-operations.html">Mathematical Operations and Elementary Functions</a></li><li class="is-active"><a class="tocitem" href="complex-and-rational-numbers.html">Complex and Rational Numbers</a><ul class="internal"><li><a class="tocitem" href="#Complex-Numbers-1"><span>Complex Numbers</span></a></li><li><a class="tocitem" href="#Rational-Numbers-1"><span>Rational Numbers</span></a></li></ul></li><li><a class="tocitem" href="strings.html">Strings</a></li><li><a class="tocitem" href="functions.html">Functions</a></li><li><a class="tocitem" href="control-flow.html">Control Flow</a></li><li><a class="tocitem" href="variables-and-scoping.html">Scope of Variables</a></li><li><a class="tocitem" href="types.html">Types</a></li><li><a class="tocitem" href="methods.html">Methods</a></li><li><a class="tocitem" href="constructors.html">Constructors</a></li><li><a class="tocitem" href="conversion-and-promotion.html">Conversion and Promotion</a></li><li><a class="tocitem" href="interfaces.html">Interfaces</a></li><li><a class="tocitem" href="modules.html">Modules</a></li><li><a class="tocitem" href="documentation.html">Documentation</a></li><li><a class="tocitem" href="metaprogramming.html">Metaprogramming</a></li><li><a class="tocitem" href="arrays.html">Multi-dimensional Arrays</a></li><li><a class="tocitem" href="missing.html">Missing Values</a></li><li><a class="tocitem" href="networking-and-streams.html">Networking and Streams</a></li><li><a class="tocitem" href="parallel-computing.html">Parallel Computing</a></li><li><a class="tocitem" href="running-external-programs.html">Running External Programs</a></li><li><a class="tocitem" href="calling-c-and-fortran-code.html">Calling C and Fortran Code</a></li><li><a class="tocitem" href="handling-operating-system-variation.html">Handling Operating System Variation</a></li><li><a class="tocitem" href="environment-variables.html">Environment Variables</a></li><li><a class="tocitem" href="embedding.html">Embedding Julia</a></li><li><a class="tocitem" href="code-loading.html">Code Loading</a></li><li><a class="tocitem" href="profile.html">Profiling</a></li><li><a class="tocitem" href="stacktraces.html">Stack Traces</a></li><li><a class="tocitem" href="performance-tips.html">Performance Tips</a></li><li><a class="tocitem" href="workflow-tips.html">Workflow Tips</a></li><li><a class="tocitem" href="style-guide.html">Style Guide</a></li><li><a class="tocitem" href="faq.html">Frequently Asked Questions</a></li><li><a class="tocitem" href="noteworthy-differences.html">Noteworthy Differences from other Languages</a></li><li><a class="tocitem" href="unicode-input.html">Unicode Input</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-4" type="checkbox"/><label class="tocitem" for="menuitem-4"><span class="docs-label">Base</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../base/base.html">Essentials</a></li><li><a class="tocitem" href="../base/collections.html">Collections and Data Structures</a></li><li><a class="tocitem" href="../base/math.html">Mathematics</a></li><li><a class="tocitem" href="../base/numbers.html">Numbers</a></li><li><a class="tocitem" href="../base/strings.html">Strings</a></li><li><a class="tocitem" href="../base/arrays.html">Arrays</a></li><li><a class="tocitem" href="../base/parallel.html">Tasks</a></li><li><a class="tocitem" href="../base/multi-threading.html">Multi-Threading</a></li><li><a class="tocitem" href="../base/constants.html">Constants</a></li><li><a class="tocitem" href="../base/file.html">Filesystem</a></li><li><a class="tocitem" href="../base/io-network.html">I/O and Network</a></li><li><a class="tocitem" href="../base/punctuation.html">Punctuation</a></li><li><a class="tocitem" href="../base/sort.html">Sorting and Related Functions</a></li><li><a class="tocitem" href="../base/iterators.html">Iteration utilities</a></li><li><a class="tocitem" href="../base/c.html">C Interface</a></li><li><a class="tocitem" href="../base/libc.html">C Standard Library</a></li><li><a class="tocitem" href="../base/stacktraces.html">StackTraces</a></li><li><a class="tocitem" href="../base/simd-types.html">SIMD Support</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-5" type="checkbox"/><label class="tocitem" for="menuitem-5"><span class="docs-label">Standard Library</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../stdlib/Base64.html">Base64</a></li><li><a class="tocitem" href="../stdlib/CRC32c.html">CRC32c</a></li><li><a class="tocitem" href="../stdlib/Dates.html">Dates</a></li><li><a class="tocitem" href="../stdlib/DelimitedFiles.html">Delimited Files</a></li><li><a class="tocitem" href="../stdlib/Distributed.html">Distributed Computing</a></li><li><a class="tocitem" href="../stdlib/FileWatching.html">File Events</a></li><li><a class="tocitem" href="../stdlib/Future.html">Future</a></li><li><a class="tocitem" href="../stdlib/InteractiveUtils.html">Interactive Utilities</a></li><li><a class="tocitem" href="../stdlib/LibGit2.html">LibGit2</a></li><li><a class="tocitem" href="../stdlib/Libdl.html">Dynamic Linker</a></li><li><a class="tocitem" href="../stdlib/LinearAlgebra.html">Linear Algebra</a></li><li><a class="tocitem" href="../stdlib/Logging.html">Logging</a></li><li><a class="tocitem" href="../stdlib/Markdown.html">Markdown</a></li><li><a class="tocitem" href="../stdlib/Mmap.html">Memory-mapped I/O</a></li><li><a class="tocitem" href="../stdlib/Pkg.html">Pkg</a></li><li><a class="tocitem" href="../stdlib/Printf.html">Printf</a></li><li><a class="tocitem" href="../stdlib/Profile.html">Profiling</a></li><li><a class="tocitem" href="../stdlib/REPL.html">The Julia REPL</a></li><li><a class="tocitem" href="../stdlib/Random.html">Random Numbers</a></li><li><a class="tocitem" href="../stdlib/SHA.html">SHA</a></li><li><a class="tocitem" href="../stdlib/Serialization.html">Serialization</a></li><li><a class="tocitem" href="../stdlib/SharedArrays.html">Shared Arrays</a></li><li><a class="tocitem" href="../stdlib/Sockets.html">Sockets</a></li><li><a class="tocitem" href="../stdlib/SparseArrays.html">Sparse Arrays</a></li><li><a class="tocitem" href="../stdlib/Statistics.html">Statistics</a></li><li><a class="tocitem" href="../stdlib/Test.html">Unit Testing</a></li><li><a class="tocitem" href="../stdlib/UUIDs.html">UUIDs</a></li><li><a class="tocitem" href="../stdlib/Unicode.html">Unicode</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6" type="checkbox"/><label class="tocitem" for="menuitem-6"><span class="docs-label">Developer Documentation</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/reflection.html">Reflection and introspection</a></li><li><input class="collapse-toggle" id="menuitem-6-2" type="checkbox"/><label class="tocitem" for="menuitem-6-2"><span class="docs-label">Documentation of Julia&#39;s Internals</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/init.html">Initialization of the Julia runtime</a></li><li><a class="tocitem" href="../devdocs/ast.html">Julia ASTs</a></li><li><a class="tocitem" href="../devdocs/types.html">More about types</a></li><li><a class="tocitem" href="../devdocs/object.html">Memory layout of Julia Objects</a></li><li><a class="tocitem" href="../devdocs/eval.html">Eval of Julia code</a></li><li><a class="tocitem" href="../devdocs/callconv.html">Calling Conventions</a></li><li><a class="tocitem" href="../devdocs/compiler.html">High-level Overview of the Native-Code Generation Process</a></li><li><a class="tocitem" href="../devdocs/functions.html">Julia Functions</a></li><li><a class="tocitem" href="../devdocs/cartesian.html">Base.Cartesian</a></li><li><a class="tocitem" href="../devdocs/meta.html">Talking to the compiler (the <code>:meta</code> mechanism)</a></li><li><a class="tocitem" href="../devdocs/subarrays.html">SubArrays</a></li><li><a class="tocitem" href="../devdocs/isbitsunionarrays.html">isbits Union Optimizations</a></li><li><a class="tocitem" href="../devdocs/sysimg.html">System Image Building</a></li><li><a class="tocitem" href="../devdocs/llvm.html">Working with LLVM</a></li><li><a class="tocitem" href="../devdocs/stdio.html">printf() and stdio in the Julia runtime</a></li><li><a class="tocitem" href="../devdocs/boundscheck.html">Bounds checking</a></li><li><a class="tocitem" href="../devdocs/locks.html">Proper maintenance and care of multi-threading locks</a></li><li><a class="tocitem" href="../devdocs/offset-arrays.html">Arrays with custom indices</a></li><li><a class="tocitem" href="../devdocs/require.html">Module loading</a></li><li><a class="tocitem" href="../devdocs/inference.html">Inference</a></li><li><a class="tocitem" href="../devdocs/ssair.html">Julia SSA-form IR</a></li><li><a class="tocitem" href="../devdocs/gc-sa.html">Static analyzer annotations for GC correctness in C code</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6-3" type="checkbox"/><label class="tocitem" for="menuitem-6-3"><span class="docs-label">Developing/debugging Julia&#39;s C code</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/backtraces.html">Reporting and analyzing crashes (segfaults)</a></li><li><a class="tocitem" href="../devdocs/debuggingtips.html">gdb debugging tips</a></li><li><a class="tocitem" href="../devdocs/valgrind.html">Using Valgrind with Julia</a></li><li><a class="tocitem" href="../devdocs/sanitizers.html">Sanitizer support</a></li></ul></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Manual</a></li><li class="is-active"><a href="complex-and-rational-numbers.html">Complex and Rational Numbers</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="complex-and-rational-numbers.html">Complex and Rational Numbers</a></li></ul></nav>
+
+<div class="docs-right">
+<span style="text-align:center; font-face: JuliaMono-Regular";>JuliaMono edition</span>
+
+
+
+
+
+<a class="docs-edit-link"
+ href="https://github.com/JuliaLang/julia/blob/master/doc/src/manual/complex-and-rational-numbers.md" title="Edit on GitHub"><span class="docs-icon fab"> </span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Complex-and-Rational-Numbers-1"><a class="docs-heading-anchor" href="#Complex-and-Rational-Numbers-1">Complex and Rational Numbers</a><a class="docs-heading-anchor-permalink" href="#Complex-and-Rational-Numbers-1" title="Permalink"></a></h1><p>Julia includes predefined types for both complex and rational numbers, and supports all the standard <a href="mathematical-operations.html#Mathematical-Operations-and-Elementary-Functions-1">Mathematical Operations and Elementary Functions</a> on them. <a href="conversion-and-promotion.html#conversion-and-promotion-1">Conversion and Promotion</a> are defined so that operations on any combination of predefined numeric types, whether primitive or composite, behave as expected.</p><h2 id="Complex-Numbers-1"><a class="docs-heading-anchor" href="#Complex-Numbers-1">Complex Numbers</a><a class="docs-heading-anchor-permalink" href="#Complex-Numbers-1" title="Permalink"></a></h2><p>The global constant <a href="../base/numbers.html#Base.im"><code>im</code></a> is bound to the complex number <em>i</em>, representing the principal square root of -1. (Using mathematicians&#39; <code>i</code> or engineers&#39; <code>j</code> for this global constant were rejected since they are such popular index variable names.) Since Julia allows numeric literals to be <a href="integers-and-floating-point-numbers.html#man-numeric-literal-coefficients-1">juxtaposed with identifiers as coefficients</a>, this binding suffices to provide convenient syntax for complex numbers, similar to the traditional mathematical notation:</p><pre><code class="language-julia-repl">julia&gt; 1+2im
+1 + 2im</code></pre><p>You can perform all the standard arithmetic operations with complex numbers:</p><pre><code class="language-julia-repl">julia&gt; (1 + 2im)*(2 - 3im)
+8 + 1im
+
+julia&gt; (1 + 2im)/(1 - 2im)
+-0.6 + 0.8im
+
+julia&gt; (1 + 2im) + (1 - 2im)
+2 + 0im
+
+julia&gt; (-3 + 2im) - (5 - 1im)
+-8 + 3im
+
+julia&gt; (-1 + 2im)^2
+-3 - 4im
+
+julia&gt; (-1 + 2im)^2.5
+2.729624464784009 - 6.9606644595719im
+
+julia&gt; (-1 + 2im)^(1 + 1im)
+-0.27910381075826657 + 0.08708053414102428im
+
+julia&gt; 3(2 - 5im)
+6 - 15im
+
+julia&gt; 3(2 - 5im)^2
+-63 - 60im
+
+julia&gt; 3(2 - 5im)^-1.0
+0.20689655172413796 + 0.5172413793103449im</code></pre><p>The promotion mechanism ensures that combinations of operands of different types just work:</p><pre><code class="language-julia-repl">julia&gt; 2(1 - 1im)
+2 - 2im
+
+julia&gt; (2 + 3im) - 1
+1 + 3im
+
+julia&gt; (1 + 2im) + 0.5
+1.5 + 2.0im
+
+julia&gt; (2 + 3im) - 0.5im
+2.0 + 2.5im
+
+julia&gt; 0.75(1 + 2im)
+0.75 + 1.5im
+
+julia&gt; (2 + 3im) / 2
+1.0 + 1.5im
+
+julia&gt; (1 - 3im) / (2 + 2im)
+-0.5 - 1.0im
+
+julia&gt; 2im^2
+-2 + 0im
+
+julia&gt; 1 + 3/4im
+1.0 - 0.75im</code></pre><p>Note that <code>3/4im == 3/(4*im) == -(3/4*im)</code>, since a literal coefficient binds more tightly than division.</p><p>Standard functions to manipulate complex values are provided:</p><pre><code class="language-julia-repl">julia&gt; z = 1 + 2im
+1 + 2im
+
+julia&gt; real(1 + 2im) # real part of z
+1
+
+julia&gt; imag(1 + 2im) # imaginary part of z
+2
+
+julia&gt; conj(1 + 2im) # complex conjugate of z
+1 - 2im
+
+julia&gt; abs(1 + 2im) # absolute value of z
+2.23606797749979
+
+julia&gt; abs2(1 + 2im) # squared absolute value
+5
+
+julia&gt; angle(1 + 2im) # phase angle in radians
+1.1071487177940904</code></pre><p>As usual, the absolute value (<a href="../base/math.html#Base.abs"><code>abs</code></a>) of a complex number is its distance from zero. <a href="../base/math.html#Base.abs2"><code>abs2</code></a> gives the square of the absolute value, and is of particular use for complex numbers since it avoids taking a square root. <a href="../base/math.html#Base.angle"><code>angle</code></a> returns the phase angle in radians (also known as the <em>argument</em> or <em>arg</em> function). The full gamut of other <a href="mathematical-operations.html#Elementary-Functions-1">Elementary Functions</a> is also defined for complex numbers:</p><pre><code class="language-julia-repl">julia&gt; sqrt(1im)
+0.7071067811865476 + 0.7071067811865475im
+
+julia&gt; sqrt(1 + 2im)
+1.272019649514069 + 0.7861513777574233im
+
+julia&gt; cos(1 + 2im)
+2.0327230070196656 - 3.0518977991518im
+
+julia&gt; exp(1 + 2im)
+-1.1312043837568135 + 2.4717266720048188im
+
+julia&gt; sinh(1 + 2im)
+-0.4890562590412937 + 1.4031192506220405im</code></pre><p>Note that mathematical functions typically return real values when applied to real numbers and complex values when applied to complex numbers. For example, <a href="../base/math.html#Base.sqrt-Tuple{Real}"><code>sqrt</code></a> behaves differently when applied to <code>-1</code> versus <code>-1 + 0im</code> even though <code>-1 == -1 + 0im</code>:</p><pre><code class="language-julia-repl">julia&gt; sqrt(-1)
+ERROR: DomainError with -1.0:
+sqrt will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+[...]
+
+julia&gt; sqrt(-1 + 0im)
+0.0 + 1.0im</code></pre><p>The <a href="integers-and-floating-point-numbers.html#man-numeric-literal-coefficients-1">literal numeric coefficient notation</a> does not work when constructing a complex number from variables. Instead, the multiplication must be explicitly written out:</p><pre><code class="language-julia-repl">julia&gt; a = 1; b = 2; a + b*im
+1 + 2im</code></pre><p>However, this is <em>not</em> recommended. Instead, use the more efficient <a href="../base/numbers.html#Base.complex-Tuple{Complex}"><code>complex</code></a> function to construct a complex value directly from its real and imaginary parts:</p><pre><code class="language-julia-repl">julia&gt; a = 1; b = 2; complex(a, b)
+1 + 2im</code></pre><p>This construction avoids the multiplication and addition operations.</p><p><a href="../base/numbers.html#Base.Inf"><code>Inf</code></a> and <a href="../base/numbers.html#Base.NaN"><code>NaN</code></a> propagate through complex numbers in the real and imaginary parts of a complex number as described in the <a href="integers-and-floating-point-numbers.html#Special-floating-point-values-1">Special floating-point values</a> section:</p><pre><code class="language-julia-repl">julia&gt; 1 + Inf*im
+1.0 + Inf*im
+
+julia&gt; 1 + NaN*im
+1.0 + NaN*im</code></pre><h2 id="Rational-Numbers-1"><a class="docs-heading-anchor" href="#Rational-Numbers-1">Rational Numbers</a><a class="docs-heading-anchor-permalink" href="#Rational-Numbers-1" title="Permalink"></a></h2><p>Julia has a rational number type to represent exact ratios of integers. Rationals are constructed using the <a href="../base/math.html#Base.://"><code>//</code></a> operator:</p><pre><code class="language-julia-repl">julia&gt; 2//3
+2//3</code></pre><p>If the numerator and denominator of a rational have common factors, they are reduced to lowest terms such that the denominator is non-negative:</p><pre><code class="language-julia-repl">julia&gt; 6//9
+2//3
+
+julia&gt; -4//8
+-1//2
+
+julia&gt; 5//-15
+-1//3
+
+julia&gt; -4//-12
+1//3</code></pre><p>This normalized form for a ratio of integers is unique, so equality of rational values can be tested by checking for equality of the numerator and denominator. The standardized numerator and denominator of a rational value can be extracted using the <a href="../base/math.html#Base.numerator"><code>numerator</code></a> and <a href="../base/math.html#Base.denominator"><code>denominator</code></a> functions:</p><pre><code class="language-julia-repl">julia&gt; numerator(2//3)
+2
+
+julia&gt; denominator(2//3)
+3</code></pre><p>Direct comparison of the numerator and denominator is generally not necessary, since the standard arithmetic and comparison operations are defined for rational values:</p><pre><code class="language-julia-repl">julia&gt; 2//3 == 6//9
+true
+
+julia&gt; 2//3 == 9//27
+false
+
+julia&gt; 3//7 &lt; 1//2
+true
+
+julia&gt; 3//4 &gt; 2//3
+true
+
+julia&gt; 2//4 + 1//6
+2//3
+
+julia&gt; 5//12 - 1//4
+1//6
+
+julia&gt; 5//8 * 3//12
+5//32
+
+julia&gt; 6//5 / 10//7
+21//25</code></pre><p>Rationals can easily be converted to floating-point numbers:</p><pre><code class="language-julia-repl">julia&gt; float(3//4)
+0.75</code></pre><p>Conversion from rational to floating-point respects the following identity for any integral values of <code>a</code> and <code>b</code>, with the exception of the case <code>a == 0</code> and <code>b == 0</code>:</p><pre><code class="language-julia-repl">julia&gt; a = 1; b = 2;
+
+julia&gt; isequal(float(a//b), a/b)
+true</code></pre><p>Constructing infinite rational values is acceptable:</p><pre><code class="language-julia-repl">julia&gt; 5//0
+1//0
+
+julia&gt; -3//0
+-1//0
+
+julia&gt; typeof(ans)
+Rational{Int64}</code></pre><p>Trying to construct a <a href="../base/numbers.html#Base.NaN"><code>NaN</code></a> rational value, however, is invalid:</p><pre><code class="language-julia-repl">julia&gt; 0//0
+ERROR: ArgumentError: invalid rational: zero(Int64)//zero(Int64)
+Stacktrace:
+[...]</code></pre><p>As usual, the promotion system makes interactions with other numeric types effortless:</p><pre><code class="language-julia-repl">julia&gt; 3//5 + 1
+8//5
+
+julia&gt; 3//5 - 0.5
+0.09999999999999998
+
+julia&gt; 2//7 * (1 + 2im)
+2//7 + 4//7*im
+
+julia&gt; 2//7 * (1.5 + 2im)
+0.42857142857142855 + 0.5714285714285714im
+
+julia&gt; 3//2 / (1 + 2im)
+3//10 - 3//5*im
+
+julia&gt; 1//2 + 2im
+1//2 + 2//1*im
+
+julia&gt; 1 + 2//3im
+1//1 - 2//3*im
+
+julia&gt; 0.5 == 1//2
+true
+
+julia&gt; 0.33 == 1//3
+false
+
+julia&gt; 0.33 &lt; 1//3
+true
+
+julia&gt; 1//3 - 0.33
+0.0033333333333332993</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="mathematical-operations.html">« Mathematical Operations and Elementary Functions</a><a class="docs-footer-nextpage" href="strings.html">Strings »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Saturday 21 March 2020 14:49">Saturday 21 March 2020</span>. Using Julia version 1.4.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

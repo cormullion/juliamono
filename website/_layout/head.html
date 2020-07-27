@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{if hasmath}} {{insert head_katex.html }} {{end}}
+	{{if hascode}} {{insert head_highlight.html }} {{end}}
+	{{isdef title}}
+		<title>{{fill title}}</title>
+	{{end}}
+	<link rel="preload" as="font"
+		href="/assets/fonts/JuliaMono-Regular.woff2"
+		type="font/woff2"
+		crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/dark.css" id="lightdark" title="dark">
+	<link rel="stylesheet" href="/css/basic.css">
+	<link rel="stylesheet" type="text/css" href="/css/juliamono.css">
+	<link rel="icon" href="/assets/favicon.png">
+	<script>
+    function setStyleSheet(url){
+       var stylesheet = document.getElementById("lightdark");
+       stylesheet.setAttribute('href', url);
+    }
+	</script>
+</head>
+<body>
+	{{insert header.html}}
+	<!-- Content appended here -->

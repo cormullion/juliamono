@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Scope of Variables · The Julia Language</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link href="../assets/julia-manual.css" rel="stylesheet" type="text/css"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar">
+    <p style="text-align: center;">JuliaMono edition</p>
+<a class="docs-logo" href="../index.html"><img class="docs-light-only" src="../assets/logo.svg" alt="The Julia Language logo"/><img class="docs-dark-only" src="../assets/logo-dark.svg" alt="The Julia Language logo"/></a><form class="docs-search" action="../search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../index.html">Home</a></li><li><input class="collapse-toggle" id="menuitem-3" type="checkbox" checked/><label class="tocitem" for="menuitem-3"><span class="docs-label">Manual</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="getting-started.html">Getting Started</a></li><li><a class="tocitem" href="variables.html">Variables</a></li><li><a class="tocitem" href="integers-and-floating-point-numbers.html">Integers and Floating-Point Numbers</a></li><li><a class="tocitem" href="mathematical-operations.html">Mathematical Operations and Elementary Functions</a></li><li><a class="tocitem" href="complex-and-rational-numbers.html">Complex and Rational Numbers</a></li><li><a class="tocitem" href="strings.html">Strings</a></li><li><a class="tocitem" href="functions.html">Functions</a></li><li><a class="tocitem" href="control-flow.html">Control Flow</a></li><li class="is-active"><a class="tocitem" href="variables-and-scoping.html">Scope of Variables</a><ul class="internal"><li><a class="tocitem" href="#Global-Scope-1"><span>Global Scope</span></a></li><li><a class="tocitem" href="#Local-Scope-1"><span>Local Scope</span></a></li><li><a class="tocitem" href="#Constants-1"><span>Constants</span></a></li></ul></li><li><a class="tocitem" href="types.html">Types</a></li><li><a class="tocitem" href="methods.html">Methods</a></li><li><a class="tocitem" href="constructors.html">Constructors</a></li><li><a class="tocitem" href="conversion-and-promotion.html">Conversion and Promotion</a></li><li><a class="tocitem" href="interfaces.html">Interfaces</a></li><li><a class="tocitem" href="modules.html">Modules</a></li><li><a class="tocitem" href="documentation.html">Documentation</a></li><li><a class="tocitem" href="metaprogramming.html">Metaprogramming</a></li><li><a class="tocitem" href="arrays.html">Multi-dimensional Arrays</a></li><li><a class="tocitem" href="missing.html">Missing Values</a></li><li><a class="tocitem" href="networking-and-streams.html">Networking and Streams</a></li><li><a class="tocitem" href="parallel-computing.html">Parallel Computing</a></li><li><a class="tocitem" href="running-external-programs.html">Running External Programs</a></li><li><a class="tocitem" href="calling-c-and-fortran-code.html">Calling C and Fortran Code</a></li><li><a class="tocitem" href="handling-operating-system-variation.html">Handling Operating System Variation</a></li><li><a class="tocitem" href="environment-variables.html">Environment Variables</a></li><li><a class="tocitem" href="embedding.html">Embedding Julia</a></li><li><a class="tocitem" href="code-loading.html">Code Loading</a></li><li><a class="tocitem" href="profile.html">Profiling</a></li><li><a class="tocitem" href="stacktraces.html">Stack Traces</a></li><li><a class="tocitem" href="performance-tips.html">Performance Tips</a></li><li><a class="tocitem" href="workflow-tips.html">Workflow Tips</a></li><li><a class="tocitem" href="style-guide.html">Style Guide</a></li><li><a class="tocitem" href="faq.html">Frequently Asked Questions</a></li><li><a class="tocitem" href="noteworthy-differences.html">Noteworthy Differences from other Languages</a></li><li><a class="tocitem" href="unicode-input.html">Unicode Input</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-4" type="checkbox"/><label class="tocitem" for="menuitem-4"><span class="docs-label">Base</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../base/base.html">Essentials</a></li><li><a class="tocitem" href="../base/collections.html">Collections and Data Structures</a></li><li><a class="tocitem" href="../base/math.html">Mathematics</a></li><li><a class="tocitem" href="../base/numbers.html">Numbers</a></li><li><a class="tocitem" href="../base/strings.html">Strings</a></li><li><a class="tocitem" href="../base/arrays.html">Arrays</a></li><li><a class="tocitem" href="../base/parallel.html">Tasks</a></li><li><a class="tocitem" href="../base/multi-threading.html">Multi-Threading</a></li><li><a class="tocitem" href="../base/constants.html">Constants</a></li><li><a class="tocitem" href="../base/file.html">Filesystem</a></li><li><a class="tocitem" href="../base/io-network.html">I/O and Network</a></li><li><a class="tocitem" href="../base/punctuation.html">Punctuation</a></li><li><a class="tocitem" href="../base/sort.html">Sorting and Related Functions</a></li><li><a class="tocitem" href="../base/iterators.html">Iteration utilities</a></li><li><a class="tocitem" href="../base/c.html">C Interface</a></li><li><a class="tocitem" href="../base/libc.html">C Standard Library</a></li><li><a class="tocitem" href="../base/stacktraces.html">StackTraces</a></li><li><a class="tocitem" href="../base/simd-types.html">SIMD Support</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-5" type="checkbox"/><label class="tocitem" for="menuitem-5"><span class="docs-label">Standard Library</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../stdlib/Base64.html">Base64</a></li><li><a class="tocitem" href="../stdlib/CRC32c.html">CRC32c</a></li><li><a class="tocitem" href="../stdlib/Dates.html">Dates</a></li><li><a class="tocitem" href="../stdlib/DelimitedFiles.html">Delimited Files</a></li><li><a class="tocitem" href="../stdlib/Distributed.html">Distributed Computing</a></li><li><a class="tocitem" href="../stdlib/FileWatching.html">File Events</a></li><li><a class="tocitem" href="../stdlib/Future.html">Future</a></li><li><a class="tocitem" href="../stdlib/InteractiveUtils.html">Interactive Utilities</a></li><li><a class="tocitem" href="../stdlib/LibGit2.html">LibGit2</a></li><li><a class="tocitem" href="../stdlib/Libdl.html">Dynamic Linker</a></li><li><a class="tocitem" href="../stdlib/LinearAlgebra.html">Linear Algebra</a></li><li><a class="tocitem" href="../stdlib/Logging.html">Logging</a></li><li><a class="tocitem" href="../stdlib/Markdown.html">Markdown</a></li><li><a class="tocitem" href="../stdlib/Mmap.html">Memory-mapped I/O</a></li><li><a class="tocitem" href="../stdlib/Pkg.html">Pkg</a></li><li><a class="tocitem" href="../stdlib/Printf.html">Printf</a></li><li><a class="tocitem" href="../stdlib/Profile.html">Profiling</a></li><li><a class="tocitem" href="../stdlib/REPL.html">The Julia REPL</a></li><li><a class="tocitem" href="../stdlib/Random.html">Random Numbers</a></li><li><a class="tocitem" href="../stdlib/SHA.html">SHA</a></li><li><a class="tocitem" href="../stdlib/Serialization.html">Serialization</a></li><li><a class="tocitem" href="../stdlib/SharedArrays.html">Shared Arrays</a></li><li><a class="tocitem" href="../stdlib/Sockets.html">Sockets</a></li><li><a class="tocitem" href="../stdlib/SparseArrays.html">Sparse Arrays</a></li><li><a class="tocitem" href="../stdlib/Statistics.html">Statistics</a></li><li><a class="tocitem" href="../stdlib/Test.html">Unit Testing</a></li><li><a class="tocitem" href="../stdlib/UUIDs.html">UUIDs</a></li><li><a class="tocitem" href="../stdlib/Unicode.html">Unicode</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6" type="checkbox"/><label class="tocitem" for="menuitem-6"><span class="docs-label">Developer Documentation</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/reflection.html">Reflection and introspection</a></li><li><input class="collapse-toggle" id="menuitem-6-2" type="checkbox"/><label class="tocitem" for="menuitem-6-2"><span class="docs-label">Documentation of Julia&#39;s Internals</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/init.html">Initialization of the Julia runtime</a></li><li><a class="tocitem" href="../devdocs/ast.html">Julia ASTs</a></li><li><a class="tocitem" href="../devdocs/types.html">More about types</a></li><li><a class="tocitem" href="../devdocs/object.html">Memory layout of Julia Objects</a></li><li><a class="tocitem" href="../devdocs/eval.html">Eval of Julia code</a></li><li><a class="tocitem" href="../devdocs/callconv.html">Calling Conventions</a></li><li><a class="tocitem" href="../devdocs/compiler.html">High-level Overview of the Native-Code Generation Process</a></li><li><a class="tocitem" href="../devdocs/functions.html">Julia Functions</a></li><li><a class="tocitem" href="../devdocs/cartesian.html">Base.Cartesian</a></li><li><a class="tocitem" href="../devdocs/meta.html">Talking to the compiler (the <code>:meta</code> mechanism)</a></li><li><a class="tocitem" href="../devdocs/subarrays.html">SubArrays</a></li><li><a class="tocitem" href="../devdocs/isbitsunionarrays.html">isbits Union Optimizations</a></li><li><a class="tocitem" href="../devdocs/sysimg.html">System Image Building</a></li><li><a class="tocitem" href="../devdocs/llvm.html">Working with LLVM</a></li><li><a class="tocitem" href="../devdocs/stdio.html">printf() and stdio in the Julia runtime</a></li><li><a class="tocitem" href="../devdocs/boundscheck.html">Bounds checking</a></li><li><a class="tocitem" href="../devdocs/locks.html">Proper maintenance and care of multi-threading locks</a></li><li><a class="tocitem" href="../devdocs/offset-arrays.html">Arrays with custom indices</a></li><li><a class="tocitem" href="../devdocs/require.html">Module loading</a></li><li><a class="tocitem" href="../devdocs/inference.html">Inference</a></li><li><a class="tocitem" href="../devdocs/ssair.html">Julia SSA-form IR</a></li><li><a class="tocitem" href="../devdocs/gc-sa.html">Static analyzer annotations for GC correctness in C code</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6-3" type="checkbox"/><label class="tocitem" for="menuitem-6-3"><span class="docs-label">Developing/debugging Julia&#39;s C code</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/backtraces.html">Reporting and analyzing crashes (segfaults)</a></li><li><a class="tocitem" href="../devdocs/debuggingtips.html">gdb debugging tips</a></li><li><a class="tocitem" href="../devdocs/valgrind.html">Using Valgrind with Julia</a></li><li><a class="tocitem" href="../devdocs/sanitizers.html">Sanitizer support</a></li></ul></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Manual</a></li><li class="is-active"><a href="variables-and-scoping.html">Scope of Variables</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="variables-and-scoping.html">Scope of Variables</a></li></ul></nav>
+
+<div class="docs-right">
+<span style="text-align:center; font-face: JuliaMono-Regular";>JuliaMono edition</span>
+
+
+
+
+
+<a class="docs-edit-link"
+ href="https://github.com/JuliaLang/julia/blob/master/doc/src/manual/variables-and-scoping.md" title="Edit on GitHub"><span class="docs-icon fab"> </span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="scope-of-variables-1"><a class="docs-heading-anchor" href="#scope-of-variables-1">Scope of Variables</a><a class="docs-heading-anchor-permalink" href="#scope-of-variables-1" title="Permalink"></a></h1><p>The <em>scope</em> of a variable is the region of code within which a variable is visible. Variable scoping helps avoid variable naming conflicts. The concept is intuitive: two functions can both have arguments called <code>x</code> without the two <code>x</code>&#39;s referring to the same thing. Similarly, there are many other cases where different blocks of code can use the same name without referring to the same thing. The rules for when the same variable name does or doesn&#39;t refer to the same thing are called scope rules; this section spells them out in detail.</p><p>Certain constructs in the language introduce <em>scope blocks</em>, which are regions of code that are eligible to be the scope of some set of variables. The scope of a variable cannot be an arbitrary set of source lines; instead, it will always line up with one of these blocks. There are two main types of scopes in Julia, <em>global scope</em> and <em>local scope</em>. The latter can be nested. The constructs introducing scope blocks are:</p><h3 id="man-scope-table-1"><a class="docs-heading-anchor" href="#man-scope-table-1">Scope constructs</a><a class="docs-heading-anchor-permalink" href="#man-scope-table-1" title="Permalink"></a></h3><table><tr><th style="text-align: right">Construct</th><th style="text-align: right">Scope type</th><th style="text-align: right">Scope blocks it may be nested in</th></tr><tr><td style="text-align: right"><a href="../base/base.html#module"><code>module</code></a>, <a href="../base/base.html#baremodule"><code>baremodule</code></a></td><td style="text-align: right">global</td><td style="text-align: right">global</td></tr><tr><td style="text-align: right">interactive prompt (REPL)</td><td style="text-align: right">global</td><td style="text-align: right">global</td></tr><tr><td style="text-align: right">(mutable) <a href="../base/base.html#struct"><code>struct</code></a>, <a href="../base/base.html#macro"><code>macro</code></a></td><td style="text-align: right">local</td><td style="text-align: right">global</td></tr><tr><td style="text-align: right"><a href="../base/base.html#for"><code>for</code></a>, <a href="../base/base.html#while"><code>while</code></a>, <a href="../base/base.html#try"><code>try-catch-finally</code></a>, <a href="../base/base.html#let"><code>let</code></a></td><td style="text-align: right">local</td><td style="text-align: right">global or local</td></tr><tr><td style="text-align: right">functions (either syntax, anonymous &amp; do-blocks)</td><td style="text-align: right">local</td><td style="text-align: right">global or local</td></tr><tr><td style="text-align: right">comprehensions, broadcast-fusing</td><td style="text-align: right">local</td><td style="text-align: right">global or local</td></tr></table><p>Notably missing from this table are <a href="control-flow.html#man-compound-expressions-1">begin blocks</a> and <a href="control-flow.html#man-conditional-evaluation-1">if blocks</a> which do <em>not</em> introduce new scopes. Both types of scopes follow somewhat different rules which will be explained below.</p><p>Julia uses <a href="https://en.wikipedia.org/wiki/Scope_%28computer_science%29#Lexical_scoping_vs._dynamic_scoping">lexical scoping</a>, meaning that a function&#39;s scope does not inherit from its caller&#39;s scope, but from the scope in which the function was defined. For example, in the following code the <code>x</code> inside <code>foo</code> refers to the <code>x</code> in the global scope of its module <code>Bar</code>:</p><pre><code class="language-julia-repl">julia&gt; module Bar
+           x = 1
+           foo() = x
+       end;</code></pre><p>and not a <code>x</code> in the scope where <code>foo</code> is used:</p><pre><code class="language-julia-repl">julia&gt; import .Bar
+
+julia&gt; x = -1;
+
+julia&gt; Bar.foo()
+1</code></pre><p>Thus <em>lexical scope</em> means that the scope of variables can be inferred from the source code alone.</p><h2 id="Global-Scope-1"><a class="docs-heading-anchor" href="#Global-Scope-1">Global Scope</a><a class="docs-heading-anchor-permalink" href="#Global-Scope-1" title="Permalink"></a></h2><p>Each module introduces a new global scope, separate from the global scope of all other modules; there is no all-encompassing global scope. Modules can introduce variables of other modules into their scope through the <a href="modules.html#modules-1">using or import</a> statements or through qualified access using the dot-notation, i.e. each module is a so-called <em>namespace</em>. Note that variable bindings can only be changed within their global scope and not from an outside module.</p><pre><code class="language-julia-repl">julia&gt; module A
+           a = 1 # a global in A&#39;s scope
+       end;
+
+julia&gt; module B
+           module C
+               c = 2
+           end
+           b = C.c    # can access the namespace of a nested global scope
+                      # through a qualified access
+           import ..A # makes module A available
+           d = A.a
+       end;
+
+julia&gt; module D
+           b = a # errors as D&#39;s global scope is separate from A&#39;s
+       end;
+ERROR: UndefVarError: a not defined
+
+julia&gt; module E
+           import ..A # make module A available
+           A.a = 2    # throws below error
+       end;
+ERROR: cannot assign variables in other modules</code></pre><p>Note that the interactive prompt (aka REPL) is in the global scope of the module <code>Main</code>.</p><h2 id="Local-Scope-1"><a class="docs-heading-anchor" href="#Local-Scope-1">Local Scope</a><a class="docs-heading-anchor-permalink" href="#Local-Scope-1" title="Permalink"></a></h2><p>A new local scope is introduced by most code blocks (see above <a href="variables-and-scoping.html#man-scope-table-1">table</a> for a complete list). A local scope inherits all the variables from a parent local scope, both for reading and writing. Unlike global scopes, local scopes are not namespaces, thus variables in an inner scope cannot be retrieved from the parent scope through some sort of qualified access.</p><p>The following rules and examples pertain to local scopes. A newly introduced variable in a local scope cannot be referenced by a parent scope. For example, here the <span>$z$</span> is not introduced into the top-level scope:</p><pre><code class="language-julia-repl">julia&gt; for i = 1:10
+           z = i
+       end
+
+julia&gt; z
+ERROR: UndefVarError: z not defined</code></pre><div class="admonition is-info"><header class="admonition-header">Note</header><div class="admonition-body"><p>In this and all following examples it is assumed that their top-level is a global scope with a clean workspace, for instance a newly started REPL.</p></div></div><p>Inner local scopes can, however, update variables in their parent scopes:</p><pre><code class="language-julia-repl">julia&gt; for i = 1:1
+           z = i
+           for j = 1:1
+               z = 0
+           end
+           println(z)
+       end
+0</code></pre><p>Inside a local scope a variable can be forced to be a new local variable using the <a href="../base/base.html#local"><code>local</code></a> keyword:</p><pre><code class="language-julia-repl">julia&gt; for i = 1:1
+           x = i + 1
+           for j = 1:1
+               local x = 0
+           end
+           println(x)
+       end
+2</code></pre><p>Inside a local scope a global variable can be assigned to by using the keyword <a href="../base/base.html#global"><code>global</code></a>:</p><pre><code class="language-julia-repl">julia&gt; for i = 1:10
+           global z
+           z = i
+       end
+
+julia&gt; z
+10</code></pre><p>The location of both the <code>local</code> and <code>global</code> keywords within the scope block is irrelevant. The following is equivalent to the last example (although stylistically worse):</p><pre><code class="language-julia-repl">julia&gt; for i = 1:10
+           z = i
+           global z
+       end
+
+julia&gt; z
+10</code></pre><p>The <code>local</code> and <code>global</code> keywords can also be applied to destructuring assignments, e.g. <code>local x, y = 1, 2</code>. In this case the keyword affects all listed variables.</p><p>In a local scope, all variables are inherited from its parent global scope block unless:</p><ul><li>an assignment would result in a modified <em>global</em> variable, or</li><li>a variable is specifically marked with the keyword <code>local</code>.</li></ul><p>Thus global variables are only inherited for reading, not for writing:</p><pre><code class="language-julia-repl">julia&gt; x, y = 1, 2;
+
+julia&gt; function foo()
+           x = 2        # assignment introduces a new local
+           return x + y # y refers to the global
+       end;
+
+julia&gt; foo()
+4
+
+julia&gt; x
+1</code></pre><p>An explicit <code>global</code> is needed to assign to a global variable:</p><div class="admonition"><header class="admonition-header">Avoiding globals</header><div class="admonition-body"><p>Avoiding changing the value of global variables is considered by many to be a programming best-practice. Changing the value of a global variable can cause &quot;action at a distance&quot;, making the behavior of a program harder to reason about. This is why the scope blocks that introduce local scope require the <code>global</code> keyword to declare the intent to modify a global variable.</p></div></div><pre><code class="language-julia-repl">julia&gt; x = 1;
+
+julia&gt; function foobar()
+           global x = 2
+       end;
+
+julia&gt; foobar();
+
+julia&gt; x
+2</code></pre><p>Note that <em>nested functions</em> can modify their parent scope&#39;s <em>local</em> variables:</p><pre><code class="language-julia-repl">julia&gt; x, y = 1, 2;
+
+julia&gt; function baz()
+           x = 2 # introduces a new local
+           function bar()
+               x = 10       # modifies the parent&#39;s x
+               return x + y # y is global
+           end
+           return bar() + x # 12 + 10 (x is modified in call of bar())
+       end;
+
+julia&gt; baz()
+22
+
+julia&gt; x, y # verify that global x and y are unchanged
+(1, 2)</code></pre><p>The reason to allow modifying local variables of parent scopes in nested functions is to allow constructing <a href="https://en.wikipedia.org/wiki/Closure_%28computer_programming%29"><code>closures</code></a> which have private state, for instance the <code>state</code> variable in the following example:</p><pre><code class="language-julia-repl">julia&gt; let state = 0
+           global counter() = (state += 1)
+       end;
+
+julia&gt; counter()
+1
+
+julia&gt; counter()
+2</code></pre><p>See also the closures in the examples in the next two sections. A variable, such as <code>x</code> in the first example and <code>state</code> in the second, that is inherited from the enclosing scope by the inner function is sometimes called a <em>captured</em> variable. Captured variables can present <a href="performance-tips.html#man-performance-captured-1">performance challenges discussed in performance tips</a>.</p><p>The distinction between inheriting global scope and nesting local scope can lead to some slight differences between functions defined in local versus global scopes for variable assignments. Consider the modification of the last example by moving <code>bar</code> to the global scope:</p><pre><code class="language-julia-repl">julia&gt; x, y = 1, 2;
+
+julia&gt; function bar()
+           x = 10 # local, no longer a closure variable
+           return x + y
+       end;
+
+julia&gt; function quz()
+           x = 2 # local
+           return bar() + x # 12 + 2 (x is not modified)
+       end;
+
+julia&gt; quz()
+14
+
+julia&gt; x, y # verify that global x and y are unchanged
+(1, 2)</code></pre><p>Note that the above nesting rules do not pertain to type and macro definitions as they can only appear at the global scope. There are special scoping rules concerning the evaluation of default and keyword function arguments which are described in the <a href="functions.html#man-functions-1">Function section</a>.</p><p>An assignment introducing a variable used inside a function, type or macro definition need not come before its inner usage:</p><pre><code class="language-julia-repl">julia&gt; f = y -&gt; y + a;
+
+julia&gt; f(3)
+ERROR: UndefVarError: a not defined
+Stacktrace:
+[...]
+
+julia&gt; a = 1
+1
+
+julia&gt; f(3)
+4</code></pre><p>This behavior may seem slightly odd for a normal variable, but allows for named functions – which are just normal variables holding function objects – to be used before they are defined. This allows functions to be defined in whatever order is intuitive and convenient, rather than forcing bottom up ordering or requiring forward declarations, as long as they are defined by the time they are actually called. As an example, here is an inefficient, mutually recursive way to test if positive integers are even or odd:</p><pre><code class="language-julia-repl">julia&gt; even(n) = (n == 0) ? true : odd(n - 1);
+
+julia&gt; odd(n) = (n == 0) ? false : even(n - 1);
+
+julia&gt; even(3)
+false
+
+julia&gt; odd(3)
+true</code></pre><p>Julia provides built-in, efficient functions to test for oddness and evenness called <a href="../base/numbers.html#Base.iseven"><code>iseven</code></a> and <a href="../base/numbers.html#Base.isodd"><code>isodd</code></a> so the above definitions should only be considered to be examples of scope, not efficient design.</p><h3 id="Let-Blocks-1"><a class="docs-heading-anchor" href="#Let-Blocks-1">Let Blocks</a><a class="docs-heading-anchor-permalink" href="#Let-Blocks-1" title="Permalink"></a></h3><p>Unlike assignments to local variables, <code>let</code> statements allocate new variable bindings each time they run. An assignment modifies an existing value location, and <code>let</code> creates new locations. This difference is usually not important, and is only detectable in the case of variables that outlive their scope via closures. The <code>let</code> syntax accepts a comma-separated series of assignments and variable names:</p><pre><code class="language-julia-repl">julia&gt; x, y, z = -1, -1, -1;
+
+julia&gt; let x = 1, z
+           println(&quot;x: $x, y: $y&quot;) # x is local variable, y the global
+           println(&quot;z: $z&quot;) # errors as z has not been assigned yet but is local
+       end
+x: 1, y: -1
+ERROR: UndefVarError: z not defined</code></pre><p>The assignments are evaluated in order, with each right-hand side evaluated in the scope before the new variable on the left-hand side has been introduced. Therefore it makes sense to write something like <code>let x = x</code> since the two <code>x</code> variables are distinct and have separate storage. Here is an example where the behavior of <code>let</code> is needed:</p><pre><code class="language-julia-repl">julia&gt; Fs = Vector{Any}(undef, 2); i = 1;
+
+julia&gt; while i &lt;= 2
+           Fs[i] = ()-&gt;i
+           global i += 1
+       end
+
+julia&gt; Fs[1]()
+3
+
+julia&gt; Fs[2]()
+3</code></pre><p>Here we create and store two closures that return variable <code>i</code>. However, it is always the same variable <code>i</code>, so the two closures behave identically. We can use <code>let</code> to create a new binding for <code>i</code>:</p><pre><code class="language-julia-repl">julia&gt; Fs = Vector{Any}(undef, 2); i = 1;
+
+julia&gt; while i &lt;= 2
+           let i = i
+               Fs[i] = ()-&gt;i
+           end
+           global i += 1
+       end
+
+julia&gt; Fs[1]()
+1
+
+julia&gt; Fs[2]()
+2</code></pre><p>Since the <code>begin</code> construct does not introduce a new scope, it can be useful to use a zero-argument <code>let</code> to just introduce a new scope block without creating any new bindings:</p><pre><code class="language-julia-repl">julia&gt; let
+           local x = 1
+           let
+               local x = 2
+           end
+           x
+       end
+1</code></pre><p>Since <code>let</code> introduces a new scope block, the inner local <code>x</code> is a different variable than the outer local <code>x</code>.</p><h3 id="For-Loops-and-Comprehensions-1"><a class="docs-heading-anchor" href="#For-Loops-and-Comprehensions-1">For Loops and Comprehensions</a><a class="docs-heading-anchor-permalink" href="#For-Loops-and-Comprehensions-1" title="Permalink"></a></h3><p><code>for</code> loops, <code>while</code> loops, and <a href="arrays.html#man-comprehensions-1">comprehensions</a> have the following behavior: any new variables introduced in their body scopes are freshly allocated for each loop iteration, as if the loop body were surrounded by a <code>let</code> block:</p><pre><code class="language-julia-repl">julia&gt; Fs = Vector{Any}(undef, 2);
+
+julia&gt; for j = 1:2
+           Fs[j] = ()-&gt;j
+       end
+
+julia&gt; Fs[1]()
+1
+
+julia&gt; Fs[2]()
+2</code></pre><p>A <code>for</code> loop or comprehension iteration variable is always a new variable:</p><pre><code class="language-julia-repl">julia&gt; function f()
+           i = 0
+           for i = 1:3
+           end
+           return i
+       end;
+
+julia&gt; f()
+0</code></pre><p>However, it is occasionally useful to reuse an existing local variable as the iteration variable. This can be done conveniently by adding the keyword <code>outer</code>:</p><pre><code class="language-julia-repl">julia&gt; function f()
+           i = 0
+           for outer i = 1:3
+           end
+           return i
+       end;
+
+julia&gt; f()
+3</code></pre><h2 id="Constants-1"><a class="docs-heading-anchor" href="#Constants-1">Constants</a><a class="docs-heading-anchor-permalink" href="#Constants-1" title="Permalink"></a></h2><p>A common use of variables is giving names to specific, unchanging values. Such variables are only assigned once. This intent can be conveyed to the compiler using the <a href="../base/base.html#const"><code>const</code></a> keyword:</p><pre><code class="language-julia-repl">julia&gt; const e  = 2.71828182845904523536;
+
+julia&gt; const pi = 3.14159265358979323846;</code></pre><p>Multiple variables can be declared in a single <code>const</code> statement:</p><pre><code class="language-julia-repl">julia&gt; const a, b = 1, 2
+(1, 2)</code></pre><p>The <code>const</code> declaration should only be used in global scope on globals. It is difficult for the compiler to optimize code involving global variables, since their values (or even their types) might change at almost any time. If a global variable will not change, adding a <code>const</code> declaration solves this performance problem.</p><p>Local constants are quite different. The compiler is able to determine automatically when a local variable is constant, so local constant declarations are not necessary, and in fact are currently not supported.</p><p>Special top-level assignments, such as those performed by the <code>function</code> and <code>struct</code> keywords, are constant by default.</p><p>Note that <code>const</code> only affects the variable binding; the variable may be bound to a mutable object (such as an array), and that object may still be modified. Additionally when one tries to assign a value to a variable that is declared constant the following scenarios are possible:</p><ul><li>if a new value has a different type than the type of the constant then an error is thrown:</li></ul><pre><code class="language-julia-repl">julia&gt; const x = 1.0
+1.0
+
+julia&gt; x = 1
+ERROR: invalid redefinition of constant x</code></pre><ul><li>if a new value has the same type as the constant then a warning is printed:</li></ul><pre><code class="language-julia-repl">julia&gt; const y = 1.0
+1.0
+
+julia&gt; y = 2.0
+WARNING: redefining constant y
+2.0</code></pre><ul><li>if an assignment would not result in the change of variable value no message is given:</li></ul><pre><code class="language-julia-repl">julia&gt; const z = 100
+100
+
+julia&gt; z = 100
+100</code></pre><p>The last rule applies for immutable objects even if the variable binding would change, e.g.:</p><pre><code class="language-julia-repl">julia&gt; const s1 = &quot;1&quot;
+&quot;1&quot;
+
+julia&gt; s2 = &quot;1&quot;
+&quot;1&quot;
+
+julia&gt; pointer.([s1, s2], 1)
+2-element Array{Ptr{UInt8},1}:
+ Ptr{UInt8} @0x00000000132c9638
+ Ptr{UInt8} @0x0000000013dd3d18
+
+julia&gt; s1 = s2
+&quot;1&quot;
+
+julia&gt; pointer.([s1, s2], 1)
+2-element Array{Ptr{UInt8},1}:
+ Ptr{UInt8} @0x0000000013dd3d18
+ Ptr{UInt8} @0x0000000013dd3d18</code></pre><p>However, for mutable objects the warning is printed as expected:</p><pre><code class="language-julia-repl">julia&gt; const a = [1]
+1-element Array{Int64,1}:
+ 1
+
+julia&gt; a = [1]
+WARNING: redefining constant a
+1-element Array{Int64,1}:
+ 1</code></pre><p>Note that although sometimes possible, changing the value of a <code>const</code> variable is strongly discouraged, and is intended only for convenience during interactive use. Changing constants can cause various problems or unexpected behaviors. For instance, if a method references a constant and is already compiled before the constant is changed then it might keep using the old value:</p><pre><code class="language-julia-repl">julia&gt; const x = 1
+1
+
+julia&gt; f() = x
+f (generic function with 1 method)
+
+julia&gt; f()
+1
+
+julia&gt; x = 2
+WARNING: redefining constant x
+2
+
+julia&gt; f()
+1</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="control-flow.html">« Control Flow</a><a class="docs-footer-nextpage" href="types.html">Types »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Saturday 21 March 2020 14:49">Saturday 21 March 2020</span>. Using Julia version 1.4.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
