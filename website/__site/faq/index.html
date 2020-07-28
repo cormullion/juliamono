@@ -74,7 +74,7 @@
 <p>Most people probably can’t tell the difference between Helvetica and Arial, and certainly aren’t going to be bothered about minor differences between JuliaMono and other coding fonts. But that’s fine. Just stick to your current favourites&#33;</p>
 <h4 id="is_it_a_package_was_it_written_in_julia_how_will_this_contribute_to_the_ecosystem_of_julia_language"><a href="#is_it_a_package_was_it_written_in_julia_how_will_this_contribute_to_the_ecosystem_of_julia_language">‘Is it a package? Was it written in Julia? How will this contribute to the ecosystem of Julia language?’</a></h4>
 <p>&#40;Hello JuliaCon Reviewer 5...&#33;&#41; Unfortunately, in the world of typographical software, one programming language is currently ubiquitous &#40;hint: one of the leading programmers in the typography realm is <strong>Just van Rossum</strong>, one of the van Rossum brothers&#41; and it’s not Julia.</p>
-<p>The typeface isn’t a Julia package. &#40;Could it be? Should it be?&#41; But although Julia wasn’t used to build the typeface, I did use Julia quite a lot while designing it; sometimes to generate glyphs, there being plenty of symmetrical designs that lend themselves to programmatic construction with a simple graphics program &#40;e.g. <a href="https://github.com/JuliaGraphics/Luxor.jl">Luxor.jl</a>&#41;. And also for producing glyph lists, charts, test output, and build scripts. And the various graphics you see here and in the specimen PDF were also made with Julia. So in that senseat least the font is a bit Julian.</p>
+<p>The typeface isn’t a Julia package. &#40;Could it be? Should it be?&#41; But although Julia wasn’t used to build the typeface, I did use Julia quite a lot while designing it; sometimes to generate glyphs, there being plenty of symmetrical designs that lend themselves to programmatic construction with a simple graphics program &#40;e.g. <a href="https://github.com/JuliaGraphics/Luxor.jl">Luxor.jl</a>&#41;. And also for producing glyph lists, charts, test output, and build scripts. And the various graphics you see here and in the specimen PDF were also made with Julia. So in that sense at least the font is a bit Julian.</p>
 <p>And how will JuliaMono contribute? It’s often in the nature of an experiment that the outcome is uncertain until it’s been carried out.</p>
 <h4 id="is_it_finished"><a href="#is_it_finished">‘Is it finished?’</a></h4>
 <p>As of July 2020 this is the first beta release, version 0.0.1, and so it’s best described as ‘started’ &#40;or at least ‘not yet abandoned‘&#41; rather than ‘finished’. As with most things, progress will vary according to supply and demand.</p>
@@ -195,7 +195,7 @@ display(p)</code></pre>
 <p>The top 9 characters - “etanirsol” - are a good match for the typical English frequency count e.g. “etarionsh”.</p>
 <p>Although over 3600 unique characters occur in the Julia documentation, about 3000 of them appear just once. All of them, except the emojis which aren’t in JuliaMono, can be plotted, but the long tail isn’t very interesting .</p>
 <p>For plotting emoji characters, you’ll have to dive into the internals of the plots system...</p>
-<p>Notice that the y-axis labels are in DejaVu Sans, provided with matplotlib. That’s because the <code>:log10</code> scaling code does its own \( \LaTeX \)-y business, ignoring the current font. However, at least I was able to insert the Julia logo successfully, since it’s part of the font.</p>
+<p>Notice that the y-axis labels are in DejaVu Sans, provided with matplotlib. That’s because the <code>:log10</code> scaling code does its own \( \LaTeX \)-y business, ignoring the current font. However, at least I was able to insert the Julia logo successfully, since it’s part of the JuliaMono font.</p>
 <h4 id="can_i_use_it_in_a_latex_document"><a href="#can_i_use_it_in_a_latex_document">‘Can I use it in a \( \LaTeX \) document?’</a></h4>
 <p>In a \( \LaTeX \) document, you should be able to define and use local fonts. Here’s an approach that worked for me.</p>
 <p>In your \( \LaTeX \) source file, define the font, using the local pathname:</p>
@@ -270,7 +270,7 @@ display(p)</code></pre>
 <p>Open an issue <a href="https://github.com/cormullion/juliamono">here</a>&#33;</p>
 <p><div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: July 27, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: July 28, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
