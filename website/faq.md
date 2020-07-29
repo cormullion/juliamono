@@ -359,13 +359,13 @@ I say ‘may’ but I don’t know for sure.
 
 #### ‘Does it work on Windows?’
 
-I don’t know. I don’t have a Windows computer to test it on, and this year has made it difficult to even gain access to one. Microsoft Windows has always had a very different approach to typography and fonts to Apple’s MacOS. I prefer the Mac approach to typography - it’s just personal taste, though. It's what I’m used to.
+I don’t know. I don’t have a Windows computer to test it on, and this year has made it difficult to even gain access to one. Microsoft Windows has always had a very different approach to typography and fonts to Apple’s MacOS. I prefer the Mac approach to typography - it’s just personal taste, though, being what I’m used to.
 
-[This fairly old article](https://blog.codinghorror.com/font-rendering-respecting-the-pixel-grid/) by Jeff (“I have no idea what I’m talking about”) Atwood mentions a few of the issues. He speculates about a future where we’re all “luxuriating in the glow of [our] 200 DPI monitors”.
+[This fairly old article](https://blog.codinghorror.com/font-rendering-respecting-the-pixel-grid/) by Jeff (“I have no idea what I’m talking about”) Atwood mentions a few of the design issues. He speculates about a future where we’re all “luxuriating in the glow of [our] 200 DPI monitors”.
 
-Are we there yet? Until then, fonts will only look as good as our monitors permit. My current computer is a 5K iMac (220 pixels per inch), which makes even badly-made fonts look crisp and finely detailed. But high-quality fonts struggle to keep their quality when they’re displayed on low-resolution displays.
+Are we there yet? Until then, fonts will only look as good as our monitors permit. My current computer is a 5K iMac (220 pixels per inch), which makes even badly-made fonts look crisp and finely detailed. But high-quality fonts struggle to mmaintain their quality when they’re displayed on low-resolution displays.
 
-JuliaMono uses the more compact PostScript (CFF) cubic Bezier curves rather than the more customizable TrueType (TTF) quadratic Bezier curves. (Both can be stored in the .OTF container format.) The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets you provide instructions to distort the character shapes so that they look better on lower resolution displays.
+JuliaMono uses the more compact PostScript (CFF) cubic Bezier curves rather than the more customizable TrueType (TTF) quadratic Bezier curves. (Both can be stored in the .OTF container format.) The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets the type designer provide instructions on how best to distort the true character shapes so that they look better on less expensive devices.
 
 #### ‘Any love for nerdfonts?’
 

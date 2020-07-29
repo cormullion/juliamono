@@ -9,7 +9,7 @@ JuliaMono is a monospaced typeface designed for programming in [Julia](https://j
 - free
 - open-source[^opensource]
 - suitable for scientific and technical programming as well as for general purpose hacking
-- available for MacOS, Unix, and Windows
+- available for MacOS, Unix, and Windows [^windows]
 - easy to use, simple, friendly, and approachable
 - distributed with a liberal licence [^licence]
 
@@ -547,11 +547,15 @@ Thanks to: Thibaut Lienart for his [Franklin.jl](https://github.com/tlienart/Fra
 ### Footnotes
 [^opensource]:  &nbsp; “open source” Eventually, but I’ve got to work out how to do it first.
 
+/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code)
+
+[^windows]:  &nbsp; “Windows” For more information about if and how it works on Windows, read [this](/faq/#does_it_work_on_windows), but I currently don't know enough about Windows font technology and how it differs from MacOS and Unix.
+
 [^licence]:  &nbsp; “licence” Although not MIT-licensed like Julia, JuliaMono is licensed using the [SIL Open Font licence](https://scripts.sil.org/OFL), which allows the fonts to be used, studied, modified, freely redistributed, and even sold, without affecting anything they’re bundled with.
 
-[^masters]:  &nbsp; “masters” In fact there are only three masters (Light, Regular, and Black), and three instances (Medium, Bold, and ExtraBold), which are interpolated between them.
-
 [^ohdear]: &nbsp; “downloading font problems” The problem might be something to do with the web security feature called [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin) which prevents a web page accessing the resources it needs.
+
+[^masters]:  &nbsp; “masters” In fact there are only three masters (Light, Regular, and Black), and three instances (Medium, Bold, and ExtraBold), which are interpolated between them.
 
 [^zscode]: &nbsp; “maths in code” spotted [here](https://github.com/JuliaArrays/StaticArrays.jl/issues/537#issuecomment-439863841)
 

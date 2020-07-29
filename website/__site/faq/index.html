@@ -255,10 +255,10 @@ display(p)</code></pre>
 &lt;/alias&gt;</code></pre>
 <p>I say ‘may’ but I don’t know for sure.</p>
 <h4 id="does_it_work_on_windows"><a href="#does_it_work_on_windows">‘Does it work on Windows?’</a></h4>
-<p>I don’t know. I don’t have a Windows computer to test it on, and this year has made it difficult to even gain access to one. Microsoft Windows has always had a very different approach to typography and fonts to Apple’s MacOS. I prefer the Mac approach to typography - it’s just personal taste, though. It&#39;s what I’m used to.</p>
-<p><a href="https://blog.codinghorror.com/font-rendering-respecting-the-pixel-grid/">This fairly old article</a> by Jeff &#40;“I have no idea what I’m talking about”&#41; Atwood mentions a few of the issues. He speculates about a future where we’re all “luxuriating in the glow of &#91;our&#93; 200 DPI monitors”.</p>
-<p>Are we there yet? Until then, fonts will only look as good as our monitors permit. My current computer is a 5K iMac &#40;220 pixels per inch&#41;, which makes even badly-made fonts look crisp and finely detailed. But high-quality fonts struggle to keep their quality when they’re displayed on low-resolution displays.</p>
-<p>JuliaMono uses the more compact PostScript &#40;CFF&#41; cubic Bezier curves rather than the more customizable TrueType &#40;TTF&#41; quadratic Bezier curves. &#40;Both can be stored in the .OTF container format.&#41; The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets you provide instructions to distort the character shapes so that they look better on lower resolution displays.</p>
+<p>I don’t know. I don’t have a Windows computer to test it on, and this year has made it difficult to even gain access to one. Microsoft Windows has always had a very different approach to typography and fonts to Apple’s MacOS. I prefer the Mac approach to typography - it’s just personal taste, though, being what I’m used to.</p>
+<p><a href="https://blog.codinghorror.com/font-rendering-respecting-the-pixel-grid/">This fairly old article</a> by Jeff &#40;“I have no idea what I’m talking about”&#41; Atwood mentions a few of the design issues. He speculates about a future where we’re all “luxuriating in the glow of &#91;our&#93; 200 DPI monitors”.</p>
+<p>Are we there yet? Until then, fonts will only look as good as our monitors permit. My current computer is a 5K iMac &#40;220 pixels per inch&#41;, which makes even badly-made fonts look crisp and finely detailed. But high-quality fonts struggle to mmaintain their quality when they’re displayed on low-resolution displays.</p>
+<p>JuliaMono uses the more compact PostScript &#40;CFF&#41; cubic Bezier curves rather than the more customizable TrueType &#40;TTF&#41; quadratic Bezier curves. &#40;Both can be stored in the .OTF container format.&#41; The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets the type designer provide instructions on how best to distort the true character shapes so that they look better on less expensive devices.</p>
 <h4 id="any_love_for_nerdfonts"><a href="#any_love_for_nerdfonts">‘Any love for nerdfonts?’</a></h4>
 <p><a href="https://www.nerdfonts.com">nerdfonts</a> can add about four thousand extra glyphs to a font. It does this by creating a new font that combines an existing font’s glyphs with a bunch of new ones, using a FontForge Python script. This is quite cool, in a way.</p>
 <p>JuliaMono concentrates on the Unicode standard glyphs, as used for Julia code, whereas Nerdfonts adds many non-standard glyphs such as product and brand logos, trade names, icons for dozens of file extensions, programming languages, commercial applications, and a fair number of not-so-relevant characters. It’s aimed at a much wider audience. Nerdfonts doesn’t overlap much with JuliaMono.</p>
@@ -270,7 +270,7 @@ display(p)</code></pre>
 <p>Open an issue <a href="https://github.com/cormullion/juliamono">here</a>&#33;</p>
 <p><div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: July 28, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: July 29, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
