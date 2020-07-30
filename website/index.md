@@ -547,8 +547,6 @@ Thanks to: Thibaut Lienart for his [Franklin.jl](https://github.com/tlienart/Fra
 ### Footnotes
 [^opensource]:  &nbsp; “open source” Eventually, but I’ve got to work out how to do it first.
 
-/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code)
-
 [^windows]:  &nbsp; “Windows” For more information about if and how it works on Windows, read [this](/faq/#does_it_work_on_windows), but I currently don't know enough about Windows font technology and how it differs from MacOS and Unix. Early reports are that the font doesn't look good on Windows.
 
 [^licence]:  &nbsp; “licence” Although not MIT-licensed like Julia, JuliaMono is licensed using the [SIL Open Font licence](https://scripts.sil.org/OFL), which allows the fonts to be used, studied, modified, freely redistributed, and even sold, without affecting anything they’re bundled with.
