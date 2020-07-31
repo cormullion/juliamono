@@ -33,9 +33,11 @@ You don’t have to.
 
 #### ‘Aren’t these font files too big?’
 
-Well, everything can be too big sometimes... It depends if you mean the web fonts or the ‘desktop’ fonts. Web fonts come in two flavours, `.WOFF` and `.WOFF2`, where the `2` indicates a more recent and slightly more compact format. `JuliaMono-Regular.woff` is 674KB, `JuliaMono-Regular.woff2` is 619KB - the size of a decent PNG image, for sure. The `.OTF` desktop versions are more like 900Kb each.
+Well, everything can be too big sometimes... It depends if you mean the web fonts or the ‘desktop’ fonts. Web fonts come in two flavours, `.WOFF` and `.WOFF2`, where the `2` indicates a more recent and slightly more compact format. `JuliaMono-Regular.woff` is 674KB, `JuliaMono-Regular.woff2` is 619KB - the size of a decent PNG image, for sure.
 
-For comparison, the Themes folder of `.CSS` files for the Julia manual (and for every manual built with Documenter.jl since v0.21) is about 700KB. So in that light the fonts aren’t that bad. Of course, the two Google fonts downloaded by every Julia document (Lato and Roboto) are tiny, at 14KB and 11KB, with 221 glyphs in each.
+The `.OTF` desktop versions are more like 900Kb each. The `.TTF` are getting on for 1.8MB each. (See [Does it work on Windows]([this](/faq/#does_it_work_on_windows)).)
+
+For comparison, the Themes folder of `.CSS` files for the Julia manual (and for every manual built with Documenter.jl since v0.21) is about 700KB. So in that light the WOFF2 fonts aren’t that bad. Of course, the two Google fonts downloaded by every Julia document (Lato and Roboto) are tiny, at 14KB and 11KB, with 221 glyphs in each.
 
 So, if you’re building a website, or designing for mobile applications, the size of the WOFF2 file(s) will be an important factor to weigh against the advantages of having predictable character sets. (This site is a bit of an exception, for obvious reasons.) Note that you can specify font subsets in the CSS using the **unicode-range** feature, which defines a restricted set of characters which you know are going to be used, so that users don’t download any that they won’t need.
 
@@ -365,7 +367,7 @@ I don’t know. I don’t have a Windows computer to test it on, and this year h
 
 Are we there yet? Until then, fonts will only look as good as our monitors permit. My current computer is a 5K iMac (220 pixels per inch), which makes even badly-made fonts look crisp and finely detailed. But high-quality fonts struggle to mmaintain their quality when they’re displayed on low-resolution displays.
 
-JuliaMono uses the more compact PostScript (CFF) cubic Bezier curves rather than the more customizable TrueType (TTF) quadratic Bezier curves. (Both can be stored in the .OTF container format.) The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets the type designer provide instructions on how best to distort the true character shapes so that they look better on less expensive devices.
+OTF font files are containers, and can hold two different font flavours. One is the PostScript (CFF) format, which uses cubic Bezier curves, and the other is the TrueType (TTF) format, which uses quadratic Bezier curves. These are the survivors of the “font wars”.  The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets the type designer provide instructions on how best to distort the true character shapes so that they look better on less expensive devices. These hinting instructions are not used on Apple devices, probably because Apple don’t make any low-resolution devices. However, TTF font files are considerably larger than the CFF/OTF versions.
 
 #### ‘Any love for nerdfonts?’
 
