@@ -1,5 +1,20 @@
 # Changelog
 
+## [v0.004] Started changelog
+
+### Added
+
+- Added some TrueType hinting instructions as an experiment.
+
+- Aligned /< and /: more preciselyy (thanks Jeff!)
+
+### Changed
+
+### Removed
+
+### Deprecated
+
+
 ## [v0.003] Started changelog
 
 ### Added
