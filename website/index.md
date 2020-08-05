@@ -355,7 +355,7 @@ I ❤ Julia
 
 JuliaMono is an [OpenType](https://en.wikipedia.org/wiki/OpenType) typeface. OpenType technology provides powerful text positioning, pattern matching, and glyph substitution features, which are essential for languages such as Arabic and Urdu. In English, OpenType features are often seen when letter pairs such as ~~~<span style="font-size: 1.5em;font-family: Georgia;font-variant-ligatures: no-common-ligatures; ">fi</span>~~~ in certain fonts are replaced by a single glyph such as ~~~<span style="font-size: 1.5em; font-family: Georgia;">ﬁ</span>~~~. These [ligatures](https://en.wikipedia.org/wiki/Orthographic_ligature) have been used ever since printing with moveable type was invented, replacing the occasional awkward character combination with a better-looking alternative.
 
-To be honest, I’m not a big fan of their use in coding fonts (and I’m not the only one[^nottheonlyone]). I like to see exactly what I’ve typed, rather than what the font has decided to replace it with. But, there are a few places in Julia where suitable Unicode alternatives are not accepted by the language, and where I feel that the ASCII-art confections currently used can be gently enhanced by the judicious use of alternate glyphs.
+To be honest, I’m not a big fan of their use in coding fonts (and I’m not the only one[^nottheonlyone]). I like to see exactly what I’ve typed, rather than what the font has decided to replace it with. But, there are a few places in Julia where suitable Unicode alternatives are not accepted by the language, and where I feel that the ASCII-art confections currently used can be gently enhanced by the judicious use of alternate glyphs. There are also a few places where some subtle tweaks can enhance the readability of the language without introducing ambiguity.
 
 In JuliaMono, the following substitutions are applied when the **contextual alternates** feature is active:
 
@@ -382,6 +382,10 @@ In JuliaMono, the following substitutions are applied when the **contextual alte
     <td class="code_ss_off"><|</td>
     <td class="code_calt_on"><|</td>
     </tr>
+    <tr>
+    <td class="code_ss_off">::</td>
+    <td class="code_calt_on">::</td>
+    </tr>
 
 </table>
 ~~~
@@ -391,6 +395,7 @@ You can see these in action in the following code fragment:[^width]
 ```
 julialang = true # (!= 0)
 (x, y) -> (x + y)
+f(p::Int) = p * p
 @inbounds if f in (Base.:+, Base.:-)
     if any(x -> x <: AbstractArray{<:Number})
          nouns = Dict(
@@ -480,12 +485,13 @@ Browser-based editors such as Juno and VS Code support many OpenType features in
 
 Terminal/console applications also vary a lot; on MacOS the **Terminal** and **iTerm** applications try to offer controls for OpenType features, with varying degrees of success. On Linux, some terminal applications such as [Kitty](https://sw.kovidgoyal.net/kitty/#font-control) offer quite good support, but others such as [Alacritty](https://github.com/alacritty/alacritty) offer little or none, as yet. [^terminal]
 
-If the application allows, you should be able to switch the ``calt`` contextual ligatures off, particularly since quite a few people won’t like any of them in their code. For the following listing, I switch the **calt** set off using CSS (see [here](/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code)), and then enable some of the alternative stylistic sets: compare the **0**, **g**, **a**, **j**, and **@** glyphs with the previous listing:
+If the application allows, you should be able to switch the ``calt`` contextual ligatures off, particularly since quite a few people won’t like any of them in their code. For the following listing, I switch the **calt** set off using CSS (see [here](/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code)), and then enable some of the alternative stylistic sets: compare characters such as the **0**, **g**, **a**, **j**, and **@** with the previous listing:
 
 @@code_ss_on
 ```
 julialang = true # (!= 0)
 (x, y) -> (x + y)
+f(p::Int) = p * p
 @inbounds if f in (Base.:+, Base.:-)
     if any(x -> x <: AbstractArray{<:Number})
          nouns = Dict(

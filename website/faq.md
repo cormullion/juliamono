@@ -59,7 +59,7 @@ And how will JuliaMono contribute? It’s often in the nature of an experiment t
 
 #### ‘Is it finished?’
 
-As of July 2020 this is the first beta release, version 0.0.1, and so it’s best described as ‘started’ (or at least ‘not yet abandoned‘) rather than ‘finished’. As with most things, progress will vary according to supply and demand.
+The first beta release, version 0.0.1, was released on July 27, 2020. The experiment is best described as ‘started’ (or at least ‘not yet abandoned‘) rather than ‘finished’. As with most things, progress will vary according to supply and demand. Always download the latest version if you want the typeface to perform as well as it can.
 
 #### ‘The glyph Uxxxx is missing/wrong - can you add/change it?’
 

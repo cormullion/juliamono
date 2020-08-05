@@ -352,7 +352,7 @@ julia> ❤("Julia")
 I ❤ Julia</code></pre>
 <h3 id="contextual_and_stylistic_alternates"><a href="#contextual_and_stylistic_alternates">Contextual and stylistic alternates</a></h3>
 <p>JuliaMono is an <a href="https://en.wikipedia.org/wiki/OpenType">OpenType</a> typeface. OpenType technology provides powerful text positioning, pattern matching, and glyph substitution features, which are essential for languages such as Arabic and Urdu. In English, OpenType features are often seen when letter pairs such as <span style="font-size: 1.5em;font-family: Georgia;font-variant-ligatures: no-common-ligatures; ">fi</span> in certain fonts are replaced by a single glyph such as <span style="font-size: 1.5em; font-family: Georgia;">ﬁ</span>. These <a href="https://en.wikipedia.org/wiki/Orthographic_ligature">ligatures</a> have been used ever since printing with moveable type was invented, replacing the occasional awkward character combination with a better-looking alternative.</p>
-<p>To be honest, I’m not a big fan of their use in coding fonts &#40;and I’m not the only one<sup id="fnref:nottheonlyone"><a href="#fndef:nottheonlyone" class="fnref">[11]</a></sup>&#41;. I like to see exactly what I’ve typed, rather than what the font has decided to replace it with. But, there are a few places in Julia where suitable Unicode alternatives are not accepted by the language, and where I feel that the ASCII-art confections currently used can be gently enhanced by the judicious use of alternate glyphs.</p>
+<p>To be honest, I’m not a big fan of their use in coding fonts &#40;and I’m not the only one<sup id="fnref:nottheonlyone"><a href="#fndef:nottheonlyone" class="fnref">[11]</a></sup>&#41;. I like to see exactly what I’ve typed, rather than what the font has decided to replace it with. But, there are a few places in Julia where suitable Unicode alternatives are not accepted by the language, and where I feel that the ASCII-art confections currently used can be gently enhanced by the judicious use of alternate glyphs. There are also a few places where some subtle tweaks can enhance the readability of the language without introducing ambiguity.</p>
 <p>In JuliaMono, the following substitutions are applied when the <strong>contextual alternates</strong> feature is active:</p>
 
 <table class="sstable">
@@ -377,12 +377,17 @@ I ❤ Julia</code></pre>
     <td class="code_ss_off"><|</td>
     <td class="code_calt_on"><|</td>
     </tr>
+    <tr>
+    <td class="code_ss_off">::</td>
+    <td class="code_calt_on">::</td>
+    </tr>
 
 </table>
 
 <p>You can see these in action in the following code fragment:<sup id="fnref:width"><a href="#fndef:width" class="fnref">[12]</a></sup>
 <pre><code class="language-julia">julialang = true # (!= 0)
 (x, y) -> (x + y)
+f(p::Int) = p * p
 @inbounds if f in (Base.:+, Base.:-)
     if any(x -> x <: AbstractArray{<:Number})
          nouns = Dict(
@@ -462,9 +467,10 @@ df2 = df |>
 <p>All this fancy technology is under the control of the application and the operating system you’re using. Ideally, they will provide an easy way for you to switch the various OpenType features on and off.</p>
 <p>Browser-based editors such as Juno and VS Code support many OpenType features in their editor windows, but not in the terminal/console windows. They provide a settings area where you can type CSS or JSON selectors to control the appearance of features, and you’ll have to know the feature codes. Some features are opt in, others are opt out; this too can vary from application to application.</p>
 <p>Terminal/console applications also vary a lot; on MacOS the <strong>Terminal</strong> and <strong>iTerm</strong> applications try to offer controls for OpenType features, with varying degrees of success. On Linux, some terminal applications such as <a href="https://sw.kovidgoyal.net/kitty/#font-control">Kitty</a> offer quite good support, but others such as <a href="https://github.com/alacritty/alacritty">Alacritty</a> offer little or none, as yet. <sup id="fnref:terminal"><a href="#fndef:terminal" class="fnref">[14]</a></sup>
-<p>If the application allows, you should be able to switch the <code>calt</code> contextual ligatures off, particularly since quite a few people won’t like any of them in their code. For the following listing, I switch the <strong>calt</strong> set off using CSS &#40;see <a href="/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code">here</a>&#41;, and then enable some of the alternative stylistic sets: compare the <strong>0</strong>, <strong>g</strong>, <strong>a</strong>, <strong>j</strong>, and <strong>@</strong> glyphs with the previous listing:</p>
+<p>If the application allows, you should be able to switch the <code>calt</code> contextual ligatures off, particularly since quite a few people won’t like any of them in their code. For the following listing, I switch the <strong>calt</strong> set off using CSS &#40;see <a href="/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code">here</a>&#41;, and then enable some of the alternative stylistic sets: compare characters such as the <strong>0</strong>, <strong>g</strong>, <strong>a</strong>, <strong>j</strong>, and <strong>@</strong> with the previous listing:</p>
 <div class="code_ss_on"><pre><code class="language-julia">julialang = true # (!= 0)
 (x, y) -> (x + y)
+f(p::Int) = p * p
 @inbounds if f in (Base.:+, Base.:-)
     if any(x -> x <: AbstractArray{<:Number})
          nouns = Dict(
@@ -585,7 +591,7 @@ Welcome to </code></pre>
 </table>
  <div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: July 31, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: August 05, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
