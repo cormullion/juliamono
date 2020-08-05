@@ -1,6 +1,20 @@
 # Changelog
 
-## [v0.004] Started changelog
+## [v0.005] 2020-08-05 19:29:40
+
+### Added
+
+- alternate form for `::`
+- punctuation is no longer case-sensitive (https://github.com/cormullion/juliamono/issues/8)
+
+### Changed
+
+### Removed
+
+### Deprecated
+
+
+## [v0.004] Some hints added
 
 ### Added
 
