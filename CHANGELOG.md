@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.006] 2020-08-08 16:49:55
+
+### Added
+
+- tweaked tildes eg for ÃÑÕãñõĨĩŨũ to be slightly narrower and higher (#15, #18)
+
+### Changed
+
+- fraktur capitals simplified
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.005] 2020-08-05 19:29:40
 
 ### Added
@@ -13,6 +29,7 @@
 
 ### Deprecated
 
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ## [v0.004] Some hints added
 
@@ -28,6 +45,7 @@
 
 ### Deprecated
 
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ## [v0.003] Started changelog
 
@@ -41,3 +59,5 @@ size (they got bigger)  for better cross-platform behaviour (Windows).
 ### Removed
 
 ### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
