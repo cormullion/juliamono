@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.007] 2020-08-10 19:17:29
+
+### Added
+
+- some CI stuff: git tag v0.00x then git push origin --tag
+
+### Changed
+
+- tuned blocks for UnicodePlots use
+- hbar, planck slanted
+- tweaked vertical metrics, hoping it won't all go horribly wrong
+
+### Removed
+
+### Deprecated
+
 ## [v0.006] 2020-08-08 16:49:55
 
 ### Added
