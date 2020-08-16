@@ -85,10 +85,9 @@
 <p>Find the relevant CSS file, and add a link to the WOFF2 stored on the server. For example:</p>
 <pre><code class="language-julia">@font-face {
 	font-family: JuliaMono-Regular;
-	src: url("https://juliamono.netlify.app/assets/fonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
 }</code></pre>
-<p>You can probably use that Netlify link for now, or perhaps <a href="https://github.com/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2">this Github one</a>, but one day someone will complain about download quotas and you’ll have to serve the WOFF/2 fonts from your own server. Some things aren’t free.</p>
-<p>One problem you might encounter is related to <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing</a>, which on some browsers prevents one web page from downloading fonts from another.</p>
+<p>This accesses version 0.008 of the Regular font using the jsDelivr CDN &#40;Content Delivery Network&#41;.. You may prefer to serve the WOFF/2 fonts from your own server. One problem you might encounter is related to <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing</a>, which on some browsers prevents one web page from downloading fonts from another.</p>
 <h4 id="how_do_i_control_features_in_css_in_atomjuno_or_vs_code"><a href="#how_do_i_control_features_in_css_in_atomjuno_or_vs_code">‘How do I control features in CSS, in Atom/Juno, or VS Code?’</a></h4>
 <p>In the Atom/Juno stylesheet, you can specify the font with the required CSS selectors:</p>
 <pre><code class="language-css">font-family: "JuliaMono-Regular";</code></pre>
@@ -117,7 +116,7 @@
 <p>you could add definitions like this:</p>
 <pre><code class="language-css">@font-face {
 	font-family: JuliaMono-Regular;
-	src: url("https://julialangblogmirror.netlify.app/assets/fonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
 }
 
 .rendered_html table{
@@ -271,7 +270,7 @@ display(p)</code></pre>
 <p>Open an issue <a href="https://github.com/cormullion/juliamono">here</a>&#33;</p>
 <p><div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: August 05, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: August 16, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

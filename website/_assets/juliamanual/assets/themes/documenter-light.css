@@ -3,7 +3,7 @@
 
 @font-face {
 	font-family: JuliaMono-Regular;
-	src: url("/assets/fonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
 }
 
 @keyframes spinAround {

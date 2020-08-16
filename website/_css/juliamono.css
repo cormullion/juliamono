@@ -2,19 +2,19 @@
 
 @font-face {
 	font-family: JuliaMono-Regular;
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2");
 }
 
 @font-face {
 	font-family: JuliaMono-Medium;
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Medium.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Medium.woff2");
 	font-display: fallback;	/* allow 100 milliseconds then display fallback */
 	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
 }
 
 @font-face {
 	font-family: JuliaMono-Bold;
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Bold.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Bold.woff2");
 	font-display: fallback;	/* allow 100 milliseconds then display fallback */
 	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
 }
@@ -22,14 +22,14 @@
 @font-face {
 	font-family: JuliaMono-ExtraBold;
 	font-display: fallback;	/* allow 100 milliseconds then display fallback */
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-ExtraBold.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-ExtraBold.woff2");
 	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
 }
 
 @font-face {
 	font-family: JuliaMono-Black;
 	font-display: fallback;	/* allow 100 milliseconds then display fallback */
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Black.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Black.woff2");
 	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
 }
 

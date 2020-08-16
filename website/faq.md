@@ -72,13 +72,11 @@ Find the relevant CSS file, and add a link to the WOFF2 stored on the server. Fo
 ```
 @font-face {
 	font-family: JuliaMono-Regular;
-	src: url("https://juliamono.netlify.app/assets/fonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
 }
 ```
 
-You can probably use that Netlify link for now, or perhaps [this Github one](https://github.com/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2), but one day someone will complain about download quotas and you’ll have to serve the WOFF/2 fonts from your own server. Some things aren’t free.
-
-One problem you might encounter is related to [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), which on some browsers prevents one web page from downloading fonts from another.
+This accesses version 0.008 of the Regular font using the jsDelivr CDN (Content Delivery Network).. You may prefer to serve the WOFF/2 fonts from your own server. One problem you might encounter is related to [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), which on some browsers prevents one web page from downloading fonts from another.
 
 #### ‘How do I control features in CSS, in Atom/Juno, or VS Code?’
 
@@ -154,7 +152,7 @@ you could add definitions like this:
 ```css
 @font-face {
 	font-family: JuliaMono-Regular;
-	src: url("https://julialangblogmirror.netlify.app/assets/fonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
 }
 
 .rendered_html table{
@@ -188,10 +186,6 @@ which downloads the font once and is then available to the notebook.
 ~~~
 
 For Pluto.jl, there’s no easy path to customization at present. If you can’t override the style using a browser style switcher such as [Stylish](https://userstyles.org) (Mac users might prefer [Cascadea](https://cascadea.app)), you can try to edit the `editor.css` file in `~/.julia/packages/Pluto/???/assets/editor.css`. Otherwise, it’s Roboto Mono for you...
-
-
-
-
 
 #### ‘How do I use the font in Plots.jl?’
 

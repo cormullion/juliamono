@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: JuliaMono-Regular;
-	src: url("/assets/fonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
 }
 
 html.theme--documenter-dark .delete, html.theme--documenter-dark .modal-close, .is-unselectable, html.theme--documenter-dark .button, html.theme--documenter-dark .file, html.theme--documenter-dark .breadcrumb, html.theme--documenter-dark .pagination-previous,
