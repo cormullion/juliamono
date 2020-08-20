@@ -122,7 +122,7 @@ end
     0, ȳ -> nothing
   end
 end</code></pre>
-<p>There are different weights of JuliaMono, so you can control the amount of contrast you have in your highlighted code: JuliaMono-Regular, <span style="font-family: JuliaMono-Medium;">JuliaMono-Medium</span>, <span style="font-family: JuliaMono-Bold;">JuliaMono-Bold</span>, <span style="font-family: JuliaMono-ExtraBold;">JuliaMono-ExtraBold</span>, and <span style="font-family: JuliaMono-Black;">JuliaMono-Black</span>. <sup id="fnref:masters"><a href="#fndef:masters" class="fnref">[5]</a></sup>
+<p>There are different weights of JuliaMono, so you can control the amount of contrast you have in your highlighted code: JuliaMono-Regular, <span style="font-family: JuliaMono-Medium;">JuliaMono-Medium</span>, <span style="font-family: JuliaMono-Bold;">JuliaMono-Bold</span>, <span style="font-family: JuliaMono-ExtraBold;">JuliaMono-ExtraBold</span>, and <span style="font-family: JuliaMono-Black;">JuliaMono-Black</span>. <sup id="fnref:masters"><a href="#fndef:masters" class="fnref">[5]</a></sup> &#40;There&#39;s a special JuliaMono-RegularLatin version as well: this is a version of JuliaMono-Regular supporting just the basic MacRoman/Windows1252 character sets, designed to be small enough to download quickly.&#41;</p>
 <p>In the hands of a virtuoso &#40;such as Dr Zygmunt Szpak, the author of the following code fragment<sup id="fnref:zscode"><a href="#fndef:zscode" class="fnref">[6]</a></sup>&#41;, the range of available Unicode characters can be quite expressive:</p>
 <pre><code class="language-julia">function T(𝛉::AbstractArray,
            𝒞::Tuple{AbstractArray,
@@ -295,7 +295,7 @@ end</code></pre>
 <img src="/assets/unicode-sample.svg" width="100%" alt="Unicode sampler"> 
 <p>In JuliaMono, every character is the same width, because this is a <a href="https://en.wikipedia.org/wiki/Monospaced_font">monospaced</a> typeface. Usually, typefaces with a lot of Unicode mathematical symbols are not monospaced, because they’re intended for use in prose and \( \LaTeX \) applications, rather than in programming code.</p>
 <p>From a design perspective, forcing every character into the same size box is a problem. It’s like fitting every human being of whatever shape or size into identical airplane seats - some characters are bound to look uncomfortable. There’s never quite enough room for a nice-looking “m” or “w”.</p>
-<p><a href="https://github.com/Evizero/UnicodePlots.jl">UnicodePlots.jl</a> uses various Unicode characters to plot figures directly in a terminal window. <sup id="fnref:linespacing"><a href="#fndef:linespacing" class="fnref">[8]</a></sup>
+<p><a href="https://github.com/Evizero/UnicodePlots.jl">UnicodePlots.jl</a> uses various Unicode characters to plot figures directly in a terminal window. <sup id="fnref:linespacing"><a href="#fndef:linespacing" class="fnref">[8]</a></sup></p>
 
 <div id="enlargewrap">
     <a class="enlarge">
@@ -384,7 +384,7 @@ I ❤ Julia</code></pre>
 
 </table>
 
-<p>You can see these in action in the following code fragment:<sup id="fnref:width"><a href="#fndef:width" class="fnref">[12]</a></sup>
+<p>You can see these in action in the following code fragment:<sup id="fnref:width"><a href="#fndef:width" class="fnref">[12]</a></sup></p>
 <pre><code class="language-julia">julialang = true # (!= 0)
 (x, y) -> (x + y)
 f(p::Int) = p * p
@@ -466,7 +466,7 @@ df2 = df |>
 
 <p>All this fancy technology is under the control of the application and the operating system you’re using. Ideally, they will provide an easy way for you to switch the various OpenType features on and off.</p>
 <p>Browser-based editors such as Juno and VS Code support many OpenType features in their editor windows, but not in the terminal/console windows. They provide a settings area where you can type CSS or JSON selectors to control the appearance of features, and you’ll have to know the feature codes. Some features are opt in, others are opt out; this too can vary from application to application.</p>
-<p>Terminal/console applications also vary a lot; on MacOS the <strong>Terminal</strong> and <strong>iTerm</strong> applications try to offer controls for OpenType features, with varying degrees of success. On Linux, some terminal applications such as <a href="https://sw.kovidgoyal.net/kitty/#font-control">Kitty</a> offer quite good support, but others such as <a href="https://github.com/alacritty/alacritty">Alacritty</a> offer little or none, as yet. <sup id="fnref:terminal"><a href="#fndef:terminal" class="fnref">[14]</a></sup>
+<p>Terminal/console applications also vary a lot; on MacOS the <strong>Terminal</strong> and <strong>iTerm</strong> applications try to offer controls for OpenType features, with varying degrees of success. On Linux, some terminal applications such as <a href="https://sw.kovidgoyal.net/kitty/#font-control">Kitty</a> offer quite good support, but others such as <a href="https://github.com/alacritty/alacritty">Alacritty</a> offer little or none, as yet. <sup id="fnref:terminal"><a href="#fndef:terminal" class="fnref">[14]</a></sup></p>
 <p>If the application allows, you should be able to switch the <code>calt</code> contextual ligatures off, particularly since quite a few people won’t like any of them in their code. For the following listing, I switch the <strong>calt</strong> set off using CSS &#40;see <a href="/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code">here</a>&#41;, and then enable some of the alternative stylistic sets: compare characters such as the <strong>0</strong>, <strong>g</strong>, <strong>a</strong>, <strong>j</strong>, and <strong>@</strong> with the previous listing:</p>
 <div class="code_ss_on"><pre><code class="language-julia">julialang = true # (!= 0)
 (x, y) -> (x + y)
@@ -499,13 +499,15 @@ REPL.REPLCompletions.latex_symbols["\\julialogo"] = "\ue800"</code></pre>
 <pre><code class="language-julia">julia> println("Welcome to ")
 Welcome to </code></pre>
 <p>It’s usually possible to type Unicode values directly into text. This is a useful skill to have when you’re not using the Julia REPL... On MacOS you hold the Option &#40;⌥&#41; key down while typing the four hex digits &#40;make sure you’re using the Unicode Hex Input keyboard&#41;. On Windows I think you type the four hex digits followed by <code>ALT</code> then <code>X</code>. On Linux it might be <code>ctrl</code>-<code>shift</code>-<code>u</code> followed by the hex digits.</p>
-<h4 id="type_anything_here_nobodys_looking"><a href="#type_anything_here_nobodys_looking">Type anything here. Nobody’s looking.</a></h4>  
+<h4 id="type_anything_here_nobodys_looking"><a href="#type_anything_here_nobodys_looking">Type anything here. Nobody’s looking.</a></h4>
+
 <textarea class="tryit" rows="4" cols="50">
 </textarea>
 
 <h3 id="thanks"><a href="#thanks">Thanks&#33;</a></h3>
 <p>Thanks to: Thibaut Lienart for his <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> web site builder; to Jérémie Knüsel who provided invaluable suggestions and advice; to Dr Zygmunt Szpak for his cool maths code.</p>
-<h3 id="footnotes"><a href="#footnotes">Footnotes</a></h3>  <table class="fndef" id="fndef:opensource">
+<h3 id="footnotes"><a href="#footnotes">Footnotes</a></h3>
+<p><table class="fndef" id="fndef:opensource">
     <tr>
         <td class="fndef-backref"><a href="#fnref:opensource">[1]</a></td>
         <td class="fndef-content">&nbsp; “open source” Eventually, but I’ve got to work out how to do it first.</td>
@@ -514,7 +516,7 @@ Welcome to </code></pre>
  <table class="fndef" id="fndef:windows">
     <tr>
         <td class="fndef-backref"><a href="#fnref:windows">[2]</a></td>
-        <td class="fndef-content">&nbsp; “Windows” For more information about if and how it works on Windows, read <a href="/faq/#does_it_work_on_windows">this</a>, but I currently don&#39;t know enough about Windows font technology and how it differs from MacOS and Unix. Early reports are that the font doesn&#39;t look good on Windows.</td>
+        <td class="fndef-content">&nbsp; “Windows” For more information about if and how it works on Windows, read <a href="/faq/#does_it_work_on_windows">this</a>, but I currently don&#39;t know enough about Windows font technology and how it differs from MacOS and Unix. Early reports said that the font didn&#39;t look good on Windows. This was because the format was CFF/PostScript OTF, which isn&#39;t hinted on Windows. A switch to TTF/TrueType OTF, which is hinted, was considered an improvement.</td>
     </tr>
 </table>
  <table class="fndef" id="fndef:licence">
@@ -550,7 +552,7 @@ Welcome to </code></pre>
  <table class="fndef" id="fndef:linespacing">
     <tr>
         <td class="fndef-backref"><a href="#fnref:linespacing">[8]</a></td>
-        <td class="fndef-content">&nbsp; “terminals and line spacing” Terminal applications usually provide the option to vary the line spacing.  For perfectly smooth Unicode plots, you can adjust this until the shaded glyphs are in tune. But for coding purposes you might want the line spacing increased &#40;or decreased&#41; from the default.</td>
+        <td class="fndef-content">&nbsp; “terminals and line spacing” Terminal applications usually provide the option to vary the line spacing.  For perfectly smooth Unicode plots, you can adjust this until the shaded glyphs are in tune. But for coding purposes you might want the line spacing increased &#40;or decreased&#41; from the default, depending on the trade-off between reading speed, font size, and how many lines of code you can cram in.</td>
     </tr>
 </table>
  <table class="fndef" id="fndef:greedy">
@@ -589,9 +591,10 @@ Welcome to </code></pre>
         <td class="fndef-content">&nbsp; “terminals again” Writers of terminal apps usually have their own ideas about how fonts and type should be managed and displayed. I haven’t yet found one that did everything that I wanted it to and nothing I didn’t expect it to. In the world of fonts, nothing is 100&#37; correct, which can be frustrating. You can track some of the issues and discussions on github and elsewhere: here’s a <a href="https://github.com/microsoft/vscode/issues/34103">VS Code</a> issue; here are the <a href="https://github.com/alacritty/alacritty/issues/50">Alacritty terminal developers</a> working on it; here is the <a href="https://iterm2.com/documentation-fonts.html">iTerm documentation</a> talking about performance.</td>
     </tr>
 </table>
- <div class="page-foot">
+ </p>
+<div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: August 05, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: August 20, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

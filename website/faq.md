@@ -53,13 +53,13 @@ Most people probably can’t tell the difference between Helvetica and Arial, an
 
 (Hello JuliaCon Reviewer 5...!) Unfortunately, in the world of typographical software, one programming language is currently ubiquitous (hint: one of the leading programmers in the typography realm is **Just van Rossum**, one of the van Rossum brothers) and it’s not Julia.
 
-The typeface isn’t a Julia package. (Could it be? Should it be?) But although Julia wasn’t used to build the typeface, I did use Julia quite a lot while designing it; sometimes to generate glyphs, there being plenty of symmetrical designs that lend themselves to programmatic construction with a simple graphics program (e.g. [Luxor.jl](https://github.com/JuliaGraphics/Luxor.jl)). And also for producing glyph lists, charts, test output, and build scripts. And the various graphics you see here and in the specimen PDF were also made with Julia. So in that sense at least the font is a bit Julian.
+The typeface isn’t a Julia package. It might be, soon! But although Julia wasn’t used to build the typeface, I did use Julia quite a lot while designing it; sometimes to generate glyphs, there being plenty of symmetrical designs that lend themselves to programmatic construction with a simple graphics program (e.g. [Luxor.jl](https://github.com/JuliaGraphics/Luxor.jl)). And also for producing glyph lists, charts, test output, and build scripts. And the various graphics you see here and in the specimen PDF were also made with Julia. So in that sense at least the font is a bit Julian.
 
 And how will JuliaMono contribute? It’s often in the nature of an experiment that the outcome is uncertain until it’s been carried out.
 
 #### ‘Is it finished?’
 
-The first beta release, version 0.0.1, was released on July 27, 2020. The experiment is best described as ‘started’ (or at least ‘not yet abandoned‘) rather than ‘finished’. As with most things, progress will vary according to supply and demand. Always download the latest version if you want the typeface to perform as well as it can.
+The first beta release, version 0.001, was released on July 27, 2020. The current version is 0.008, released on August 15 2020. The experiment is best described as ‘started’ (or at least ‘not yet abandoned‘) rather than ‘finished’. As with most things, progress will vary according to supply and demand. Always download the latest version if you want the typeface to perform as well as it can.
 
 #### ‘The glyph Uxxxx is missing/wrong - can you add/change it?’
 
@@ -79,6 +79,8 @@ Find the relevant CSS file, and add a link to the WOFF2 stored on the server. Fo
 This accesses version 0.008 of the Regular font using the jsDelivr CDN (Content Delivery Network).. You may prefer to serve the WOFF/2 fonts from your own server. One problem you might encounter is related to [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), which on some browsers prevents one web page from downloading fonts from another.
 
 #### ‘How do I control features in CSS, in Atom/Juno, or VS Code?’
+
+##### Atom/Juno
 
 In the Atom/Juno stylesheet, you can specify the font with the required CSS selectors:
 
@@ -122,14 +124,27 @@ atom-text-editor {
 }
 ```
 
-In VS Code you’ll find suitable JSON settings somewhere in the labyrinthine (but thankfully searchable) Settings department. To control the display of contextual and stylistic alternates, add a line like this:
+##### VS-Code
+
+In VS-Code you’ll find the font settings somewhere in the labyrinthine (but thankfully searchable) Settings department.
+
+![VS Code settings](/assets/vscode-settings-1-800.png)
+
+To control the display of contextual and stylistic alternates, click on the Edit Settings in JSON, and look for `editor.fontLigatures`:
+
+
+![VS Code settings](/assets/vscode-settings-2-800.png)
+
+This uses the feature codes ([(listed here](/#contextual_and_stylistic_alternates)). These should all be switched on or off in a single line.
+
+For example, if you want all the alternate stylistic sets, use:
 
 ```css
 "editor.fontLigatures": "'ss01', 'ss02', 'ss03',
-	'ss04', 'ss05', 'ss06', 'zero'",
+    'ss04', 'ss05', 'ss06', 'zero'",
 ```
 
-This uses the feature codes ([(listed here](/#contextual_and_stylistic_alternates)). These should all be switched on or off in a single line. So for example, if you don’t like the contextual alternates, prefer the slashed zero, a simpler g, and a lighter asterisk, use this:
+Or if you don’t like the contextual alternates, prefer the slashed zero, a simpler g, and a lighter asterisk, use this:
 
 ```css
 "editor.fontLigatures": "'calt' off, 'zero', 'ss01', 'ss05'",
@@ -334,10 +349,6 @@ julϊ̇a
 
 Yes.
 
-
-
-
-
 #### ‘Does it work on Linux?’
 
 Yes. But font management in Linux may require you to become familiar with the `fontconfig` program. And it may be necessary to provide an additional configuration file (in `/etc/fonts/local.conf` for example), that contains instructions like the following:
@@ -355,13 +366,15 @@ I say ‘may’ but I don’t know for sure.
 
 #### ‘Does it work on Windows?’
 
-I don’t know. I don’t have a Windows computer to test it on, and this year has made it difficult to even gain access to one. Microsoft Windows has always had a very different approach to typography and fonts to Apple’s MacOS. I prefer the Mac approach to typography - it’s just personal taste, though, being what I’m used to.
+I think so. I don’t have a Windows computer to test it on, and this year has made it difficult to even gain access to one. Microsoft Windows has always had a very different approach to typography and fonts to Apple’s MacOS. I prefer the Mac approach to typography - it’s just personal taste, though, being what I’m used to.
 
 [This fairly old article](https://blog.codinghorror.com/font-rendering-respecting-the-pixel-grid/) by Jeff (“I have no idea what I’m talking about”) Atwood mentions a few of the design issues. He speculates about a future where we’re all “luxuriating in the glow of [our] 200 DPI monitors”.
 
 Are we there yet? Until then, fonts will only look as good as our monitors permit. My current computer is a 5K iMac (220 pixels per inch), which makes even badly-made fonts look crisp and finely detailed. But high-quality fonts struggle to mmaintain their quality when they’re displayed on low-resolution displays.
 
-OTF font files are containers, and can hold two different font flavours. One is the PostScript (CFF) format, which uses cubic Bezier curves, and the other is the TrueType (TTF) format, which uses quadratic Bezier curves. These are the survivors of the “font wars”.  The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets the type designer provide instructions on how best to distort the true character shapes so that they look better on less expensive devices. These hinting instructions are not used on Apple devices, probably because Apple don’t make any low-resolution devices. However, TTF font files are considerably larger than the CFF/OTF versions.
+JuliaMono is an OTF/TTF-flavoured font.
+
+OTF font files are containers, and can hold two different font flavours. One is the PostScript (CFF) format, which uses cubic Bezier curves, and the other is the TrueType (TTF) format, which uses quadratic Bezier curves. These are the survivors of the “font wars”.  The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets the type designer provide instructions on how best to distort the true character shapes so that they look better on less expensive devices. These hinting instructions are not used on Apple devices, probably because Apple don’t make any low-resolution devices. However, TTF font files are considerably larger than the OTF/CFF versions.
 
 #### ‘Any love for nerdfonts?’
 

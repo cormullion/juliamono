@@ -1,6 +1,22 @@
 # Changelog
 
-## [v0.008] coming soon
+## [v0.009] 2020-08-20
+
+### Added
+
+### Changed
+
+- adjusted designs for Ψ and ψ to make them more different
+- added \U1F7C0 -> \U1F7D8
+- adjusted saltire
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## [v0.008] 2020-08-15 00:00:00
 
 ### Added
 
