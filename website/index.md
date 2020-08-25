@@ -476,6 +476,13 @@ Here’s a list of the stylistic sets currently available in JuliaMono.
     <td><p>simple a</p></td>
     </tr>
 
+    <tr>
+    <td>ss07</td>
+    <td class="code_ss_off">`</td>
+    <td class="code_ss_on">`</td>
+    <td><p>smaller grave</p></td>
+    </tr>
+
 </table>
 ~~~
 
@@ -548,7 +555,7 @@ It’s usually possible to type Unicode values directly into text. This is a use
 
 ### Thanks!
 
-Thanks to: Thibaut Lienart for his [Franklin.jl](https://github.com/tlienart/Franklin.jl) web site builder; to Jérémie Knüsel who provided invaluable suggestions and advice; to Dr Zygmunt Szpak for his cool maths code.
+Thanks to: Thibaut Lienart for his [Franklin.jl](https://github.com/tlienart/Franklin.jl) web site builder; to Jérémie Knüsel who provided invaluable suggestions and advice; to Dr Zygmunt Szpak for his cool maths code; to Simeon Schaub for the issues and PRs.
 
 ### Footnotes
 [^opensource]:  &nbsp; “open source” Eventually, but I’ve got to work out how to do it first.
