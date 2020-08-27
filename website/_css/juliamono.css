@@ -206,7 +206,7 @@ code.language-julia.hljs {
 .code_ss_on {
 	/* simple g, circular @, simple j */
 	width:100%;
-	font-feature-settings: "zero", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06";
+	font-feature-settings: "zero", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07";
 	/* no contextual ligatures */
 	font-variant-ligatures: no-contextual;
 }

@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.010] 2020-08-27
+
+### Added
+
+- added ss07: smaller grave
+- added Rrotundas
+
+### Changed
+
+- minor adjustments to glyphs
+- updated specimen
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.009] 2020-08-20
 
 ### Added
