@@ -39,7 +39,7 @@ Locate your font folder. Might be one of:
 ~/.local/share/fonts/
 ```
 
-You might want to (or have to) regenerate the font cache:
+and copy the files there. You might want to (or have to) regenerate the font cache:
 
 ```
 $ fc-cache -f -v
