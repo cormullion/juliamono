@@ -1,5 +1,22 @@
 # Changelog
 
+## [v0.011] 2020-08-31
+
+### Added
+
+- copied subscripts and superscripts to PUA F0000 temporarily (cf steven johnson's proposal)
+
+### Changed
+
+- adjusted height of acute accented characters, perhaps will avoid some clipping on windows terminal
+- minor adjustments to subscripts...
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.010] 2020-08-27
 
 ### Added
