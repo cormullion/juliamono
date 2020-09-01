@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.012] 2020-09-01
+
+### Added
+
+### Changed
+
+- typoascender set to 950
+- fixed weird ligature bug with ->
+- tweak designs of some script glyphs (WIP)
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.011] 2020-08-31
 
 ### Added
@@ -8,6 +24,8 @@
 
 ### Changed
 
+
+- typoascender set to 1000
 - adjusted height of acute accented characters, perhaps will avoid some clipping on windows terminal
 - minor adjustments to subscripts...
 
