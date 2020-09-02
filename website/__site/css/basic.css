@@ -85,7 +85,7 @@ instead, display a burger menu.
 @media (max-width: 500px) {
     header {
         display: flex;
-        align-items: left;
+        align-items: start;
 	}
 
     nav {
