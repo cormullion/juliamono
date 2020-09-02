@@ -213,13 +213,13 @@ code.language-julia.hljs {
 
 .code_ss_off {
 	/* simple g, circular @, simple j */
-	font-feature-settings: none;
+	font-feature-settings: normal;
 	/* no contextual ligatures */
 	font-variant-ligatures: no-contextual;
 }
 
 .code_calt_on {
-	font-feature-settings: none;
+	font-feature-settings: normal;
 	/* no contextual ligatures */
 	font-variant-ligatures: contextual;
 }
@@ -253,7 +253,6 @@ code.language-julia.hljs {
 
 .tryit {
 	font-family: JuliaMono-Regular;
-	position: center;
 	width: 90%;
 	margin: 1em;
 	line-height: 2.2em;
