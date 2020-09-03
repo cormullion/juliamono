@@ -1,5 +1,20 @@
 # Changelog
 
+## [v0.013] 2020-09-03
+
+### Added
+
+### Changed
+
+- minor tweaks to subscripts, scripts, math operators
+- fixed css errors in website
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.012] 2020-09-01
 
 ### Added
