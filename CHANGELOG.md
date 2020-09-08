@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.014] 2020-09-08
+
+### Added
+
+- `ss08` "Distinct Ligatures" is a stylistic set that inserts a small gap between the arrow ligature glyphs if `calt` is not enabled
+
+### Changed
+
+- tweaked some Greek characters: Φϕφ
+- removed <- ligature
+- misc tweaking
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.013] 2020-09-03
 
 ### Added
