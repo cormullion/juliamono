@@ -127,7 +127,7 @@ atom-text-editor {
 
 <!--  force a paragraph  -->
 
-#### ‘Can I use this font in a Jupyter notebook? Or a Pluto notebook? And how do I do it?’
+#### ‘Can I use this font in a notebook?And how do I do it?’
 
 It’s a good question. Some browsers these days are reluctant to give even you access to things on your own local disk, “for security reasons”. But a local copy of the font may be available and accessible on your particular set-up.
 
@@ -175,15 +175,13 @@ which downloads the font once and is then available to the notebook.
 </div>
 ~~~
 
-For Pluto.jl, there’s no easy path to customization at present. If you can’t override the style using a browser style switcher such as [Stylish](https://userstyles.org) (Mac users might prefer [Cascadea](https://cascadea.app)), you can try to edit the `editor.css` file in `~/.julia/packages/Pluto/???/assets/editor.css`. Otherwise, it’s Roboto Mono for you...
-
 #### ‘How do I use the font in Plots.jl?’
 
 Another great question. Are you sure you want a monospaced font on your plot? If you do, it should be easy enough to ask for the font when you plot. But it’s never as simple as you want it to be, as is usual in the world of fonts.
 
 I know very little about plotting in Julia, but some investigations suggest that:
 
-- pyplot() works well, mostly
+- `pyplot()` works well, mostly
 - some backends do their own thing with fonts. For example, I couldn’t persuade the GR backend to use JuliaMono at all.
 
 Here’s some code that uses JuliaMono for a plot. The plot shows the frequency of occurrence of every Unicode character used in the Julia git repository, and uses the characters as plot markers. I went through every text file and totalled all the characters - there are 956044 letter “e”s, and so on. I’m using `pyplot()`; the `freqs` DataFrame holds the characters and the counts. I’ve created a few font objects using `Plots.font()`, which makes it easier to use different text styles in the `plot()` function. I haven’t yet worked out how to use the different weights of a font family.

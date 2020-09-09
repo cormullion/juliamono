@@ -1,5 +1,20 @@
 # Changelog
 
+## [v0.015] 2020-09-
+
+### Added
+
+- JuliaMono-BoldLatin is a JuliaMono-BOld on a diet: only 330 glyphs!
+- prototype for ss09 Alternate f
+
+### Changed
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.014] 2020-09-08
 
 ### Added
