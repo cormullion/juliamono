@@ -1,11 +1,11 @@
 # Changelog
 
-## [v0.015] 2020-09-
+## [v0.015] 2020-09-15
 
 ### Added
 
-- JuliaMono-BoldLatin is a JuliaMono-BOld on a diet: only 330 glyphs!
-- prototype for ss09 Alternate f
+- JuliaMono-BoldLatin is a JuliaMono-Bold on a diet: only 330 glyphs!
+- ss09 contains an allternate design for "f"
 
 ### Changed
 
