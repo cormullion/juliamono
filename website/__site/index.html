@@ -129,8 +129,7 @@ end</code></pre>
     l = length(𝛉)
     𝐈ₗ = SMatrix{l,l}(1.0I)
     𝐈ₘ = SMatrix{1,1}(1.0I)
-    𝐓 = @SMatrix ze
-	++++ros(l,l)
+    𝐓 = @SMatrix zeros(l,l)
     N = length(𝒟[1])
     ℳ, ℳʹ = 𝒟
     Λ₁, Λ₂ = 𝒞
