@@ -14,6 +14,15 @@ For Arch Linux, there is also a [package in the AUR](https://aur.archlinux.org/p
 
 To install and activate a font, launch Font Book from your Applications folder, and drag the font files into the middle pane labelled Font. If you're using a different font manager, you already know what to do. :)
 
+##### Homebrew
+
+On the latest version of Homebrew, you can install the fonts with:
+
+```
+$ brew tap homebrew/cask-fonts
+$ brew cask install font-juliamono
+```
+
 #### Windows
 
 To install and activate a font on Windows, go to Computer |> Local Disk (C:) |> Windows |> Fonts. Locate the expanded .zip file folder, and drag the font files from there into the Fonts folder.

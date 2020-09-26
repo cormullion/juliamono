@@ -129,7 +129,8 @@ end</code></pre>
     l = length(𝛉)
     𝐈ₗ = SMatrix{l,l}(1.0I)
     𝐈ₘ = SMatrix{1,1}(1.0I)
-    𝐓 = @SMatrix zeros(l,l)
+    𝐓 = @SMatrix ze
+	++++ros(l,l)
     N = length(𝒟[1])
     ℳ, ℳʹ = 𝒟
     Λ₁, Λ₂ = 𝒞
@@ -288,7 +289,7 @@ end</code></pre>
 
 
 <h3 id="unicode_coverage"><a href="#unicode_coverage">Unicode coverage</a></h3>
-<p>One of the goals of JuliaMono is to include most of the characters that a Julia programmer would reasonably expect to find. &#40;Except for all those emojis - they are best handled by the operating system.&#41; Here’s a couple of thousand chosen at random:</p>
+<p>One of the goals of JuliaMono is to include most of the characters that a Julia programmer would reasonably expect to find. &#40;Except for all those emojis - they are best handled by the operating system.&#41; Here’s a thousand or so chosen at random:</p>
 <img src="/assets/unicode-sample.svg" width="100%" alt="Unicode sampler"> 
 <p>In JuliaMono, every character is the same width, because this is a <a href="https://en.wikipedia.org/wiki/Monospaced_font">monospaced</a> typeface. Usually, typefaces with a lot of Unicode mathematical symbols are not monospaced, because they’re intended for use in prose and \( \LaTeX \) applications, rather than in programming code.</p>
 <p>From a design perspective, forcing every character into the same size box is a problem. It’s like fitting every human being of whatever shape or size into identical airplane seats - some characters are bound to look uncomfortable. There’s never quite enough room for a nice-looking “m” or “w”.</p>
@@ -320,19 +321,19 @@ end</code></pre>
 <p>It’s also a good idea to support box-drawing characters and DataFrames.jl output &#40;terminal permitting&#41;:</p>
 <pre><code class="language-julia">julia> df = DataFrame(A=samples, B=glyphs)
 df = 10×2 DataFrame
-│ Row │ A                 │ B                   │
-│     │ String            │ String              │
-├─────┼───────────────────┼─────────────────────┤
-│ 1   │ sample 1          │ ▁▂▁▁▂▄▅▁▄▁▁▅▆▂▇▅▂▇  │
-│ 2   │ sample 2          │ ▁▂▄▁▁▃▁▆▂▆▃▁▂▃▂▇▄   │
-│ 3   │ sample 3          │ ▁▆▇▁▃▇▇▆▅▅▄▇▇▅▅▇▄▂  │
-│ 4   │ sample 4          │ ▅▁▄▁▆▃▁▃▇▂▂▇▅▇▃▆▃▁  │
-│ 5   │ sample 5          │ ▆▂▁▂▇▆▃▅▅▄▆▇▄▇▆▁▇   │
-│ 6   │ sample 6          │ ▁▁▇▂▂▇▃▅▂▂▆▂▄▄▁▄▂▇▆ │
-│ 7   │ sample 7          │ ▂▃▂▁▁▇▁▂▆▂▁▇▁▄▃▂▁▄  │
-│ 8   │ sample 8          │ ▄▄▁▂▄▁▅▁▅▁▂▂▇▂▁▃▄▄  │
-│ 9   │ sample 9          │ ▁▁▁▂▁▆▃▄▄▁▂▂▃▂▁▅▁▆▃ │
-│ 10  │ sample 10         │ ▁▇▄▂▅▃▇▁▇▇▆▄▇▅▄▂▄▅▄ │</code></pre>
+│ Row │ A              │ B                   │
+│     │ String         │ String              │
+├─────┼────────────────┼─────────────────────┤
+│ 1   │ sample 1       │ ▁▂▁▁▂▄▅▁▄▁▁▅▆▂▇▅▂▇  │
+│ 2   │ sample 2       │ ▁▂▄▁▁▃▁▆▂▆▃▁▂▃▂▇▄   │
+│ 3   │ sample 3       │ ▁▆▇▁▃▇▇▆▅▅▄▇▇▅▅▇▄▂  │
+│ 4   │ sample 4       │ ▅▁▄▁▆▃▁▃▇▂▂▇▅▇▃▆▃▁  │
+│ 5   │ sample 5       │ ▆▂▁▂▇▆▃▅▅▄▆▇▄▇▆▁▇   │
+│ 6   │ sample 6       │ ▁▁▇▂▂▇▃▅▂▂▆▂▄▄▁▄▂▇▆ │
+│ 7   │ sample 7       │ ▂▃▂▁▁▇▁▂▆▂▁▇▁▄▃▂▁▄  │
+│ 8   │ sample 8       │ ▄▄▁▂▄▁▅▁▅▁▂▂▇▂▁▃▄▄  │
+│ 9   │ sample 9       │ ▁▁▁▂▁▆▃▄▄▁▂▂▃▂▁▅▁▆▃ │
+│ 10  │ sample 10      │ ▁▇▄▂▅▃▇▁▇▇▆▄▇▅▄▂▄▅▄ │</code></pre>
 <p>&#40;Can you spot the little used and sadly mathematically-unsupported &quot;times&quot; character?&#41;</p>
 <p>If you want to know whether you can use a Unicode character as an identifier in your Julia code, use the undocumented function <code>Base.isidentifier&#40;&#41;</code>. So, for example, if you have the urge to use a dingbat &#40;one of the classic <a href="https://en.wikipedia.org/wiki/Zapf_Dingbats">Herman Zapf dingbat</a> designs&#41;, you could look for something suitable in the output of this:</p>
 <pre><code class="language-julia">julia> for n in 0x2700:0x27bf
@@ -464,6 +465,18 @@ df2 = df |>
     <td class="code_ss_off">`</td>
     <td class="code_ss_on">`</td>
     <td><p>smaller grave</p></td>
+    </tr>
+    <tr>
+    <td>ss08</td>
+    <td class="code_ss_off">-></td>
+    <td class="code_ss_on_dl">-></td>
+    <td><p>distinct ligatures</p></td>
+    </tr>
+    <tr>
+    <td>ss09</td>
+    <td class="code_ss_off">f</td>
+    <td class="code_ss_on">f</td>
+    <td><p>alternate f</p></td>
     </tr>
 
 </table>
@@ -598,7 +611,7 @@ Welcome to </code></pre>
  </p>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: September 09, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: September 26, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

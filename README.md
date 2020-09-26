@@ -4,6 +4,8 @@ Jeff Bezanson, co-creator of Julia, "State of Julia 2020", YouTube.
 
 #### JuliaMono, a font for programming with Julia
 
+Visit [juliamono.netlify.app](https://juliamono.netlify.app/) to read all about this typeface.
+
 Here are the pages from the specimen PDF, to save you downloading it.
 
 ![specimen page 1](https://github.com/cormullion/juliamono/blob/master/images/specimen_1.png)

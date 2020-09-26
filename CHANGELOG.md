@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.016] 2020-09-26
+
+### Added
+
+### Changed
+
+- fixed faulty axis weight setting
+- tidied up some fractions
+- more tweaking of Greek characters (one day George will be happy :)
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.015] 2020-09-15
 
 ### Added
@@ -19,7 +35,7 @@
 
 ### Added
 
-- `ss08` "Distinct Ligatures" is a stylistic set that inserts a small gap between the arrow ligature glyphs if `calt` is not enabled
+- `ss08` "Distinct Ligatures" is a stylistic set that inserts a small gap between the arrow ligature glyphs - ONLY if `calt` is not enabled
 
 ### Changed
 

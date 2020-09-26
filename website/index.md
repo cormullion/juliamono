@@ -109,7 +109,8 @@ function T(𝛉::AbstractArray,
     l = length(𝛉)
     𝐈ₗ = SMatrix{l,l}(1.0I)
     𝐈ₘ = SMatrix{1,1}(1.0I)
-    𝐓 = @SMatrix zeros(l,l)
+    𝐓 = @SMatrix ze
+	++++ros(l,l)
     N = length(𝒟[1])
     ℳ, ℳʹ = 𝒟
     Λ₁, Λ₂ = 𝒞
@@ -274,7 +275,7 @@ Here are some samples of various languages[^languages] :
 
 ### Unicode coverage
 
-One of the goals of JuliaMono is to include most of the characters that a Julia programmer would reasonably expect to find. (Except for all those emojis - they are best handled by the operating system.) Here’s a couple of thousand chosen at random:
+One of the goals of JuliaMono is to include most of the characters that a Julia programmer would reasonably expect to find. (Except for all those emojis - they are best handled by the operating system.) Here’s a thousand or so chosen at random:
 
 ~~~<img src="/assets/unicode-sample.svg" width="100%" alt="Unicode sampler"> ~~~
 
@@ -319,19 +320,19 @@ It’s also a good idea to support box-drawing characters and DataFrames.jl outp
 ```
 julia> df = DataFrame(A=samples, B=glyphs)
 df = 10×2 DataFrame
-│ Row │ A                 │ B                   │
-│     │ String            │ String              │
-├─────┼───────────────────┼─────────────────────┤
-│ 1   │ sample 1          │ ▁▂▁▁▂▄▅▁▄▁▁▅▆▂▇▅▂▇  │
-│ 2   │ sample 2          │ ▁▂▄▁▁▃▁▆▂▆▃▁▂▃▂▇▄   │
-│ 3   │ sample 3          │ ▁▆▇▁▃▇▇▆▅▅▄▇▇▅▅▇▄▂  │
-│ 4   │ sample 4          │ ▅▁▄▁▆▃▁▃▇▂▂▇▅▇▃▆▃▁  │
-│ 5   │ sample 5          │ ▆▂▁▂▇▆▃▅▅▄▆▇▄▇▆▁▇   │
-│ 6   │ sample 6          │ ▁▁▇▂▂▇▃▅▂▂▆▂▄▄▁▄▂▇▆ │
-│ 7   │ sample 7          │ ▂▃▂▁▁▇▁▂▆▂▁▇▁▄▃▂▁▄  │
-│ 8   │ sample 8          │ ▄▄▁▂▄▁▅▁▅▁▂▂▇▂▁▃▄▄  │
-│ 9   │ sample 9          │ ▁▁▁▂▁▆▃▄▄▁▂▂▃▂▁▅▁▆▃ │
-│ 10  │ sample 10         │ ▁▇▄▂▅▃▇▁▇▇▆▄▇▅▄▂▄▅▄ │
+│ Row │ A              │ B                   │
+│     │ String         │ String              │
+├─────┼────────────────┼─────────────────────┤
+│ 1   │ sample 1       │ ▁▂▁▁▂▄▅▁▄▁▁▅▆▂▇▅▂▇  │
+│ 2   │ sample 2       │ ▁▂▄▁▁▃▁▆▂▆▃▁▂▃▂▇▄   │
+│ 3   │ sample 3       │ ▁▆▇▁▃▇▇▆▅▅▄▇▇▅▅▇▄▂  │
+│ 4   │ sample 4       │ ▅▁▄▁▆▃▁▃▇▂▂▇▅▇▃▆▃▁  │
+│ 5   │ sample 5       │ ▆▂▁▂▇▆▃▅▅▄▆▇▄▇▆▁▇   │
+│ 6   │ sample 6       │ ▁▁▇▂▂▇▃▅▂▂▆▂▄▄▁▄▂▇▆ │
+│ 7   │ sample 7       │ ▂▃▂▁▁▇▁▂▆▂▁▇▁▄▃▂▁▄  │
+│ 8   │ sample 8       │ ▄▄▁▂▄▁▅▁▅▁▂▂▇▂▁▃▄▄  │
+│ 9   │ sample 9       │ ▁▁▁▂▁▆▃▄▄▁▂▂▃▂▁▅▁▆▃ │
+│ 10  │ sample 10      │ ▁▇▄▂▅▃▇▁▇▇▆▄▇▅▄▂▄▅▄ │
 ```
 
 (Can you spot the little used and sadly mathematically-unsupported "times" character?)
@@ -483,6 +484,18 @@ Here’s a list of the stylistic sets currently available in JuliaMono.
     <td class="code_ss_off">`</td>
     <td class="code_ss_on">`</td>
     <td><p>smaller grave</p></td>
+    </tr>
+    <tr>
+    <td>ss08</td>
+    <td class="code_ss_off">-></td>
+    <td class="code_ss_on_dl">-></td>
+    <td><p>distinct ligatures</p></td>
+    </tr>
+    <tr>
+    <td>ss09</td>
+    <td class="code_ss_off">f</td>
+    <td class="code_ss_on">f</td>
+    <td><p>alternate f</p></td>
     </tr>
 
 </table>

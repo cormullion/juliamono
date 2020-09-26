@@ -186,16 +186,13 @@ code.language-julia.hljs {
 }
 
 .codealt * {
-	/* slash zero, simple g, circular @, simple j, alternate asterisk, simple a */
-	font-feature-settings: "ss01", "ss02", "ss03", "ss04", "ss05", "ss06";
-	/* no contextual ligatures */
+	font-feature-settings: "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09" ;
 	font-variant-ligatures: no-contextual;
 }
 
 .code_zero_on {
 	/* slash zero */
 	font-feature-settings: "zero";
-	/* no contextual ligatures */
 	font-variant-ligatures: no-contextual;
 }
 
@@ -204,23 +201,23 @@ code.language-julia.hljs {
 }
 
 .code_ss_on {
-	/* simple g, circular @, simple j */
 	width:100%;
-	font-feature-settings: "zero", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07";
-	/* no contextual ligatures */
+	font-feature-settings: "zero", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09";
 	font-variant-ligatures: no-contextual;
 }
 
 .code_ss_off {
-	/* simple g, circular @, simple j */
 	font-feature-settings: normal;
-	/* no contextual ligatures */
+	font-variant-ligatures: no-contextual;
+}
+
+.code_ss_on_dl {
+	font-feature-settings: "ss08";
 	font-variant-ligatures: no-contextual;
 }
 
 .code_calt_on {
 	font-feature-settings: normal;
-	/* no contextual ligatures */
 	font-variant-ligatures: contextual;
 }
 
