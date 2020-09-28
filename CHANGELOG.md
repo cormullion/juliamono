@@ -6,7 +6,9 @@
 
 ### Changed
 
-- fixed u1D2e2
+- fixed u02a7 tesh
+- fixed u240E shift out
+- fixed U1D2E2 mayan numeral 2
 
 ### Removed
 

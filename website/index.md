@@ -19,7 +19,7 @@ This site uses JuliaMono for all text; if your browser can’t[^ohdear] (or you 
 
 ~~~<span style="text-align: center;font-family: JuliaMono-Regular;font-size:4rem;"> (  ) </span>~~~
 
-To download and install JuliaMono, see the instructions [here](/faq/).
+To download and install JuliaMono, see the instructions [here](/download/).
 
 ### Screenshots
 
