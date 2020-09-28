@@ -7,30 +7,27 @@
 
 #### ‘Why⁉’
 
-Well, I wanted something to take to the 2020 JuliaCon at Lisbon, rather than my usual doodles made with Julia. I thought it might be of more general interest. This was to be my first ever presentation at my first ever conference, but this year hasn’t gone according to plan for any of us.
-
-JuliaMono is in the nature of an experiment, to see whether it would be possible and/or useful to create a typeface with the Julia language in mind.
+The typeface was introduced at the 2020 Julia conference, in Lisbon, and it was my contribution to the festivities.
 
 #### ‘What’s Julia-specific about it? How does it “work well with” Julia?’
 
-* it’s got Julia in the name :)
 * it has all the glyphs used in the Unicode Input chapter of the Julia documentation (except for the emojis)
-* the glyphs were designed to make my Julia code look nice
+* the glyphs were designed with Julia code in mind
+* the font contains special features such as contextual alternates, stylistic sets, and “ligatures” to complement Julia syntax
 
 #### ‘Where can I see it in action?’
 
-Well, apart from here, you could visit my [blog](https://cormullion.github.io), or, for a wider range of examples, visit [this mirror of the Julia blog](https://julialangblogmirror.netlify.app/blog/). It hasn’t been updated for a while (it was useful during the development of [Franklin.jl](https://franklinjl.org)), but all the code examples use JuliaMono.
+You can visit [this mirror of the Julia blog](https://julialangblogmirror.netlify.app/blog/). It hasn’t been updated for a while (it was useful during the development of [Franklin.jl](https://franklinjl.org)), but all the code examples use JuliaMono.
 
-You can also browse through [this local copy](/assets/juliamanual/index.html) of the Julia manual. I’ve replaced the default Roboto-Mono font with JuliaMono-Regular, so you can check out your favourite manual pages (you have some, right?) to see what they look like.
+You can browse through [this local copy](/assets/juliamanual/index.html) of the Julia manual. The default Roboto-Mono font has been replaced with JuliaMono-Regular.
 
-#### ‘Why should I use it?’
+As an example of using JuliaMono with [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl)-generated documents, see the documentation for [Luxor.jl](https://github.com/JuliaGraphics/Luxor.jl).
 
-You don’t have to.
+For blogging, [my blog](https://cormullion.github.io) uses JuliaMono for code examples.
 
 #### ‘I don’t like it as much as ``$(my_favourite_font)``’
 
 **That’s not a question!** But I know what you mean. Choice of work environment (editor, font, colour scheme, background music, preferred beverage, etc.) is very much a personal thing, and over the hours, days, and weeks that you work with your particular setup, you’ll grow accustomed to it, and unfamiliar work environments will look unappealing or even ugly. You’d probably need to try any alternatives for a while before you get more accustomed to them. Fortunately, you don’t have to use [Comic Code](https://www.myfonts.com/fonts/tabular-type-foundry/comic-code/), the [Kakoune editor](http://kakoune.org), the music of [Autechre](http://autechre.ws/), [Durian tea](https://www.tealeaves.com/products/durian), or anything else that’s new and unfamiliar; just stick to your current favourites!
-
 
 #### ‘How can I use the web fonts?’
 
@@ -123,7 +120,6 @@ atom-text-editor {
 	    "ss04", "ss05", "ss06";
 }
 ```
-
 
 <!--  force a paragraph  -->
 
@@ -267,7 +263,7 @@ Then you can use something like `minted` to format the code.
 
 #### ‘Aren’t these font files too big?’
 
-Well, everything can be too big sometimes... It depends if you mean the web fonts or the ‘desktop’ fonts. Web fonts come in two flavours, `.WOFF` and `.WOFF2`, where the `2` indicates a more recent and slightly more compact format. `JuliaMono-Regular.woff` is 674KB, `JuliaMono-Regular.woff2` is 619KB - the size of a decent PNG image, for sure.
+It depends if you mean the web fonts or the ‘desktop’ fonts. Web fonts come in two flavours, `.WOFF` and `.WOFF2`, where the `2` indicates a more recent and slightly more compact format. `JuliaMono-Regular.woff` is 674KB, `JuliaMono-Regular.woff2` is 619KB - the size of a PNG image, perhaps.
 
 The `.OTF` desktop versions are more like 900Kb each. The `.TTF` are getting on for 1.8MB each. (See [Does it work on Windows]([this](/faq/#does_it_work_on_windows)).)
 
@@ -277,7 +273,7 @@ So, if you’re building a website, or designing for mobile applications, the si
 
 #### ‘How is this different from any other Unicode font?’
 
-(Hello, JuliaCon Reviewer 4!) You’re right, of course, there are many coding fonts, all perfectly adequate for the task of programming in Julia and most other languages. Comparing two different fonts is a matter of how important small similarities and differences are. Perhaps with one font you’ll see the occasional empty box or odd replacement rather than the character you were hoping for. Or perhaps sometimes you won’t like a particular glyph.
+You’re right, of course, there are many coding fonts, all perfectly adequate for the task of programming in Julia and most other languages. Comparing two different fonts is a matter of how important small similarities and differences are. Perhaps with one font you’ll see the occasional empty box or odd replacement rather than the character you were hoping for. Or perhaps sometimes you won’t like a particular glyph.
 
 More likely, though, the overall ‘feel’ of a new and unfamiliar font - too narrow, too wide, too dense, too light, too quirky, too dull, too consistent, too variable - is a matter of personal taste, immune to objective measurement. The design goals of JuliaMono - readable, easy to use, unquirky, simple - mean that the shapes aren’t compressed or condensed. It’s not fashionably thin. It might feel quite “airy” because of the generously-spaced shapes. The punctuation is quite solid, which might not be to your taste; it’s much more important in code than in ordinary prose, and my eyesight is probably poorer than yours!
 
@@ -285,7 +281,7 @@ Most people probably can’t tell the difference between Helvetica and Arial, an
 
 #### ‘Is it a package? Was it written in Julia? How will this contribute to the ecosystem of Julia language?’
 
-(Hello JuliaCon Reviewer 5...!) Unfortunately, in the world of typographical software, one programming language is currently ubiquitous (hint: one of the leading programmers in the typography realm is **Just van Rossum**, one of the van Rossum brothers) and it’s not Julia.
+Unfortunately, in the world of typographical software, one programming language is currently ubiquitous (hint: one of the leading programmers in the typography realm is **Just van Rossum**, one of the van Rossum brothers) and it’s not Julia.
 
 The typeface isn’t a Julia package. It might be, soon! But although Julia wasn’t used to build the typeface, I did use Julia quite a lot while designing it; sometimes to generate glyphs, there being plenty of symmetrical designs that lend themselves to programmatic construction with a simple graphics program (e.g. [Luxor.jl](https://github.com/JuliaGraphics/Luxor.jl)). And also for producing glyph lists, charts, test output, and build scripts. And the various graphics you see here and in the specimen PDF were also made with Julia. So in that sense at least the font is a bit Julian.
 
@@ -293,11 +289,12 @@ And how will JuliaMono contribute? It’s often in the nature of an experiment t
 
 #### ‘Is it finished?’
 
-The first beta release, version 0.001, was released on July 27, 2020. The current version is 0.008, released on August 15 2020. The experiment is best described as ‘started’ (or at least ‘not yet abandoned‘) rather than ‘finished’. As with most things, progress will vary according to supply and demand. Always download the latest version if you want the typeface to perform as well as it can.
+The first beta release, version 0.001, was released on July 27, 2020. The current version is 0.016, released in September 2020. Progress will vary according to supply and demand. Always download the latest version if you want the typeface to perform as well as it can.
 
 #### ‘The glyph Uxxxx is missing/wrong - can you add/change it?’
 
-Probably. Open an issue on github. If I feel like addressing it, it won’t take long to add or change an individual character glyph and update the fonts (less than an hour, probably), and compiling an OpenType font and uploading it only takes a few minutes. Similarly, adding non-Unicode characters is easy enough. Perhaps you want a new glyph added to the [Private Use Area](/index.html#private_use_areas)? There’s plenty of room.
+Probably. Open an issue on github. It doesn’t take long to add or change an individual character glyph and update the fonts (less than an hour, probably), and compiling an OpenType font and uploading it only takes a few minutes. Similarly, adding non-Unicode characters is easy enough. Perhaps you want a new glyph added to the [Private Use Area](/index.html#private_use_areas)?
+
 #### ‘Why don’t these accents/marks work properly?’
 
 Unicode (and Julia) allows you to combine characters. In the REPL, you can type a character and then modify it by adding a mark or diacritic. For example:
@@ -357,7 +354,9 @@ Yes.
 
 #### ‘Does it work on Linux?’
 
-Yes. But font management in Linux may require you to become familiar with the `fontconfig` program. And it may be necessary to provide an additional configuration file (in `/etc/fonts/local.conf` for example), that contains instructions like the following:
+Yes.
+
+Font management in Linux may require you to become familiar with the `fontconfig` program. And it may be necessary to provide an additional configuration file (in `/etc/fonts/local.conf` for example), that contains instructions like the following:
 
 ```html
 <alias>
@@ -368,19 +367,15 @@ Yes. But font management in Linux may require you to become familiar with the `f
 </alias>
 ```
 
-I say ‘may’ but I don’t know for sure.
-
 #### ‘Does it work on Windows?’
 
-I think so. I don’t have a Windows computer to test it on, and this year has made it difficult to even gain access to one. Microsoft Windows has always had a very different approach to typography and fonts to Apple’s MacOS. I prefer the Mac approach to typography - it’s just personal taste, though, being what I’m used to.
+The font works well on a good quality display, but will struggle to maintain quality when displayed on low-resolution displays.
 
-[This fairly old article](https://blog.codinghorror.com/font-rendering-respecting-the-pixel-grid/) by Jeff (“I have no idea what I’m talking about”) Atwood mentions a few of the design issues. He speculates about a future where we’re all “luxuriating in the glow of [our] 200 DPI monitors”.
+On Windows, the shapes of letters are distorted in order to place the important features of letters on pixels, rather than ‘between’ pixels (which could make features disappear). On high-resolution displays, as found on Apple devices, it isn't necesary to distort letter shapes in this way. The distortion is controlled by a process called ‘hinting’. On Windows displays, you may find that there is unevenness and variations in thickness and alignments, particularly at smaller sizes. This is due to the hinting generating distorted shapes to target pixels.
 
-Are we there yet? Until then, fonts will only look as good as our monitors permit. My current computer is a 5K iMac (220 pixels per inch), which makes even badly-made fonts look crisp and finely detailed. But high-quality fonts struggle to mmaintain their quality when they’re displayed on low-resolution displays.
+JuliaMono is an OTF/TTF-flavoured font that contains hinting instructions, so it might look reasonably good on lower-resolution screens.
 
-JuliaMono is an OTF/TTF-flavoured font.
-
-OTF font files are containers, and can hold two different font flavours. One is the PostScript (CFF) format, which uses cubic Bezier curves, and the other is the TrueType (TTF) format, which uses quadratic Bezier curves. These are the survivors of the “font wars”.  The TrueType format is sometimes preferred on Windows, because the more extensive ‘hinting’ lets the type designer provide instructions on how best to distort the true character shapes so that they look better on less expensive devices. These hinting instructions are not used on Apple devices, probably because Apple don’t make any low-resolution devices. However, TTF font files are considerably larger than the OTF/CFF versions.
+Hinted fonts are larger as a consequence.
 
 #### ‘Any love for nerdfonts?’
 

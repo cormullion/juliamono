@@ -2,14 +2,16 @@
 @def hasmath = true
 @def hascode = true
 
-### JuliaMono - a simple font for Julia code
+### JuliaMono - a monospaced font for scientific and technical computing
 
-JuliaMono is a monospaced typeface designed for programming in [Julia](https://julialang.org). You can use it for other languages, too... :) JuliaMono, like Julia, is:
+JuliaMono is a monospaced typeface designed for programming in [Julia](https://julialang.org) and in other text editing environments that require a wide range of specialist and technical Unicode characters.
+
+JuliaMono is:
 
 - free
 - open-source[^opensource]
 - suitable for scientific and technical programming as well as for general purpose hacking
-- available for MacOS, Unix, and (possibly) Windows [^windows]
+- available for MacOS, Unix, and Windows [^windows]
 - easy to use, simple, friendly, and approachable
 - distributed with a liberal licence [^licence]
 
@@ -17,7 +19,7 @@ This site uses JuliaMono for all text; if your browser can’t[^ohdear] (or you 
 
 ~~~<span style="text-align: center;font-family: JuliaMono-Regular;font-size:4rem;"> (  ) </span>~~~
 
-This project is unofficial, and isn’t endorsed by anyone in the Julia community!
+To download and install JuliaMono, see the instructions [here](/faq/).
 
 ### Screenshots
 
