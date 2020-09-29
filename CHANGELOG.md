@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.017] forthcoming release
+## [v0.017] 2020-09-29
 
 ### Added
 

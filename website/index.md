@@ -98,7 +98,7 @@ end
 
 There are different weights of JuliaMono, so you can control the amount of contrast you have in your highlighted code: JuliaMono-Regular, ~~~<span style="font-family: JuliaMono-Medium;">JuliaMono-Medium</span>~~~, ~~~<span style="font-family: JuliaMono-Bold;">JuliaMono-Bold</span>~~~, ~~~<span style="font-family: JuliaMono-ExtraBold;">JuliaMono-ExtraBold</span>~~~, and ~~~<span style="font-family: JuliaMono-Black;">JuliaMono-Black</span>~~~. [^masters]
 
-(There's are also Latin versions of some of the fonts: these are stripped down versions supporting just the basic MacRoman/Windows1252 character sets, intended for use as place-holders, of interest only if you want to have more control over web font loading in web browsers.)
+(There's are also versions of two of the fonts with “Latin” in the name: these are stripped down versions supporting just the basic MacRoman/Windows1252 “Latin” character sets, intended for use as place-holders, of interest mainly if you want to have more control over font loading times in web browser-based applications.)
 
 In the hands of a virtuoso (such as Dr Zygmunt Szpak, the author of the following code fragment[^zscode]), the range of available Unicode characters can be quite expressive:
 
