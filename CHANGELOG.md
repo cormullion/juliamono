@@ -6,9 +6,12 @@
 
 ### Changed
 
-- numerous glyphs changed #49 (Thanks DSCorbett!)
+- numerous fixes for glyphs #49 (Thanks DSCorbett)
+- small vertical shift for `#` #52 (Thanks waldyrious)
 
 ### Removed
+
+- some empty glyphs removed using complicated regex pattern... :(
 
 ### Deprecated
 
