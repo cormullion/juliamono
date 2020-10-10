@@ -40,7 +40,7 @@
 
 	<!-- Content appended here -->
 <div class="franklin-content"><h3 id="juliamono_-_a_monospaced_font_for_scientific_and_technical_computing"><a href="#juliamono_-_a_monospaced_font_for_scientific_and_technical_computing">JuliaMono - a monospaced font for scientific and technical computing</a></h3>
-<p>JuliaMono is a monospaced typeface designed for programming in <a href="https://julialang.org">Julia</a> and in other text editing environments that require a wide range of specialist and technical Unicode characters.</p>
+<p>JuliaMono is a monospaced typeface designed for programming in the <a href="https://julialang.org">Julia</a> Programming Language and in other text editing environments that require a wide range of specialist and technical Unicode characters.</p>
 <p>JuliaMono is:</p>
 <ul>
 <li><p>free</p>
@@ -109,55 +109,55 @@
 <p>The following examples will be rendered in JuliaMono by your browser &#40;if it’s successfully downloaded the web font versions&#41;, so I hope what you see here is close to what I made.</p>
 <p>The CSS markup applied to the following code uses two weights of the typeface, JuliaMono-Regular and JuliaMono-Medium, which is a smidgeon bolder:</p>
 <pre><code class="language-julia">using Zygote: @adjoint
-function ignore(f)
-  try return f()
+function ignore&#40;f&#41;
+  try return f&#40;&#41;
         catch e; return 0; end
 end
-@adjoint function ignore(f)
-  try Zygote._pullback(__context__, f)
+@adjoint function ignore&#40;f&#41;
+  try Zygote._pullback&#40;__context__, f&#41;
   catch e
-    0, ȳ -> nothing
+    0, ȳ -&gt; nothing
   end
 end</code></pre>
 <p>There are different weights of JuliaMono, so you can control the amount of contrast you have in your highlighted code: JuliaMono-Regular, <span style="font-family: JuliaMono-Medium;">JuliaMono-Medium</span>, <span style="font-family: JuliaMono-Bold;">JuliaMono-Bold</span>, <span style="font-family: JuliaMono-ExtraBold;">JuliaMono-ExtraBold</span>, and <span style="font-family: JuliaMono-Black;">JuliaMono-Black</span>. <sup id="fnref:masters"><a href="#fndef:masters" class="fnref">[5]</a></sup></p>
-<p>&#40;There&#39;s are also Latin versions of some of the fonts: these are stripped down versions supporting just the basic MacRoman/Windows1252 character sets, intended for use as place-holders, of interest only if you want to have more control over web font loading in web browsers.&#41;</p>
+<p>&#40;There&#39;s are also versions of two of the fonts with “Latin” in the name: these are stripped down versions supporting just the basic MacRoman/Windows1252 “Latin” character sets, intended for use as place-holders, of interest mainly if you want to have more control over font loading times in web browser-based applications.&#41;</p>
 <p>In the hands of a virtuoso &#40;such as Dr Zygmunt Szpak, the author of the following code fragment<sup id="fnref:zscode"><a href="#fndef:zscode" class="fnref">[6]</a></sup>&#41;, the range of available Unicode characters can be quite expressive:</p>
-<pre><code class="language-julia">function T(𝛉::AbstractArray,
-           𝒞::Tuple{AbstractArray,
-           Vararg{AbstractArray}},
-           𝒟::Tuple{AbstractArray, Vararg{AbstractArray}})
-    ⊗ = kron
-    l = length(𝛉)
-    𝐈ₗ = SMatrix{l,l}(1.0I)
-    𝐈ₘ = SMatrix{1,1}(1.0I)
-    𝐓 = @SMatrix zeros(l,l)
-    N = length(𝒟[1])
-    ℳ, ℳʹ = 𝒟
-    Λ₁, Λ₂ = 𝒞
-    𝚲ₙ = @MMatrix zeros(4,4)
-    𝐞₁ = @SMatrix [1.0; 0.0; 0.0]
-    𝐞₂ = @SMatrix [0.0; 1.0; 0.0]
-    for n = 1:N
-        index = SVector(1,2)
-        𝚲ₙ[1:2,1:2] .=  Λ₁[n][index,index]
-        𝚲ₙ[3:4,3:4] .=  Λ₂[n][index,index]
-        𝐦    = hom(ℳ[n])
-        𝐦ʹ   = hom(ℳʹ[n])
-        𝐔ₙ   = (𝐦 ⊗ 𝐦ʹ)
-        ∂ₓ𝐮ₙ = [(𝐞₁ ⊗ 𝐦ʹ) (𝐞₂ ⊗ 𝐦ʹ) (𝐦 ⊗ 𝐞₁) (𝐦 ⊗ 𝐞₂)]
-        𝐁ₙ   = ∂ₓ𝐮ₙ * 𝚲ₙ * ∂ₓ𝐮ₙ'
-        𝚺ₙ   = 𝛉' * 𝐁ₙ * 𝛉
-        𝚺ₙ⁻¹ = inv(𝚺ₙ)
-        𝐓₁   = @SMatrix zeros(Float64,l,l)
-        for k = 1:l
-            𝐞ₖ = 𝐈ₗ[:,k]
-            ∂𝐞ₖ𝚺ₙ = (𝐈ₘ ⊗ 𝐞ₖ') * 𝐁ₙ * (𝐈ₘ ⊗ 𝛉) + (𝐈ₘ ⊗ 𝛉') * 𝐁ₙ * (𝐈ₘ ⊗ 𝐞ₖ)
+<pre><code class="language-julia">function T&#40;𝛉::AbstractArray,
+           𝒞::Tuple&#123;AbstractArray,
+           Vararg&#123;AbstractArray&#125;&#125;,
+           𝒟::Tuple&#123;AbstractArray, Vararg&#123;AbstractArray&#125;&#125;&#41;
+    ⊗ &#61; kron
+    l &#61; length&#40;𝛉&#41;
+    𝐈ₗ &#61; SMatrix&#123;l,l&#125;&#40;1.0I&#41;
+    𝐈ₘ &#61; SMatrix&#123;1,1&#125;&#40;1.0I&#41;
+    𝐓 &#61; @SMatrix zeros&#40;l,l&#41;
+    N &#61; length&#40;𝒟&#91;1&#93;&#41;
+    ℳ, ℳʹ &#61; 𝒟
+    Λ₁, Λ₂ &#61; 𝒞
+    𝚲ₙ &#61; @MMatrix zeros&#40;4,4&#41;
+    𝐞₁ &#61; @SMatrix &#91;1.0; 0.0; 0.0&#93;
+    𝐞₂ &#61; @SMatrix &#91;0.0; 1.0; 0.0&#93;
+    for n &#61; 1:N
+        index &#61; SVector&#40;1,2&#41;
+        𝚲ₙ&#91;1:2,1:2&#93; .&#61;  Λ₁&#91;n&#93;&#91;index,index&#93;
+        𝚲ₙ&#91;3:4,3:4&#93; .&#61;  Λ₂&#91;n&#93;&#91;index,index&#93;
+        𝐦    &#61; hom&#40;ℳ&#91;n&#93;&#41;
+        𝐦ʹ   &#61; hom&#40;ℳʹ&#91;n&#93;&#41;
+        𝐔ₙ   &#61; &#40;𝐦 ⊗ 𝐦ʹ&#41;
+        ∂ₓ𝐮ₙ &#61; &#91;&#40;𝐞₁ ⊗ 𝐦ʹ&#41; &#40;𝐞₂ ⊗ 𝐦ʹ&#41; &#40;𝐦 ⊗ 𝐞₁&#41; &#40;𝐦 ⊗ 𝐞₂&#41;&#93;
+        𝐁ₙ   &#61; ∂ₓ𝐮ₙ * 𝚲ₙ * ∂ₓ𝐮ₙ&#39;
+        𝚺ₙ   &#61; 𝛉&#39; * 𝐁ₙ * 𝛉
+        𝚺ₙ⁻¹ &#61; inv&#40;𝚺ₙ&#41;
+        𝐓₁   &#61; @SMatrix zeros&#40;Float64,l,l&#41;
+        for k &#61; 1:l
+            𝐞ₖ &#61; 𝐈ₗ&#91;:,k&#93;
+            ∂𝐞ₖ𝚺ₙ &#61; &#40;𝐈ₘ ⊗ 𝐞ₖ&#39;&#41; * 𝐁ₙ * &#40;𝐈ₘ ⊗ 𝛉&#41; &#43; &#40;𝐈ₘ ⊗ 𝛉&#39;&#41; * 𝐁ₙ * &#40;𝐈ₘ ⊗ 𝐞ₖ&#41;
             # Accumulating the result in 𝐓₁ allocates memory,
             # even though the two terms in the
             # summation are both SArrays.
-            𝐓₁ = 𝐓₁ + 𝐔ₙ * 𝚺ₙ⁻¹ * (∂𝐞ₖ𝚺ₙ) * 𝚺ₙ⁻¹ * 𝐔ₙ' * 𝛉 * 𝐞ₖ'
+            𝐓₁ &#61; 𝐓₁ &#43; 𝐔ₙ * 𝚺ₙ⁻¹ * &#40;∂𝐞ₖ𝚺ₙ&#41; * 𝚺ₙ⁻¹ * 𝐔ₙ&#39; * 𝛉 * 𝐞ₖ&#39;
         end
-        𝐓 = 𝐓 + 𝐓₁
+        𝐓 &#61; 𝐓 &#43; 𝐓₁
     end
     𝐓
 end</code></pre>
@@ -319,8 +319,8 @@ end</code></pre>
 <img src="/assets/barchart.svg" width="100%" alt="silly barchart"> 
 <p>&#40;Of course, size isn’t everything - quality can beat quantity, and other fonts will offer different experiences<sup id="fnref:otherfonts"><a href="#fndef:otherfonts" class="fnref">[10]</a></sup>&#41;.</p>
 <p>It’s also a good idea to support box-drawing characters and DataFrames.jl output &#40;terminal permitting&#41;:</p>
-<pre><code class="language-julia">julia> df = DataFrame(A=samples, B=glyphs)
-df = 10×2 DataFrame
+<pre><code class="language-julia">julia&gt; df &#61; DataFrame&#40;A&#61;samples, B&#61;glyphs&#41;
+df &#61; 10×2 DataFrame
 │ Row │ A              │ B                   │
 │     │ String         │ String              │
 ├─────┼────────────────┼─────────────────────┤
@@ -336,17 +336,17 @@ df = 10×2 DataFrame
 │ 10  │ sample 10      │ ▁▇▄▂▅▃▇▁▇▇▆▄▇▅▄▂▄▅▄ │</code></pre>
 <p>&#40;Can you spot the little used and sadly mathematically-unsupported &quot;times&quot; character?&#41;</p>
 <p>If you want to know whether you can use a Unicode character as an identifier in your Julia code, use the undocumented function <code>Base.isidentifier&#40;&#41;</code>. So, for example, if you have the urge to use a dingbat &#40;one of the classic <a href="https://en.wikipedia.org/wiki/Zapf_Dingbats">Herman Zapf dingbat</a> designs&#41;, you could look for something suitable in the output of this:</p>
-<pre><code class="language-julia">julia> for n in 0x2700:0x27bf
-			Base.isidentifier(string(Char(n))) && print(Char(n))
+<pre><code class="language-julia">julia&gt; for n in 0x2700:0x27bf
+			Base.isidentifier&#40;string&#40;Char&#40;n&#41;&#41;&#41; &amp;&amp; print&#40;Char&#40;n&#41;&#41;
 	   end
 ✀✁✂✃✄✅✆✇✈✉✊✋✌✍✎✏✐✑✒✓✔✕✖✗✘✙✚✛✜✝✞✟✠✡✢✣✤✥✦✧✨✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺
 ✻✼✽✾✿❀❁❂❃❄❅❆❇❈❉❊❋❌❍❎❏❐❑❒❓❔❕❖❗❘❙❚❛❜❝❞❟❠❡❢❣❤❥❦❧➔➕➖➗➘➙➚➛➜➝➞➟➠➡
 ➢➣➤➥➦➧➨➩➪➫➬➭➮➯➰➱➲➳➴➵➶➷➸➹➺➻➼➽➾➿
 
-julia> ❤(s) = println("I ❤ $(s)")
-❤ (generic function with 1 method)
+julia&gt; ❤&#40;s&#41; &#61; println&#40;&quot;I ❤ &#36;&#40;s&#41;&quot;&#41;
+❤ &#40;generic function with 1 method&#41;
 
-julia> ❤("Julia")
+julia&gt; ❤&#40;&quot;Julia&quot;&#41;
 I ❤ Julia</code></pre>
 <h3 id="contextual_and_stylistic_alternates"><a href="#contextual_and_stylistic_alternates">Contextual and stylistic alternates</a></h3>
 <p>JuliaMono is an <a href="https://en.wikipedia.org/wiki/OpenType">OpenType</a> typeface. OpenType technology provides powerful text positioning, pattern matching, and glyph substitution features, which are essential for languages such as Arabic and Urdu. In English, OpenType features are often seen when letter pairs such as <span style="font-size: 1.5em;font-family: Georgia;font-variant-ligatures: no-common-ligatures; ">fi</span> in certain fonts are replaced by a single glyph such as <span style="font-size: 1.5em; font-family: Georgia;">ﬁ</span>. These <a href="https://en.wikipedia.org/wiki/Orthographic_ligature">ligatures</a> have been used ever since printing with moveable type was invented, replacing the occasional awkward character combination with a better-looking alternative.</p>
@@ -383,21 +383,21 @@ I ❤ Julia</code></pre>
 </table>
 
 <p>You can see these in action in the following code fragment:<sup id="fnref:width"><a href="#fndef:width" class="fnref">[12]</a></sup></p>
-<pre><code class="language-julia">julialang = true # (!= 0)
-(x, y) -> (x + y)
-f(p::Int) = p * p
-@inbounds if f in (Base.:+, Base.:-)
-    if any(x -> x <: AbstractArray{<:Number})
-         nouns = Dict(
-            Base.:+ => "addition",
-            Base.:- => "subtraction",
-        )
+<pre><code class="language-julia">julialang &#61; true # &#40;&#33;&#61; 0&#41;
+&#40;x, y&#41; -&gt; &#40;x &#43; y&#41;
+f&#40;p::Int&#41; &#61; p * p
+@inbounds if f in &#40;Base.:&#43;, Base.:-&#41;
+    if any&#40;x -&gt; x &lt;: AbstractArray&#123;&lt;:Number&#125;&#41;
+         nouns &#61; Dict&#40;
+            Base.:&#43; &#61;&gt; &quot;addition&quot;,
+            Base.:- &#61;&gt; &quot;subtraction&quot;,
+        &#41;
     end
 end
-df2 = df |>
-    @groupby(_.a) |>
-    @map({a = key(_), b = mean(_.b)}) |>
-    DataFrame # <|</code></pre>
+df2 &#61; df |&gt;
+    @groupby&#40;_.a&#41; |&gt;
+    @map&#40;&#123;a &#61; key&#40;_&#41;, b &#61; mean&#40;_.b&#41;&#125;&#41; |&gt;
+    DataFrame # &lt;|</code></pre>
 <p>OpenType fonts also offer you the ability to choose different designs for certain characters. These are stored as a ‘stylistic set’.</p>
 <p>All the options are stored in the font, and are often referred to by their internal four letter code &#40;not the best user-oriented design, really&#41;. For example, the contextual alternates listed above are collectively stored in the <strong>calt</strong> feature.</p>
 <p>Sometimes, an application will show the options more visually in a Typography panel<sup id="fnref:typographypanel"><a href="#fndef:typographypanel" class="fnref">[13]</a></sup>, usually tucked away somewhere on a Font chooser dialog.</p>
@@ -485,35 +485,35 @@ df2 = df |>
 <p>Browser-based editors such as Juno and VS Code support many OpenType features in their editor windows, but not in the terminal/console windows. They provide a settings area where you can type CSS or JSON selectors to control the appearance of features, and you’ll have to know the feature codes. Some features are opt in, others are opt out; this too can vary from application to application.</p>
 <p>Terminal/console applications also vary a lot; on MacOS the <strong>Terminal</strong> and <strong>iTerm</strong> applications try to offer controls for OpenType features, with varying degrees of success. On Linux, some terminal applications such as <a href="https://sw.kovidgoyal.net/kitty/#font-control">Kitty</a> offer quite good support, but others such as <a href="https://github.com/alacritty/alacritty">Alacritty</a> offer little or none, as yet. <sup id="fnref:terminal"><a href="#fndef:terminal" class="fnref">[14]</a></sup></p>
 <p>If the application allows, you should be able to switch the <code>calt</code> contextual ligatures off, particularly since quite a few people won’t like any of them in their code. For the following listing, I switch the <strong>calt</strong> set off using CSS &#40;see <a href="/faq/#how_do_i_control_features_in_css_in_juno_or_vs_code">here</a>&#41;, and then enable some of the alternative stylistic sets: compare characters such as the <strong>0</strong>, <strong>g</strong>, <strong>a</strong>, <strong>j</strong>, and <strong>@</strong> with the previous listing:</p>
-<div class="code_ss_on"><pre><code class="language-julia">julialang = true # (!= 0)
-(x, y) -> (x + y)
-f(p::Int) = p * p
-@inbounds if f in (Base.:+, Base.:-)
-    if any(x -> x <: AbstractArray{<:Number})
-         nouns = Dict(
-            Base.:+ => "addition",
-            Base.:- => "subtraction",
-        )
+<div class="code_ss_on"><pre><code class="language-julia">julialang &#61; true # &#40;&#33;&#61; 0&#41;
+&#40;x, y&#41; -&gt; &#40;x &#43; y&#41;
+f&#40;p::Int&#41; &#61; p * p
+@inbounds if f in &#40;Base.:&#43;, Base.:-&#41;
+    if any&#40;x -&gt; x &lt;: AbstractArray&#123;&lt;:Number&#125;&#41;
+         nouns &#61; Dict&#40;
+            Base.:&#43; &#61;&gt; &quot;addition&quot;,
+            Base.:- &#61;&gt; &quot;subtraction&quot;,
+        &#41;
     end
 end
-df2 = df |>
-    @groupby(_.a) |>
-    @map({a = key(_), b = mean(_.b)}) |>
-    DataFrame # <|</code></pre></div>
+df2 &#61; df |&gt;
+    @groupby&#40;_.a&#41; |&gt;
+    @map&#40;&#123;a &#61; key&#40;_&#41;, b &#61; mean&#40;_.b&#41;&#125;&#41; |&gt;
+    DataFrame # &lt;|</code></pre></div>
 <p>&#40;I originally liked the idea of a more circular <code>@</code> sign, but in practice it doesn’t work at small point sizes, as the details disappear. But I’ve kept it anyway.&#41;</p>
 <h3 id="private_use_areas_puas"><a href="#private_use_areas_puas">Private Use Areas &#40;PUAs&#41;</a></h3>
 <p>There are a few areas of the Unicode system that have been officially kept empty and are thus available to store characters that are not part of the standard. These are called the <strong>Private Use Areas</strong>, and there are three: <code>\ue000</code> to <code>\uf8ff</code>, <code>\UF0000</code> to <code>\UFFFFD</code>, and <code>U100000</code> to <code>U&#43;10FFFD</code>.</p>
 <p>Each typeface can do its own thing in these areas. In JuliaMono, for example, if you look around <code>\ue800</code> you’ll find a few familiar shapes:</p>
-<pre><code class="language-julia">julia> foreach(println, '\ue800':'\ue802')
+<pre><code class="language-julia">julia&gt; foreach&#40;println, &#39;\ue800&#39;:&#39;\ue802&#39;&#41;
 
 
 </code></pre>
 <p>The obvious drawback to using characters in a Private Use Area is that you have to have installed the font wherever you want to see them rendered correctly, unless they’ve been converted to outlines or bitmaps. If the font isn’t installed &#40;eg on github&#41;, you have no idea what glyph - if any - will be displayed.</p>
 <p>You can define these to be available at the Julia REPL. For example, say you want the Julia circles to be available in the terminal when you type <code>\julialogo</code><span style="font-size: 1.5em;"></span> in a Julia session with the JuliaMono font active. Run this:</p>
 <pre><code class="language-julia">using REPL
-REPL.REPLCompletions.latex_symbols["\\julialogo"] = "\ue800"</code></pre>
+REPL.REPLCompletions.latex_symbols&#91;&quot;\\julialogo&quot;&#93; &#61; &quot;\ue800&quot;</code></pre>
 <p>Now you can insert the logo in strings by typing <code>\julialogo</code><span style="font-size: 1.5em;"></span>:</p>
-<pre><code class="language-julia">julia> println("Welcome to ")
+<pre><code class="language-julia">julia&gt; println&#40;&quot;Welcome to &quot;&#41;
 Welcome to </code></pre>
 <p>It’s usually possible to type Unicode values directly into text. This is a useful skill to have when you’re not using the Julia REPL... On MacOS you hold the Option &#40;⌥&#41; key down while typing the four hex digits &#40;make sure you’re using the Unicode Hex Input keyboard&#41;. On Windows I think you type the four hex digits followed by <code>ALT</code> then <code>X</code>. On Linux it might be <code>ctrl</code>-<code>shift</code>-<code>u</code> followed by the hex digits.</p>
 <h4 id="type_anything_here_nobodys_looking"><a href="#type_anything_here_nobodys_looking">Type anything here. Nobody’s looking.</a></h4>
@@ -611,7 +611,7 @@ Welcome to </code></pre>
  </p>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: September 28, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: October 10, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the Julia Programming Language, based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

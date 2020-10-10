@@ -7,12 +7,12 @@
 
 #### ‘Why⁉’
 
-The typeface was introduced at the 2020 Julia conference, in Lisbon, and it was my contribution to the festivities.
+The typeface was introduced at the 2020 Julia Programming Language conference, in Lisbon, and it was my contribution to the festivities.
 
 #### ‘What’s Julia-specific about it? How does it “work well with” Julia?’
 
 * it has all the glyphs used in the Unicode Input chapter of the Julia documentation (except for the emojis)
-* the glyphs were designed with Julia code in mind
+* the glyphs were designed with the Julia programming language in mind
 * the font contains special features such as contextual alternates, stylistic sets, and “ligatures” to complement Julia syntax
 
 #### ‘Where can I see it in action?’

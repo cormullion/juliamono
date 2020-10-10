@@ -42,12 +42,12 @@
 <div class="franklin-content"><h1 id="frequently_asked_questions"><a href="#frequently_asked_questions">Frequently asked questions</a></h1>
 <div class="franklin-toc"><ol><li><a href="#why">‘Why⁉’</a></li><li><a href="#whats_julia-specific_about_it_how_does_it_work_well_with_julia">‘What’s Julia-specific about it? How does it “work well with” Julia?’</a></li><li><a href="#where_can_i_see_it_in_action">‘Where can I see it in action?’</a></li><li><a href="#i_dont_like_it_as_much_as_my_favourite_font">‘I don’t like it as much as <code>&#36;&#40;my_favourite_font&#41;</code>’</a></li><li><a href="#how_can_i_use_the_web_fonts">‘How can I use the web fonts?’</a></li><li><a href="#how_do_i_control_features_in_css_in_atomjuno_or_vs_code">‘How do I control features in CSS, in Atom/Juno, or VS Code?’</a><ol><li><a href="#vs-code">VS-Code</a></li><li><a href="#atomjuno">Atom/Juno</a></li></ol></li><li><a href="#can_i_use_this_font_in_a_notebookand_how_do_i_do_it">‘Can I use this font in a notebook?And how do I do it?’</a></li><li><a href="#how_do_i_use_the_font_in_plotsjl">‘How do I use the font in Plots.jl?’</a></li><li><a href="#can_i_use_it_in_a_latex_document">‘Can I use it in a \( \LaTeX \) document?’</a></li><li><a href="#arent_these_font_files_too_big">‘Aren’t these font files too big?’</a></li><li><a href="#how_is_this_different_from_any_other_unicode_font">‘How is this different from any other Unicode font?’</a></li><li><a href="#is_it_a_package_was_it_written_in_julia_how_will_this_contribute_to_the_ecosystem_of_julia_language">‘Is it a package? Was it written in Julia? How will this contribute to the ecosystem of Julia language?’</a></li><li><a href="#is_it_finished">‘Is it finished?’</a></li><li><a href="#the_glyph_uxxxx_is_missingwrong_-_can_you_addchange_it">‘The glyph Uxxxx is missing/wrong - can you add/change it?’</a></li><li><a href="#why_dont_these_accentsmarks_work_properly">‘Why don’t these accents/marks work properly?’</a></li><li><a href="#does_it_work_on_macos">‘Does it work on macOS?’</a></li><li><a href="#does_it_work_on_linux">‘Does it work on Linux?’</a></li><li><a href="#does_it_work_on_windows">‘Does it work on Windows?’</a></li><li><a href="#any_love_for_nerdfonts">‘Any love for nerdfonts?’</a></li><li><a href="#what_about_italics_how_about_juliasans">‘What about italics? How about JuliaSans?’</a></li><li><a href="#i_have_a_question_that_you_havent_answered">‘I have a question that you haven’t answered’</a></li></ol></div>
 <h4 id="why"><a href="#why">‘Why⁉’</a></h4>
-<p>The typeface was introduced at the 2020 Julia conference, in Lisbon, and it was my contribution to the festivities.</p>
+<p>The typeface was introduced at the 2020 Julia Programming Language conference, in Lisbon, and it was my contribution to the festivities.</p>
 <h4 id="whats_julia-specific_about_it_how_does_it_work_well_with_julia"><a href="#whats_julia-specific_about_it_how_does_it_work_well_with_julia">‘What’s Julia-specific about it? How does it “work well with” Julia?’</a></h4>
 <ul>
 <li><p>it has all the glyphs used in the Unicode Input chapter of the Julia documentation &#40;except for the emojis&#41;</p>
 </li>
-<li><p>the glyphs were designed with Julia code in mind</p>
+<li><p>the glyphs were designed with the Julia programming language in mind</p>
 </li>
 <li><p>the font contains special features such as contextual alternates, stylistic sets, and “ligatures” to complement Julia syntax</p>
 </li>
@@ -61,10 +61,10 @@
 <p><strong>That’s not a question&#33;</strong> But I know what you mean. Choice of work environment &#40;editor, font, colour scheme, background music, preferred beverage, etc.&#41; is very much a personal thing, and over the hours, days, and weeks that you work with your particular setup, you’ll grow accustomed to it, and unfamiliar work environments will look unappealing or even ugly. You’d probably need to try any alternatives for a while before you get more accustomed to them. Fortunately, you don’t have to use <a href="https://www.myfonts.com/fonts/tabular-type-foundry/comic-code/">Comic Code</a>, the <a href="http://kakoune.org">Kakoune editor</a>, the music of <a href="http://autechre.ws/">Autechre</a>, <a href="https://www.tealeaves.com/products/durian">Durian tea</a>, or anything else that’s new and unfamiliar; just stick to your current favourites&#33;</p>
 <h4 id="how_can_i_use_the_web_fonts"><a href="#how_can_i_use_the_web_fonts">‘How can I use the web fonts?’</a></h4>
 <p>Find the relevant CSS file, and add a link to the WOFF2 stored on the server. For example:</p>
-<pre><code class="language-julia">@font-face {
+<pre><code class="language-julia">@font-face &#123;
 	font-family: JuliaMono-Regular;
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2");
-}</code></pre>
+	src: url&#40;&quot;https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2&quot;&#41;;
+&#125;</code></pre>
 <p>This accesses the current version the Regular font using the jsDelivr CDN &#40;Content Delivery Network&#41;.</p>
 <p>You may prefer to serve the WOFF/2 fonts from your own server. One problem you might encounter is related to <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing</a>, which on some browsers prevents one web page from downloading fonts from another.</p>
 <h4 id="how_do_i_control_features_in_css_in_atomjuno_or_vs_code"><a href="#how_do_i_control_features_in_css_in_atomjuno_or_vs_code">‘How do I control features in CSS, in Atom/Juno, or VS Code?’</a></h4>
@@ -75,53 +75,53 @@
 <p><img src="/assets/vscode-settings-2-800.png" alt="VS Code settings" /></p>
 <p>This uses the feature codes &#40;<a href="/#contextual_and_stylistic_alternates">listed here</a>&#41;. These should all be switched on or off in a single line.</p>
 <p>For example, if you want all the alternate stylistic sets, use:</p>
-<pre><code class="language-css">"editor.fontLigatures": "'ss01', 'ss02', 'ss03',
-'ss04', 'ss05', 'ss06', 'zero', 'ss07'",</code></pre>
+<pre><code class="language-css">&quot;editor.fontLigatures&quot;: &quot;&#39;ss01&#39;, &#39;ss02&#39;, &#39;ss03&#39;,
+&#39;ss04&#39;, &#39;ss05&#39;, &#39;ss06&#39;, &#39;zero&#39;, &#39;ss07&#39;&quot;,</code></pre>
 <p>Or if you don’t like the contextual alternates, prefer the slashed zero, a simpler g, and a lighter asterisk, use this:</p>
-<pre><code class="language-css">"editor.fontLigatures": "'calt' off, 'zero', 'ss01', 'ss05'",</code></pre>
+<pre><code class="language-css">&quot;editor.fontLigatures&quot;: &quot;&#39;calt&#39; off, &#39;zero&#39;, &#39;ss01&#39;, &#39;ss05&#39;&quot;,</code></pre>
 <h5 id="atomjuno"><a href="#atomjuno">Atom/Juno</a></h5>
 <p>In the Atom/Juno stylesheet, you can specify the font with the required CSS selectors:</p>
-<pre><code class="language-css">font-family: "JuliaMono";</code></pre>
+<pre><code class="language-css">font-family: &quot;JuliaMono&quot;;</code></pre>
 <p>which defaults to the Regular weight, or</p>
-<pre><code class="language-css">font-family: "JuliaMono-Medium";</code></pre>
+<pre><code class="language-css">font-family: &quot;JuliaMono-Medium&quot;;</code></pre>
 <p>You can switch off the contextual alternates &#40;such as <code>-&gt;</code> and <code>&#61;&gt;</code>&#41; with:</p>
 <pre><code class="language-css">font-variant-ligatures: no-contextual;</code></pre>
 <p>Or on &#40;if it’s not enabled by default&#41; with:</p>
 <pre><code class="language-css">font-variant-ligatures: contextual;</code></pre>
 <p>Select any stylistic sets in a single line. For example:</p>
-<pre><code class="language-css">font-feature-settings: "zero", "ss02";</code></pre>
+<pre><code class="language-css">font-feature-settings: &quot;zero&quot;, &quot;ss02&quot;;</code></pre>
 <div class="code_ss_on">enables the slashed zero (0) and the simpler "g".</div>
 <p>In Atom/Juno, you’d put these in the stylesheet, perhaps like this:</p>
-<pre><code class="language-css">atom-text-editor {
+<pre><code class="language-css">atom-text-editor &#123;
     font-variant-ligatures: no-contextual;
-	font-feature-settings: "ss01", "ss02", "ss03",
-	    "ss04", "ss05", "ss06";
-}</code></pre>
+	font-feature-settings: &quot;ss01&quot;, &quot;ss02&quot;, &quot;ss03&quot;,
+	    &quot;ss04&quot;, &quot;ss05&quot;, &quot;ss06&quot;;
+&#125;</code></pre>
 <h4 id="can_i_use_this_font_in_a_notebookand_how_do_i_do_it"><a href="#can_i_use_this_font_in_a_notebookand_how_do_i_do_it">‘Can I use this font in a notebook?And how do I do it?’</a></h4>
 <p>It’s a good question. Some browsers these days are reluctant to give even you access to things on your own local disk, “for security reasons”. But a local copy of the font may be available and accessible on your particular set-up.</p>
 <p>If not, you could try using web fonts, as above. For example, if there’s a Jupyter CSS file here:</p>
 <pre><code class="language-julia">~/.jupyter/custom/custom.css</code></pre>
 <p>you could add definitions like this:</p>
-<pre><code class="language-css">@font-face {
+<pre><code class="language-css">@font-face &#123;
 	font-family: JuliaMono-Regular;
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
-}
+	src: url&#40;&quot;https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2&quot;&#41;;
+&#125;
 
-.rendered_html table{
-    font-size: 16px !important;
-}
+.rendered_html table&#123;
+    font-size: 16px &#33;important;
+&#125;
 
-div.input_area {
-    background: #def !important;
-    font-size: 16px !important;
-}
+div.input_area &#123;
+    background: #def &#33;important;
+    font-size: 16px &#33;important;
+&#125;
 
-.CodeMirror {
-    font-size: 16px !important;
-    font-family: "JuliaMono-Regular" !important;
-    font-feature-settings: "zero", "ss01";
+.CodeMirror &#123;
+    font-size: 16px &#33;important;
+    font-family: &quot;JuliaMono-Regular&quot; &#33;important;
+    font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;;
     font-variant-ligatures: contextual;
-}</code></pre>
+&#125;</code></pre>
 <p>which downloads the font once and is then available to the notebook.</p>
 
 <div id="enlargewrap">
@@ -144,40 +144,40 @@ div.input_area {
 </ul>
 <p>Here’s some code that uses JuliaMono for a plot. The plot shows the frequency of occurrence of every Unicode character used in the Julia git repository, and uses the characters as plot markers. I went through every text file and totalled all the characters - there are 956044 letter “e”s, and so on. I’m using <code>pyplot&#40;&#41;</code>; the <code>freqs</code> DataFrame holds the characters and the counts. I’ve created a few font objects using <code>Plots.font&#40;&#41;</code>, which makes it easier to use different text styles in the <code>plot&#40;&#41;</code> function. I haven’t yet worked out how to use the different weights of a font family.</p>
 <pre><code class="language-julia">using Plots, Plots.PlotMeasures
-pyplot()
-theme(:dark)
+pyplot&#40;&#41;
+theme&#40;:dark&#41;
 
-juliamonofont8 = Plots.font(family="JuliaMono", 8,
-    halign=:center, colorant"white")
-juliamonofont12 = Plots.font(family="JuliaMono", 12,
-    halign=:center, colorant"white")
-juliamonofont80 = Plots.font(family="JuliaMono", 80,
-    halign=:center, colorant"grey30")
+juliamonofont8 &#61; Plots.font&#40;family&#61;&quot;JuliaMono&quot;, 8,
+    halign&#61;:center, colorant&quot;white&quot;&#41;
+juliamonofont12 &#61; Plots.font&#40;family&#61;&quot;JuliaMono&quot;, 12,
+    halign&#61;:center, colorant&quot;white&quot;&#41;
+juliamonofont80 &#61; Plots.font&#40;family&#61;&quot;JuliaMono&quot;, 80,
+    halign&#61;:center, colorant&quot;grey30&quot;&#41;
 
-annotation = "counting character frequencies\nin Julia source files "
+annotation &#61; &quot;counting character frequencies\nin Julia source files &quot;
 
-p = plot(1:100,
-    freqs[1:100, 2],
-    fontfamily         = "JuliaMono",
-    margin             = 20mm,
-    yaxis              = :log10,
-    annotation         = [
-        (50, 1000, Plots.text(annotation, juliamonofont12)),
-        (80, 1_000_000, Plots.text("", juliamonofont80))
-        ],
-    linewidth          = 0.25,
-    series_annotations = Plots.text.(freqs[1:100, 1], Ref(juliamonofont8)),
-    xlabel             = "← more frequent | less frequent → ",
-    ylabel             = "occurrences (log scale) ",
-    labelfontsize      = 6,
-    titlefontsize      = 14,
-    formatter          = :plain,
-    size               = (800, 500),
-	title              = "Top 100 characters\nin the Julia github repo ",
-    legend             = false,
-    )
+p &#61; plot&#40;1:100,
+    freqs&#91;1:100, 2&#93;,
+    fontfamily         &#61; &quot;JuliaMono&quot;,
+    margin             &#61; 20mm,
+    yaxis              &#61; :log10,
+    annotation         &#61; &#91;
+        &#40;50, 1000, Plots.text&#40;annotation, juliamonofont12&#41;&#41;,
+        &#40;80, 1_000_000, Plots.text&#40;&quot;&quot;, juliamonofont80&#41;&#41;
+        &#93;,
+    linewidth          &#61; 0.25,
+    series_annotations &#61; Plots.text.&#40;freqs&#91;1:100, 1&#93;, Ref&#40;juliamonofont8&#41;&#41;,
+    xlabel             &#61; &quot;← more frequent | less frequent → &quot;,
+    ylabel             &#61; &quot;occurrences &#40;log scale&#41; &quot;,
+    labelfontsize      &#61; 6,
+    titlefontsize      &#61; 14,
+    formatter          &#61; :plain,
+    size               &#61; &#40;800, 500&#41;,
+	title              &#61; &quot;Top 100 characters\nin the Julia github repo &quot;,
+    legend             &#61; false,
+    &#41;
 
-display(p)</code></pre>
+display&#40;p&#41;</code></pre>
 <p><img src="/assets/julia-frequencies.svg" alt="frequency counts" /></p>
 <p>The top 9 characters - “etanirsol” - are a good match for the typical English frequency count e.g. “etarionsh”.</p>
 <p>Although over 3600 unique characters occur in the Julia documentation, about 3000 of them appear just once. All of them, except the emojis which aren’t in JuliaMono, can be plotted, but the long tail isn’t very interesting .</p>
@@ -186,14 +186,14 @@ display(p)</code></pre>
 <h4 id="can_i_use_it_in_a_latex_document"><a href="#can_i_use_it_in_a_latex_document">‘Can I use it in a \( \LaTeX \) document?’</a></h4>
 <p>In a \( \LaTeX \) document, you should be able to define and use local fonts. Here’s an approach that worked for me.</p>
 <p>In your \( \LaTeX \) source file, define the font, using the local pathname:</p>
-<pre><code class="language-julia">\newfontfamily \JuliaMono {JuliaMono-Regular.otf}[
-    Path      = /Users/me/Library/Fonts/,
-    Extension = .otf
-    ]
-\newfontface \JuliaMonoMedium{JuliaMono-Regular}
-\setmonofont{JuliaMonoMedium}[
-	Contextuals=Alternate
-]</code></pre>
+<pre><code class="language-julia">\newfontfamily \JuliaMono &#123;JuliaMono-Regular.otf&#125;&#91;
+    Path      &#61; /Users/me/Library/Fonts/,
+    Extension &#61; .otf
+    &#93;
+\newfontface \JuliaMonoMedium&#123;JuliaMono-Regular&#125;
+\setmonofont&#123;JuliaMonoMedium&#125;&#91;
+	Contextuals&#61;Alternate
+&#93;</code></pre>
 <p>Then you can use something like <code>minted</code> to format the code. 
 <div id="enlargewrap">
     <a class="enlarge">
@@ -275,7 +275,7 @@ display(p)</code></pre>
 <p></p>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Cormullion. Last modified: September 28, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> based on the "basic" template.
+    &copy; Cormullion. Last modified: October 10, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the Julia Programming Language, based on the "basic" template.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

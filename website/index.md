@@ -4,7 +4,7 @@
 
 ### JuliaMono - a monospaced font for scientific and technical computing
 
-JuliaMono is a monospaced typeface designed for programming in [Julia](https://julialang.org) and in other text editing environments that require a wide range of specialist and technical Unicode characters.
+JuliaMono is a monospaced typeface designed for programming in the [Julia](https://julialang.org) Programming Language and in other text editing environments that require a wide range of specialist and technical Unicode characters.
 
 JuliaMono is:
 
