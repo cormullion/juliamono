@@ -7,7 +7,7 @@
 
 #### ‘Why⁉’
 
-The typeface was introduced at the 2020 Julia Programming Language conference, in Lisbon, and it was my contribution to the festivities.
+The typeface was introduced at the 2020 Julia Programming Language conference, JuliaCon, in Lisbon, Portugal, and it was (going to be) my contribution to the festivities. It was an experiment to see whether a font could be designed with a specific programming language in mind.
 
 #### ‘What’s Julia-specific about it? How does it “work well with” Julia?’
 
@@ -19,7 +19,7 @@ The typeface was introduced at the 2020 Julia Programming Language conference, i
 
 You can visit [this mirror of the Julia blog](https://julialangblogmirror.netlify.app/blog/). It hasn’t been updated for a while (it was useful during the development of [Franklin.jl](https://franklinjl.org)), but all the code examples use JuliaMono.
 
-You can browse through [this local copy](/assets/juliamanual/index.html) of the Julia manual. The default Roboto-Mono font has been replaced with JuliaMono-Regular.
+You can browse through [this local copy](/assets/juliamanual/index.html) of an old Julia manual. The default Roboto-Mono font has been replaced with JuliaMono-Regular.
 
 As an example of using JuliaMono with [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl)-generated documents, see the documentation for [Luxor.jl](https://github.com/JuliaGraphics/Luxor.jl).
 
@@ -232,7 +232,13 @@ Notice that the y-axis labels are in DejaVu Sans, provided with matplotlib. That
 
 #### ‘Can I use it in a $ \LaTeX $ document?’
 
-In a $ \LaTeX $ document, you should be able to define and use local fonts. Here’s an approach that worked for me.
+In a $ \LaTeX $ document, you should be able to define and use local fonts.
+
+Robert Moss put together an excellent package to help negotiate the various font issues that you might encounter when using Unicode and $ \LaTeX $:
+
+[A custom Julia language style for the LaTeX listings package, and Unicode support for the JuliaMono font in a lstlisting environment.](https://github.com/mossr/julia-mono-listings).
+
+Here’s an approach that worked for me.
 
 In your $ \LaTeX $ source file, define the font, using the local pathname:
 
@@ -279,6 +285,7 @@ More likely, though, the overall ‘feel’ of a new and unfamiliar font - too n
 
 Most people probably can’t tell the difference between Helvetica and Arial, and certainly aren’t going to be bothered about minor differences between JuliaMono and other coding fonts. But that’s fine. Just stick to your current favourites!
 
+
 #### ‘Is it a package? Was it written in Julia? How will this contribute to the ecosystem of Julia language?’
 
 Unfortunately, in the world of typographical software, one programming language is currently ubiquitous (hint: one of the leading programmers in the typography realm is **Just van Rossum**, one of the van Rossum brothers) and it’s not Julia.
@@ -289,11 +296,7 @@ And how will JuliaMono contribute? It’s often in the nature of an experiment t
 
 #### ‘Is it finished?’
 
-The first beta release, version 0.001, was released on July 27, 2020. The current version is 0.016, released in September 2020. Progress will vary according to supply and demand. Always download the latest version if you want the typeface to perform as well as it can.
-
-#### ‘The glyph Uxxxx is missing/wrong - can you add/change it?’
-
-Probably. Open an issue on github. It doesn’t take long to add or change an individual character glyph and update the fonts (less than an hour, probably), and compiling an OpenType font and uploading it only takes a few minutes. Similarly, adding non-Unicode characters is easy enough. Perhaps you want a new glyph added to the [Private Use Area](/index.html#private_use_areas)?
+The first beta release, version 0.001, was released on July 27, 2020. The most recent version is 0.019, released in October 2020. Download the latest version if you want the typeface to perform as well as it can.
 
 #### ‘Why don’t these accents/marks work properly?’
 
@@ -367,6 +370,8 @@ Font management in Linux may require you to become familiar with the `fontconfig
 </alias>
 ```
 
+With some older terminal software the ligatures may cause problems (not that all terminals display ligatures properly, some are just confused by fonts that have them).
+
 #### ‘Does it work on Windows?’
 
 The font works well on a good quality display, but will struggle to maintain quality when displayed on low-resolution displays.
@@ -387,12 +392,12 @@ The nerdfonts project is a bit of a hack - glyphs are pushed into areas that are
 
 Perhaps the companies could contribute money to the Julia project in exchange for having their logos stored in the font...
 
+#### ‘I prefer the glyphs in this other font...’
+
+Good to know!
+
 #### ‘What about italics? How about JuliaSans?’
 
 One day perhaps.
-
-#### ‘I have a question that you haven’t answered’
-
-Open an issue [here](https://github.com/cormullion/juliamono)!
 
 

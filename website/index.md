@@ -4,16 +4,15 @@
 
 ### JuliaMono - a monospaced font for scientific and technical computing
 
-JuliaMono is a monospaced typeface designed for programming in the [Julia](https://julialang.org) Programming Language and in other text editing environments that require a wide range of specialist and technical Unicode characters.
+JuliaMono is a monospaced typeface designed for programming in the [Julia](https://julialang.org) Programming Language and in other text editing environments that require a wide range of specialist and technical Unicode characters. It was intended as an experiment to be presented at the 2020 JuliaCon conference in Lisbon, Portugal (which of course did't happen).
 
 JuliaMono is:
 
 - free
-- open-source[^opensource]
+- distributed with a liberal licence [^licence]
 - suitable for scientific and technical programming as well as for general purpose hacking
 - available for MacOS, Unix, and Windows [^windows]
 - easy to use, simple, friendly, and approachable
-- distributed with a liberal licence [^licence]
 
 This site uses JuliaMono for all text; if your browser can’t[^ohdear] (or you didn’t allow it to) download and display web fonts, you’ll only see the font in action in the images. You’ll see a familiar formation of three dots here when/if the font has been downloaded:
 
@@ -571,14 +570,12 @@ It’s usually possible to type Unicode values directly into text. This is a use
 
 ### Thanks!
 
-Thanks to: Thibaut Lienart for his [Franklin.jl](https://github.com/tlienart/Franklin.jl) web site builder; to Jérémie Knüsel who provided invaluable suggestions and advice; to Dr Zygmunt Szpak for his cool maths code; to Simeon Schaub for the issues and PRs.
+Thanks to: Thibaut Lienart for his [Franklin.jl](https://github.com/tlienart/Franklin.jl) web site builder; to Jérémie Knüsel who provided invaluable suggestions and advice; to Dr Zygmunt Szpak for his cool maths code; to Simeon Schaub for the issues and PRs, and to others in the Julia community for help and suggestions.
 
 ### Footnotes
-[^opensource]:  &nbsp; “open source” Eventually, but I’ve got to work out how to do it first.
+[^licence]:  &nbsp; “licence” Although not MIT-licensed like Julia, JuliaMono is licensed using the [SIL Open Font licence](https://scripts.sil.org/OFL), which allows the fonts to be used, studied, modified, freely redistributed, and even sold, without affecting anything they’re bundled with.
 
 [^windows]:  &nbsp; “Windows” For more information about if and how it works on Windows, read [this](/faq/#does_it_work_on_windows), but I currently don't know enough about Windows font technology and how it differs from MacOS and Unix. Early reports said that the font didn't look good on Windows. This was because the format was CFF/PostScript OTF, which isn't hinted on Windows. A switch to TTF/TrueType OTF, which is hinted, was considered an improvement.
-
-[^licence]:  &nbsp; “licence” Although not MIT-licensed like Julia, JuliaMono is licensed using the [SIL Open Font licence](https://scripts.sil.org/OFL), which allows the fonts to be used, studied, modified, freely redistributed, and even sold, without affecting anything they’re bundled with.
 
 [^ohdear]: &nbsp; “downloading font problems” The problem might be something to do with the web security feature called [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin) which prevents a web page accessing the resources it needs.
 
