@@ -1,6 +1,22 @@
 # Changelog
 
-## [v0.018] forthcoming
+## [v0.019] 2020-10-11
+
+### Added
+
+### Changed
+
+- fix lower-case lcaron 013e #58 (thanks mirosval)
+- tweaked some brackets #60 (thanks goerz)
+- removed OTF versions from zip
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## [v0.018] 2020-10-08
 
 ### Added
 
