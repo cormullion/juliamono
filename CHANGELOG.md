@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.020] 2020-10-12
+
+### Added
+
+### Changed
+
+- experimental design for 1D538-1D550
+- some tweaks for APL (not going to spend much more time though)
+- nudge 302
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.019] 2020-10-11
 
 ### Added
