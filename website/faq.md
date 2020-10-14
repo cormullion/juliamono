@@ -138,7 +138,7 @@ you could add definitions like this:
 ```css
 @font-face {
 	font-family: JuliaMono-Regular;
-	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.008/webfonts/JuliaMono-Regular.woff2");
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2");
 }
 
 .rendered_html table{
@@ -158,7 +158,7 @@ div.input_area {
 }
 ```
 
-which downloads the font once and is then available to the notebook.
+which downloads the font once and is then available to applications.
 
 ~~~
 <div id="enlargewrap">

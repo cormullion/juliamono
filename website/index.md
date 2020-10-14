@@ -497,6 +497,12 @@ Here’s a list of the stylistic sets currently available in JuliaMono.
     <td class="code_ss_on">f</td>
     <td><p>alternate f</p></td>
     </tr>
+    <tr>
+    <td>ss10</td>
+    <td class="code_ss_off">r</td>
+    <td class="code_ss_on">r</td>
+    <td><p>alternate r</p></td>
+    </tr>
 
 </table>
 ~~~

@@ -1,5 +1,22 @@
 # Changelog
 
+## [v0.021] 2020-10-14
+
+### Added
+
+- alternate r (also not convinced yet)
+
+### Changed
+
+- experimental redesign for U1D552 to U1D56B (not yet convinced)
+- en dash lengthened
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.020] 2020-10-12
 
 ### Added
@@ -8,7 +25,7 @@
 
 - experimental design for 1D538-1D550
 - some tweaks for APL (not going to spend much more time though)
-- nudge 302
+- nudge u0302
 
 ### Removed
 
