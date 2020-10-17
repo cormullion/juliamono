@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.022] 2020-10-17
+
+### Added
+
+- added some ornaments (1F650 - 1F66F)
+
+### Changed
+
+- a few tweaks and corrections to various glyphs
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.021] 2020-10-14
 
 ### Added

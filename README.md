@@ -1,6 +1,6 @@
-#### JuliaMono, a font for programming with Julia
+#### JuliaMono, a font for programming
 
-Read [this blog post](https://cormullion.github.io/pages/2020-07-26-JuliaMono/) to read all about this typeface.
+Read [this blog post](https://cormullion.github.io/pages/2020-07-26-JuliaMono/) to find out more about this typeface.
 
 Here are the pages from the specimen PDF, to save you downloading it.
 
