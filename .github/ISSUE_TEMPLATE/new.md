@@ -19,4 +19,4 @@ Hi! Thanks for visiting. Sadly I've run out of time to work on this font. So:
 
 - "in my opinion this glyph should be"... Indeed, perhaps it should, but nothing in life is perfect.
 
-So, if you __really__ want to open a new issue, please make sure you're using the current version, and perhaps don't expect too much as a result. Thank you very for your interest, though, I appreciate it!
+So, if you __really__ want to open a new issue, please make sure you're using the current version, and perhaps don't expect too much as a result. Thank you very much for your interest, though, I appreciate it!
