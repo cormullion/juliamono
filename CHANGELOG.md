@@ -1,5 +1,28 @@
 # Changelog
 
+## [v0.023] 2020-10-23
+
+### Added
+
+- added Ornamental Dingbats 0x1F650:0x1F67F
+- added thinner grave in stylistic alternate SS11 fixes #50
+
+### Changed
+
+- adjusted winascender values because `fontbakery` raised an error on the values I had.
+  I hope they're right and I was wrong...
+- musical symbols are now aligned to midaxis not baseline, fixes #56
+- Phi capital now has serifs  fixes #68
+- en and em dashes adjusted fixes #70
+
+### Removed
+ 
+- netlify website
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.022] 2020-10-17
 
 ### Added
