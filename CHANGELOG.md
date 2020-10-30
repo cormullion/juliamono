@@ -1,5 +1,35 @@
 # Changelog
 
+## [v0.025] 2020-10-30
+
+### Added
+
+- addd manufacture name
+- added top anchors to some Script math glyphs
+- add astrological symbols
+
+### Changed
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## [v0.024] 2020-10-23
+
+### Added
+
+### Changed
+
+- added the webfonts folder back, removed by mistake :(
+
+### Removed
+
+### Deprecated
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.023] 2020-10-23
 
 ### Added
@@ -16,7 +46,7 @@
 - en and em dashes adjusted fixes #70
 
 ### Removed
- 
+
 - netlify website
 
 ### Deprecated
