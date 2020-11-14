@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.027] 2020-11-14
+
+### Added
+
+### Changed
+
+- adjustments to size and position of superscripts
+- adjustments to size and position of 0x1D400 -> ox-1D7FF
+- ink traps for 0x2A
+
+### Removed
+
+### Deprecated
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.026] 2020-11-06
 
 ### Added
