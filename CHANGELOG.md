@@ -1,5 +1,25 @@
 # Changelog
 
+## [v0.028] 2020-12-05
+
+### Added
+
+### Changed
+
+- size of rings increased slightly eg in ÅǺḀŮåůẘẙ 
+
+- resolution of font file doubled to 2000 UPM. I'm hoping this improves some rendering by reducing any problems caused by rounding issues, but who knows.
+
+- removed some mark anchors from script glyphs, for some reason they caused errors
+
+- 0x0276 upper-cased 
+ 
+### Removed
+
+### Deprecated
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.027] 2020-11-14
 
 ### Added
