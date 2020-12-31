@@ -1,5 +1,24 @@
 # Changelog
 
+## [v0.029] 2020-12-31
+
+### Added
+
+- Georgian Unicode glyphs
+- some missing Greek archaic glyphs
+- Oxa726 and Oxa727
+
+### Changed
+
+- adjusted phi latin to be less greek (although there's some debate about this one)
+- fix 0x020c, 0x03CB
+ 
+### Removed
+
+### Deprecated
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.028] 2020-12-05
 
 ### Added
