@@ -1,5 +1,22 @@
 # Changelog
 
+## [v0.030] 2021-01-10
+
+### Added
+
+### Changed
+
+- made Iacute_J/IJ/ij more consistent 
+- minor changes to U+01D409, U+1D39, U+20E1, U+034D, U+20D7, U+27F9
+- Phisuper (U+1Db2) modified
+- Integrals more integrated
+
+### Removed
+
+### Deprecated
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.029] 2020-12-31
 
 ### Added
