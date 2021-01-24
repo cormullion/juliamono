@@ -12,25 +12,25 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Create Tar and Zip File
+      - name: Create Assets
         run: |
-          tar -czvf JuliaMono.tar.gz JuliaMono-*.ttf LICENSE
-          zip JuliaMono.zip JuliaMono-*.ttf LICENSE
-      - name: Upload Tar File
-        uses: actions/upload-release-asset@v1
+          # full dist
+          tar -czvf JuliaMono.tar.gz JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
+          zip JuliaMono.zip JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
+          # only ttf
+          tar -czvf JuliaMono-ttf.tar.gz JuliaMono-*.ttf LICENSE
+          zip JuliaMono-ttf.zip JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
+          # only webfonts
+          tar -czvf JuliaMono-webfonts.tar.gz webfonts/JuliaMono-*.woff2 LICENSE
+          zip JuliaMono-webfonts.zip webfonts/JuliaMono-*.woff2 LICENSE
+      - name: Upload Assets
+        run: |
+          set -x
+          assets=()
+          for asset in JuliaMono*.{tar.gz,zip}; do
+            assets+=("$asset")
+          done
+          tag_name="${GITHUB_REF##*/}"
+          gh release upload "$tag_name" "${assets[@]}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./JuliaMono.tar.gz
-          asset_name: JuliaMono.tar.gz
-          asset_content_type: application/tar+gzip
-      - name: Upload Zip File
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./JuliaMono.zip
-          asset_name: JuliaMono.zip
-          asset_content_type: application/zip
