@@ -1,5 +1,26 @@
 # Changelog
 
+## [v0.031] 2021-01-25
+
+### Added
+
+- E834 "con"
+
+### Changed
+
+- 0257 lost its hook, I've sewn a new one back on
+- added ink traps to asterisk * (0x2a) 
+- tidied up some extrabold versions of some glyphs
+- tweaked some of those pesky script/math glyphs
+
+### Removed
+
+- removed duplicate math script glyphs U1d49d U1d4a0 U1d4a1 U1d4a3 U1d4a4 U1d4a7 U1d4a8 U1d4ad; the Unicode folks added them in a piecemeal fashion, so a continuous run was never possible. Visit mono-math.netlify.com for more information about math symbol coverage!
+
+### Deprecated
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.030] 2021-01-10
 
 ### Added
