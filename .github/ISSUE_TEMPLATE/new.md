@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-Hi! Thanks for visiting. Sadly I've run out of time to work on this font. So:
+Hi! Thanks for visiting.
 
 - found a serious mistake/error? Report it and I'll try to fix it sometime.
 
@@ -15,8 +15,10 @@ Hi! Thanks for visiting. Sadly I've run out of time to work on this font. So:
 
 - "not as nice as RoboFiraSourceBrainsVu-Mono..." No worries, I won't be offended if you use that instead...
 
-- "something looks wrong on Unix/Windows". If you can reproduce it on MacOS in VS-Code I might investigate it. Unfortunately, there are so many variables, such as screen resolution, Windows hinting, terminal app support, editor quirks, etc., and it's difficult to work out the cause of these rendering issues.
+- "something looks wrong on Unix/Windows". If you can reproduce it on MacOS in VS-Code I might investigate it. Unfortunately, there are so many variables, such as screen resolution, Windows hinting, terminal app support, editor quirks, etc., and it's really difficult to work out the cause of these rendering issues.
 
 - "in my opinion this glyph should be"... Indeed, perhaps it should, but nothing in life is perfect.
 
-So, if you __really__ want to open a new issue, please make sure you're using the current version, and perhaps don't expect too much as a result. Thank you very much for your interest, though, I appreciate it!
+Make sure you're using the current version!
+
+Thank you very much for your interest, I appreciate it!
