@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.032] forthcoming 
+
+### Added
+
+### Changed
+
+- some 'not' math glyphs have been changed to be consistent with each other and with U+0338. 
+
+### Removed
+
+### Deprecated
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ## [v0.031] 2021-01-25
 
 ### Added
