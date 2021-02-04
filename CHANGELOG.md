@@ -1,12 +1,13 @@
 # Changelog
 
-## [v0.032] forthcoming 
+## [v0.032] 2021-02-04
 
 ### Added
 
 ### Changed
 
-- some 'not' math glyphs have been changed to be consistent with each other and with U+0338. 
+- assorted 'not' math glyphs have been changed to be consistent with each other and with U+0338.
+- tuning other glyphs, attempting some consistency
 
 ### Removed
 
