@@ -1,0 +1,321 @@
+/* colors are defined in light/dark.css */
+
+@font-face {
+	font-family: JuliaMono-Regular;
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-Regular.woff2");
+}
+
+@font-face {
+	font-family: JuliaMono-Medium;
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-Medium.woff2");
+	font-display: fallback;	/* allow 100 milliseconds then display fallback */
+	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
+}
+
+@font-face {
+	font-family: JuliaMono-Bold;
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-Bold.woff2");
+	font-display: fallback;	/* allow 100 milliseconds then display fallback */
+	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
+}
+
+@font-face {
+	font-family: JuliaMono-ExtraBold;
+	font-display: fallback;	/* allow 100 milliseconds then display fallback */
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-ExtraBold.woff2");
+	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
+}
+
+@font-face {
+	font-family: JuliaMono-Black;
+	font-display: fallback;	/* allow 100 milliseconds then display fallback */
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-Black.woff2");
+	unicode-range: U+0020-00FF, U+2049-2050, U+2000-2020;
+}
+
+html {
+	font-family: JuliaMono-Regular;
+}
+
+body {
+	margin-top: 300px;
+	background-image: url("/assets/juliamonocolordots.svg");
+	background-position : center 0;
+	background-repeat: no-repeat;
+	font-size: 18px;
+}
+
+a {
+	padding:0 0 0 0;
+    border-bottom-style: dotted;
+	text-decoration: none;
+}
+
+a:hover {
+	 border-color: green;
+}
+
+.franklin-content {
+	display: flex;
+	flex-direction: column;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.lightswitch {
+	font-family: JuliaMono-Black;
+	font-variant-caps: all-small-caps;
+}
+
+.lightswitchlight {
+	color:#000;
+	background-color: #ddd;
+}
+
+.lightswitchdark {
+	color:white;
+	background-color: #111;
+}
+
+.franklin-toc {
+	font-family: JuliaMono-Regular;
+	font-size: 0.9rem;
+	margin: 3rem;
+}
+
+.franklin-toc ol {
+	list-style: square;
+	margin-left: 1rem;
+	font-size: 0.9rem;
+}
+.franklin-toc li {
+	list-style: square;
+}
+
+h1 {
+	font-size: 3rem;
+	font-family: JuliaMono-Black;
+	hanging-punctuation: first;
+	margin-bottom: 0.5rem;
+}
+
+h2, h3 {
+	font-size: 2.0rem;
+	line-height: 3rem;
+	font-family: JuliaMono-ExtraBold;
+	max-width: 50ch;
+	margin-bottom: 0.5rem;
+	hanging-punctuation: first;
+}
+
+h4, h5 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-family: JuliaMono-ExtraBold;
+	max-width: 50ch;
+	margin-bottom: 0.5rem;
+	hanging-punctuation: first;
+}
+
+p  {
+	font-size: 1rem;
+	line-height: 2rem;
+	font-family: JuliaMono-Regular;
+	text-align: left;
+	align-items:left;
+	margin-left: 0%;
+	margin-right: 0%;
+	hanging-punctuation: first;
+}
+
+.strong {
+	font-face: JuliaMono-Bold;
+}
+
+.fndef, .fndef-content, .fndef-backref{
+	font-size: 0.8rem;
+	font-family: JuliaMono-Regular;
+	display: inline;
+	vertical-align: top;
+	line-height: 1.5rem;
+
+}
+
+p > code {
+	font-family: JuliaMono-Regular;
+	margin-top: 0.25rem;
+	margin-right: 0.25rem;
+}
+
+ul {
+	margin-top: 0.75rem;
+	margin-right: 0.25rem;
+}
+
+pre, code {
+	font-family: JuliaMono-Regular;
+	width: 100%;
+	margin:0;
+}
+
+code.language-julia.hljs {
+	font-size: 1em;
+	line-height: 1.5em;
+	/* overflow: auto; */
+	page-break-inside: avoid;
+	text-wrap: unrestricted;
+	/* Mozilla, since 1999 */
+	/* Opera 7 */
+	/* Opera 4-6 */
+	white-space: pre-wrap;
+	/* css-3 */
+	word-wrap: break-word;
+	/* Internet Explorer 5.5+ */
+	border: none;
+}
+
+.copyright {
+	margin: 10rem 2rem 2rem 2rem;
+	font-family: JuliaMono-Regular;
+	font-size: 0.5rem;
+	text-align: center;
+}
+
+.smallercode {
+  font-size: 0.7em;
+}
+
+.codealt * {
+	font-feature-settings: "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09" ;
+	font-variant-ligatures: no-contextual;
+}
+
+.code_zero_on {
+	/* slash zero */
+	font-feature-settings: "zero";
+	font-variant-ligatures: no-contextual;
+}
+
+.code_alt_zero {
+	font-feature-settings: "ss04";
+}
+
+.code_ss_on {
+	width:100%;
+	font-feature-settings: "zero", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09";
+	font-variant-ligatures: no-contextual;
+}
+
+.code_ss_off {
+	font-feature-settings: normal;
+	font-variant-ligatures: no-contextual;
+}
+
+.code_ss_on_dl {
+	font-feature-settings: "ss08";
+	font-variant-ligatures: no-contextual;
+}
+
+.code_calt_on {
+	font-feature-settings: normal;
+	font-variant-ligatures: contextual;
+}
+
+/* language sample table */
+.language * {
+	 font-family: JuliaMono-Regular;
+	 vertical-align: top;
+	 line-height: 1.3em;
+	 padding: 0.5rem;
+	 max-width: 100%;
+}
+
+/* stylistic alts table */
+.sstable {
+	font-family: JuliaMono-Regular;
+	width: 100%;
+	vertical-align: top;
+	text-align: center;
+}
+
+.sstable th > p {
+  text-align: center;
+}
+
+.sstable td {
+	text-align: center;
+  width: 25%;
+}
+
+
+.tryit {
+	font-family: JuliaMono-Regular;
+	width: 90%;
+	margin: 1em;
+	line-height: 2.2em;
+	font-size: 2em;
+	flex: 1;
+}
+
+/* images */
+
+#enlargewrap {
+	position: relative;
+}
+
+.enlarge img {
+	border:1px solid #000;
+	margin:5px;
+}
+
+.enlarge span {
+	position:absolute;
+	visibility:hidden;
+}
+
+.enlarge:hover, .enlarge:hover span {
+	visibility:visible;
+	z-index:3;
+}
+
+.img-box {
+	padding: 5px;
+}
+
+.hljs-keyword {
+	font-family: JuliaMono-Medium;
+}
+
+.hljs-quote
+{
+	font-style: normal;
+}
+
+.hljs-meta {
+	font-family: JuliaMono-Medium;
+}
+
+.hljs-comment {
+	font-style: oblique 10deg;
+}
+
+@media only screen and (max-width: 500px)  {
+	body {
+		 background-size: 500px;
+	}
+	nav {
+		border-radius: 0.5rem;
+	}
+ 	div.franklin-content {
+		max-width: 95%;
+		margin:  1rem;
+		padding: 1rem;
+ 	}
+	header {
+	    margin-top: 0px;
+	}
+
+	body {
+		margin-top: 0px;
+		}
+}

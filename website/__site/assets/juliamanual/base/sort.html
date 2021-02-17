@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Sorting and Related Functions · The Julia Language</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link href="../assets/julia-manual.css" rel="stylesheet" type="text/css"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar">
+    <p style="text-align: center;">JuliaMono edition</p>
+<a class="docs-logo" href="../index.html"><img class="docs-light-only" src="../assets/logo.svg" alt="The Julia Language logo"/><img class="docs-dark-only" src="../assets/logo-dark.svg" alt="The Julia Language logo"/></a><form class="docs-search" action="../search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../index.html">Home</a></li><li><input class="collapse-toggle" id="menuitem-3" type="checkbox"/><label class="tocitem" for="menuitem-3"><span class="docs-label">Manual</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../manual/getting-started.html">Getting Started</a></li><li><a class="tocitem" href="../manual/variables.html">Variables</a></li><li><a class="tocitem" href="../manual/integers-and-floating-point-numbers.html">Integers and Floating-Point Numbers</a></li><li><a class="tocitem" href="../manual/mathematical-operations.html">Mathematical Operations and Elementary Functions</a></li><li><a class="tocitem" href="../manual/complex-and-rational-numbers.html">Complex and Rational Numbers</a></li><li><a class="tocitem" href="../manual/strings.html">Strings</a></li><li><a class="tocitem" href="../manual/functions.html">Functions</a></li><li><a class="tocitem" href="../manual/control-flow.html">Control Flow</a></li><li><a class="tocitem" href="../manual/variables-and-scoping.html">Scope of Variables</a></li><li><a class="tocitem" href="../manual/types.html">Types</a></li><li><a class="tocitem" href="../manual/methods.html">Methods</a></li><li><a class="tocitem" href="../manual/constructors.html">Constructors</a></li><li><a class="tocitem" href="../manual/conversion-and-promotion.html">Conversion and Promotion</a></li><li><a class="tocitem" href="../manual/interfaces.html">Interfaces</a></li><li><a class="tocitem" href="../manual/modules.html">Modules</a></li><li><a class="tocitem" href="../manual/documentation.html">Documentation</a></li><li><a class="tocitem" href="../manual/metaprogramming.html">Metaprogramming</a></li><li><a class="tocitem" href="../manual/arrays.html">Multi-dimensional Arrays</a></li><li><a class="tocitem" href="../manual/missing.html">Missing Values</a></li><li><a class="tocitem" href="../manual/networking-and-streams.html">Networking and Streams</a></li><li><a class="tocitem" href="../manual/parallel-computing.html">Parallel Computing</a></li><li><a class="tocitem" href="../manual/running-external-programs.html">Running External Programs</a></li><li><a class="tocitem" href="../manual/calling-c-and-fortran-code.html">Calling C and Fortran Code</a></li><li><a class="tocitem" href="../manual/handling-operating-system-variation.html">Handling Operating System Variation</a></li><li><a class="tocitem" href="../manual/environment-variables.html">Environment Variables</a></li><li><a class="tocitem" href="../manual/embedding.html">Embedding Julia</a></li><li><a class="tocitem" href="../manual/code-loading.html">Code Loading</a></li><li><a class="tocitem" href="../manual/profile.html">Profiling</a></li><li><a class="tocitem" href="../manual/stacktraces.html">Stack Traces</a></li><li><a class="tocitem" href="../manual/performance-tips.html">Performance Tips</a></li><li><a class="tocitem" href="../manual/workflow-tips.html">Workflow Tips</a></li><li><a class="tocitem" href="../manual/style-guide.html">Style Guide</a></li><li><a class="tocitem" href="../manual/faq.html">Frequently Asked Questions</a></li><li><a class="tocitem" href="../manual/noteworthy-differences.html">Noteworthy Differences from other Languages</a></li><li><a class="tocitem" href="../manual/unicode-input.html">Unicode Input</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-4" type="checkbox" checked/><label class="tocitem" for="menuitem-4"><span class="docs-label">Base</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="base.html">Essentials</a></li><li><a class="tocitem" href="collections.html">Collections and Data Structures</a></li><li><a class="tocitem" href="math.html">Mathematics</a></li><li><a class="tocitem" href="numbers.html">Numbers</a></li><li><a class="tocitem" href="strings.html">Strings</a></li><li><a class="tocitem" href="arrays.html">Arrays</a></li><li><a class="tocitem" href="parallel.html">Tasks</a></li><li><a class="tocitem" href="multi-threading.html">Multi-Threading</a></li><li><a class="tocitem" href="constants.html">Constants</a></li><li><a class="tocitem" href="file.html">Filesystem</a></li><li><a class="tocitem" href="io-network.html">I/O and Network</a></li><li><a class="tocitem" href="punctuation.html">Punctuation</a></li><li class="is-active"><a class="tocitem" href="sort.html">Sorting and Related Functions</a><ul class="internal"><li><a class="tocitem" href="#Sorting-Functions-1"><span>Sorting Functions</span></a></li><li><a class="tocitem" href="#Order-Related-Functions-1"><span>Order-Related Functions</span></a></li><li><a class="tocitem" href="#Sorting-Algorithms-1"><span>Sorting Algorithms</span></a></li></ul></li><li><a class="tocitem" href="iterators.html">Iteration utilities</a></li><li><a class="tocitem" href="c.html">C Interface</a></li><li><a class="tocitem" href="libc.html">C Standard Library</a></li><li><a class="tocitem" href="stacktraces.html">StackTraces</a></li><li><a class="tocitem" href="simd-types.html">SIMD Support</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-5" type="checkbox"/><label class="tocitem" for="menuitem-5"><span class="docs-label">Standard Library</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../stdlib/Base64.html">Base64</a></li><li><a class="tocitem" href="../stdlib/CRC32c.html">CRC32c</a></li><li><a class="tocitem" href="../stdlib/Dates.html">Dates</a></li><li><a class="tocitem" href="../stdlib/DelimitedFiles.html">Delimited Files</a></li><li><a class="tocitem" href="../stdlib/Distributed.html">Distributed Computing</a></li><li><a class="tocitem" href="../stdlib/FileWatching.html">File Events</a></li><li><a class="tocitem" href="../stdlib/Future.html">Future</a></li><li><a class="tocitem" href="../stdlib/InteractiveUtils.html">Interactive Utilities</a></li><li><a class="tocitem" href="../stdlib/LibGit2.html">LibGit2</a></li><li><a class="tocitem" href="../stdlib/Libdl.html">Dynamic Linker</a></li><li><a class="tocitem" href="../stdlib/LinearAlgebra.html">Linear Algebra</a></li><li><a class="tocitem" href="../stdlib/Logging.html">Logging</a></li><li><a class="tocitem" href="../stdlib/Markdown.html">Markdown</a></li><li><a class="tocitem" href="../stdlib/Mmap.html">Memory-mapped I/O</a></li><li><a class="tocitem" href="../stdlib/Pkg.html">Pkg</a></li><li><a class="tocitem" href="../stdlib/Printf.html">Printf</a></li><li><a class="tocitem" href="../stdlib/Profile.html">Profiling</a></li><li><a class="tocitem" href="../stdlib/REPL.html">The Julia REPL</a></li><li><a class="tocitem" href="../stdlib/Random.html">Random Numbers</a></li><li><a class="tocitem" href="../stdlib/SHA.html">SHA</a></li><li><a class="tocitem" href="../stdlib/Serialization.html">Serialization</a></li><li><a class="tocitem" href="../stdlib/SharedArrays.html">Shared Arrays</a></li><li><a class="tocitem" href="../stdlib/Sockets.html">Sockets</a></li><li><a class="tocitem" href="../stdlib/SparseArrays.html">Sparse Arrays</a></li><li><a class="tocitem" href="../stdlib/Statistics.html">Statistics</a></li><li><a class="tocitem" href="../stdlib/Test.html">Unit Testing</a></li><li><a class="tocitem" href="../stdlib/UUIDs.html">UUIDs</a></li><li><a class="tocitem" href="../stdlib/Unicode.html">Unicode</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6" type="checkbox"/><label class="tocitem" for="menuitem-6"><span class="docs-label">Developer Documentation</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/reflection.html">Reflection and introspection</a></li><li><input class="collapse-toggle" id="menuitem-6-2" type="checkbox"/><label class="tocitem" for="menuitem-6-2"><span class="docs-label">Documentation of Julia&#39;s Internals</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/init.html">Initialization of the Julia runtime</a></li><li><a class="tocitem" href="../devdocs/ast.html">Julia ASTs</a></li><li><a class="tocitem" href="../devdocs/types.html">More about types</a></li><li><a class="tocitem" href="../devdocs/object.html">Memory layout of Julia Objects</a></li><li><a class="tocitem" href="../devdocs/eval.html">Eval of Julia code</a></li><li><a class="tocitem" href="../devdocs/callconv.html">Calling Conventions</a></li><li><a class="tocitem" href="../devdocs/compiler.html">High-level Overview of the Native-Code Generation Process</a></li><li><a class="tocitem" href="../devdocs/functions.html">Julia Functions</a></li><li><a class="tocitem" href="../devdocs/cartesian.html">Base.Cartesian</a></li><li><a class="tocitem" href="../devdocs/meta.html">Talking to the compiler (the <code>:meta</code> mechanism)</a></li><li><a class="tocitem" href="../devdocs/subarrays.html">SubArrays</a></li><li><a class="tocitem" href="../devdocs/isbitsunionarrays.html">isbits Union Optimizations</a></li><li><a class="tocitem" href="../devdocs/sysimg.html">System Image Building</a></li><li><a class="tocitem" href="../devdocs/llvm.html">Working with LLVM</a></li><li><a class="tocitem" href="../devdocs/stdio.html">printf() and stdio in the Julia runtime</a></li><li><a class="tocitem" href="../devdocs/boundscheck.html">Bounds checking</a></li><li><a class="tocitem" href="../devdocs/locks.html">Proper maintenance and care of multi-threading locks</a></li><li><a class="tocitem" href="../devdocs/offset-arrays.html">Arrays with custom indices</a></li><li><a class="tocitem" href="../devdocs/require.html">Module loading</a></li><li><a class="tocitem" href="../devdocs/inference.html">Inference</a></li><li><a class="tocitem" href="../devdocs/ssair.html">Julia SSA-form IR</a></li><li><a class="tocitem" href="../devdocs/gc-sa.html">Static analyzer annotations for GC correctness in C code</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6-3" type="checkbox"/><label class="tocitem" for="menuitem-6-3"><span class="docs-label">Developing/debugging Julia&#39;s C code</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../devdocs/backtraces.html">Reporting and analyzing crashes (segfaults)</a></li><li><a class="tocitem" href="../devdocs/debuggingtips.html">gdb debugging tips</a></li><li><a class="tocitem" href="../devdocs/valgrind.html">Using Valgrind with Julia</a></li><li><a class="tocitem" href="../devdocs/sanitizers.html">Sanitizer support</a></li></ul></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Base</a></li><li class="is-active"><a href="sort.html">Sorting and Related Functions</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="sort.html">Sorting and Related Functions</a></li></ul></nav>
+
+<div class="docs-right">
+<span style="text-align:center; font-face: JuliaMono-Regular";>JuliaMono edition</span>
+
+
+
+
+
+<a class="docs-edit-link"
+ href="https://github.com/JuliaLang/julia/blob/master/doc/src/base/sort.md" title="Edit on GitHub"><span class="docs-icon fab"> </span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Sorting-and-Related-Functions-1"><a class="docs-heading-anchor" href="#Sorting-and-Related-Functions-1">Sorting and Related Functions</a><a class="docs-heading-anchor-permalink" href="#Sorting-and-Related-Functions-1" title="Permalink"></a></h1><p>Julia has an extensive, flexible API for sorting and interacting with already-sorted arrays of values. By default, Julia picks reasonable algorithms and sorts in standard ascending order:</p><pre><code class="language-julia-repl">julia&gt; sort([2,3,1])
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3</code></pre><p>You can easily sort in reverse order as well:</p><pre><code class="language-julia-repl">julia&gt; sort([2,3,1], rev=true)
+3-element Array{Int64,1}:
+ 3
+ 2
+ 1</code></pre><p>To sort an array in-place, use the &quot;bang&quot; version of the sort function:</p><pre><code class="language-julia-repl">julia&gt; a = [2,3,1];
+
+julia&gt; sort!(a);
+
+julia&gt; a
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3</code></pre><p>Instead of directly sorting an array, you can compute a permutation of the array&#39;s indices that puts the array into sorted order:</p><pre><code class="language-julia-repl">julia&gt; v = randn(5)
+5-element Array{Float64,1}:
+  0.297288
+  0.382396
+ -0.597634
+ -0.0104452
+ -0.839027
+
+julia&gt; p = sortperm(v)
+5-element Array{Int64,1}:
+ 5
+ 3
+ 4
+ 1
+ 2
+
+julia&gt; v[p]
+5-element Array{Float64,1}:
+ -0.839027
+ -0.597634
+ -0.0104452
+  0.297288
+  0.382396</code></pre><p>Arrays can easily be sorted according to an arbitrary transformation of their values:</p><pre><code class="language-julia-repl">julia&gt; sort(v, by=abs)
+5-element Array{Float64,1}:
+ -0.0104452
+  0.297288
+  0.382396
+ -0.597634
+ -0.839027</code></pre><p>Or in reverse order by a transformation:</p><pre><code class="language-julia-repl">julia&gt; sort(v, by=abs, rev=true)
+5-element Array{Float64,1}:
+ -0.839027
+ -0.597634
+  0.382396
+  0.297288
+ -0.0104452</code></pre><p>If needed, the sorting algorithm can be chosen:</p><pre><code class="language-julia-repl">julia&gt; sort(v, alg=InsertionSort)
+5-element Array{Float64,1}:
+ -0.839027
+ -0.597634
+ -0.0104452
+  0.297288
+  0.382396</code></pre><p>All the sorting and order related functions rely on a &quot;less than&quot; relation defining a total order on the values to be manipulated. The <code>isless</code> function is invoked by default, but the relation can be specified via the <code>lt</code> keyword.</p><h2 id="Sorting-Functions-1"><a class="docs-heading-anchor" href="#Sorting-Functions-1">Sorting Functions</a><a class="docs-heading-anchor-permalink" href="#Sorting-Functions-1" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="Base.sort!" href="#Base.sort!"><code>Base.sort!</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">sort!(v; alg::Algorithm=defalg(v), lt=isless, by=identity, rev::Bool=false, order::Ordering=Forward)</code></pre><p>Sort the vector <code>v</code> in place. <a href="sort.html#Base.Sort.QuickSort"><code>QuickSort</code></a> is used by default for numeric arrays while <a href="sort.html#Base.Sort.MergeSort"><code>MergeSort</code></a> is used for other arrays. You can specify an algorithm to use via the <code>alg</code> keyword (see <a href="sort.html#Sorting-Algorithms-1">Sorting Algorithms</a> for available algorithms). The <code>by</code> keyword lets you provide a function that will be applied to each element before comparison; the <code>lt</code> keyword allows providing a custom &quot;less than&quot; function; use <code>rev=true</code> to reverse the sorting order. These options are independent and can be used together in all possible combinations: if both <code>by</code> and <code>lt</code> are specified, the <code>lt</code> function is applied to the result of the <code>by</code> function; <code>rev=true</code> reverses whatever ordering specified via the <code>by</code> and <code>lt</code> keywords.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; v = [3, 1, 2]; sort!(v); v
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+
+julia&gt; v = [3, 1, 2]; sort!(v, rev = true); v
+3-element Array{Int64,1}:
+ 3
+ 2
+ 1
+
+julia&gt; v = [(1, &quot;c&quot;), (3, &quot;a&quot;), (2, &quot;b&quot;)]; sort!(v, by = x -&gt; x[1]); v
+3-element Array{Tuple{Int64,String},1}:
+ (1, &quot;c&quot;)
+ (2, &quot;b&quot;)
+ (3, &quot;a&quot;)
+
+julia&gt; v = [(1, &quot;c&quot;), (3, &quot;a&quot;), (2, &quot;b&quot;)]; sort!(v, by = x -&gt; x[2]); v
+3-element Array{Tuple{Int64,String},1}:
+ (3, &quot;a&quot;)
+ (2, &quot;b&quot;)
+ (1, &quot;c&quot;)</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L650-L688">source</a></section><section><div><pre><code class="language-none">sort!(A; dims::Integer, alg::Algorithm=defalg(A), lt=isless, by=identity, rev::Bool=false, order::Ordering=Forward)</code></pre><p>Sort the multidimensional array <code>A</code> along dimension <code>dims</code>. See <a href="sort.html#Base.sort!"><code>sort!</code></a> for a description of possible keyword arguments.</p><p>To sort slices of an array, refer to <a href="sort.html#Base.sortslices"><code>sortslices</code></a>.</p><div class="admonition is-compat"><header class="admonition-header">Julia 1.1</header><div class="admonition-body"><p>This function requires at least Julia 1.1.</p></div></div><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; A = [4 3; 1 2]
+2×2 Array{Int64,2}:
+ 4  3
+ 1  2
+
+julia&gt; sort!(A, dims = 1); A
+2×2 Array{Int64,2}:
+ 1  2
+ 4  3
+
+julia&gt; sort!(A, dims = 2); A
+2×2 Array{Int64,2}:
+ 1  2
+ 3  4</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L1044-L1072">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.sort" href="#Base.sort"><code>Base.sort</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">sort(v; alg::Algorithm=defalg(v), lt=isless, by=identity, rev::Bool=false, order::Ordering=Forward)</code></pre><p>Variant of <a href="sort.html#Base.sort!"><code>sort!</code></a> that returns a sorted copy of <code>v</code> leaving <code>v</code> itself unmodified.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; v = [3, 1, 2];
+
+julia&gt; sort(v)
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+
+julia&gt; v
+3-element Array{Int64,1}:
+ 3
+ 1
+ 2</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L733-L754">source</a></section><section><div><pre><code class="language-none">sort(A; dims::Integer, alg::Algorithm=DEFAULT_UNSTABLE, lt=isless, by=identity, rev::Bool=false, order::Ordering=Forward)</code></pre><p>Sort a multidimensional array <code>A</code> along the given dimension. See <a href="sort.html#Base.sort!"><code>sort!</code></a> for a description of possible keyword arguments.</p><p>To sort slices of an array, refer to <a href="sort.html#Base.sortslices"><code>sortslices</code></a>.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; A = [4 3; 1 2]
+2×2 Array{Int64,2}:
+ 4  3
+ 1  2
+
+julia&gt; sort(A, dims = 1)
+2×2 Array{Int64,2}:
+ 1  2
+ 4  3
+
+julia&gt; sort(A, dims = 2)
+2×2 Array{Int64,2}:
+ 3  4
+ 1  2</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L986-L1012">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.sortperm" href="#Base.sortperm"><code>Base.sortperm</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">sortperm(v; alg::Algorithm=DEFAULT_UNSTABLE, lt=isless, by=identity, rev::Bool=false, order::Ordering=Forward)</code></pre><p>Return a permutation vector <code>I</code> that puts <code>v[I]</code> in sorted order. The order is specified using the same keywords as <a href="sort.html#Base.sort!"><code>sort!</code></a>. The permutation is guaranteed to be stable even if the sorting algorithm is unstable, meaning that indices of equal elements appear in ascending order.</p><p>See also <a href="sort.html#Base.Sort.sortperm!"><code>sortperm!</code></a>.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; v = [3, 1, 2];
+
+julia&gt; p = sortperm(v)
+3-element Array{Int64,1}:
+ 2
+ 3
+ 1
+
+julia&gt; v[p]
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L863-L889">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.InsertionSort" href="#Base.Sort.InsertionSort"><code>Base.Sort.InsertionSort</code></a> — <span class="docstring-category">Constant</span></header><section><div><pre><code class="language-julia">InsertionSort</code></pre><p>Indicate that a sorting function should use the insertion sort algorithm. Insertion sort traverses the collection one element at a time, inserting each element into its correct, sorted position in the output list.</p><p>Characteristics:</p><ul><li><em>stable</em>: preserves the ordering of elements which compare equal (e.g. &quot;a&quot; and &quot;A&quot; in a sort of letters which ignores case).</li><li><em>in-place</em> in memory.</li><li><em>quadratic performance</em> in the number of elements to be sorted: it is well-suited to small collections but should not be used for large ones.</li></ul></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L412-L427">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.MergeSort" href="#Base.Sort.MergeSort"><code>Base.Sort.MergeSort</code></a> — <span class="docstring-category">Constant</span></header><section><div><pre><code class="language-julia">MergeSort</code></pre><p>Indicate that a sorting function should use the merge sort algorithm. Merge sort divides the collection into subcollections and repeatedly merges them, sorting each subcollection at each step, until the entire collection has been recombined in sorted form.</p><p>Characteristics:</p><ul><li><em>stable</em>: preserves the ordering of elements which compare equal (e.g. &quot;a&quot; and &quot;A&quot; in a sort of letters which ignores case).</li><li><em>not in-place</em> in memory.</li><li><em>divide-and-conquer</em> sort strategy.</li></ul></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L444-L459">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.QuickSort" href="#Base.Sort.QuickSort"><code>Base.Sort.QuickSort</code></a> — <span class="docstring-category">Constant</span></header><section><div><pre><code class="language-julia">QuickSort</code></pre><p>Indicate that a sorting function should use the quick sort algorithm, which is <em>not</em> stable.</p><p>Characteristics:</p><ul><li><em>not stable</em>: does not preserve the ordering of elements which compare equal (e.g. &quot;a&quot; and &quot;A&quot; in a sort of letters which ignores case).</li><li><em>in-place</em> in memory.</li><li><em>divide-and-conquer</em>: sort strategy similar to <a href="sort.html#Base.Sort.MergeSort"><code>MergeSort</code></a>.</li><li><em>good performance</em> for large collections.</li></ul></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L429-L442">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.PartialQuickSort" href="#Base.Sort.PartialQuickSort"><code>Base.Sort.PartialQuickSort</code></a> — <span class="docstring-category">Type</span></header><section><div><pre><code class="language-julia">PartialQuickSort{T &lt;: Union{Integer,OrdinalRange}}</code></pre><p>Indicate that a sorting function should use the partial quick sort algorithm. Partial quick sort returns the smallest <code>k</code> elements sorted from smallest to largest, finding them and sorting them using <a href="sort.html#Base.Sort.QuickSort"><code>QuickSort</code></a>.</p><p>Characteristics:</p><ul><li><em>not stable</em>: does not preserve the ordering of elements which compare equal (e.g. &quot;a&quot; and &quot;A&quot; in a sort of letters which ignores case).</li><li><em>in-place</em> in memory.</li><li><em>divide-and-conquer</em>: sort strategy similar to <a href="sort.html#Base.Sort.MergeSort"><code>MergeSort</code></a>.</li></ul></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L393-L406">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.sortperm!" href="#Base.Sort.sortperm!"><code>Base.Sort.sortperm!</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">sortperm!(ix, v; alg::Algorithm=DEFAULT_UNSTABLE, lt=isless, by=identity, rev::Bool=false, order::Ordering=Forward, initialized::Bool=false)</code></pre><p>Like <a href="sort.html#Base.sortperm"><code>sortperm</code></a>, but accepts a preallocated index vector <code>ix</code>.  If <code>initialized</code> is <code>false</code> (the default), <code>ix</code> is initialized to contain the values <code>1:length(v)</code>.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; v = [3, 1, 2]; p = zeros(Int, 3);
+
+julia&gt; sortperm!(p, v); p
+3-element Array{Int64,1}:
+ 2
+ 3
+ 1
+
+julia&gt; v[p]
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L917-L939">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.sortslices" href="#Base.sortslices"><code>Base.sortslices</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">sortslices(A; dims, alg::Algorithm=DEFAULT_UNSTABLE, lt=isless, by=identity, rev::Bool=false, order::Ordering=Forward)</code></pre><p>Sort slices of an array <code>A</code>. The required keyword argument <code>dims</code> must be either an integer or a tuple of integers. It specifies the dimension(s) over which the slices are sorted.</p><p>E.g., if <code>A</code> is a matrix, <code>dims=1</code> will sort rows, <code>dims=2</code> will sort columns. Note that the default comparison function on one dimensional slices sorts lexicographically.</p><p>For the remaining keyword arguments, see the documentation of <a href="sort.html#Base.sort!"><code>sort!</code></a>.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; sortslices([7 3 5; -1 6 4; 9 -2 8], dims=1) # Sort rows
+3×3 Array{Int64,2}:
+ -1   6  4
+  7   3  5
+  9  -2  8
+
+julia&gt; sortslices([7 3 5; -1 6 4; 9 -2 8], dims=1, lt=(x,y)-&gt;isless(x[2],y[2]))
+3×3 Array{Int64,2}:
+  9  -2  8
+  7   3  5
+ -1   6  4
+
+julia&gt; sortslices([7 3 5; -1 6 4; 9 -2 8], dims=1, rev=true)
+3×3 Array{Int64,2}:
+  9  -2  8
+  7   3  5
+ -1   6  4
+
+julia&gt; sortslices([7 3 5; 6 -1 -4; 9 -2 8], dims=2) # Sort columns
+3×3 Array{Int64,2}:
+  3   5  7
+ -1  -4  6
+ -2   8  9
+
+julia&gt; sortslices([7 3 5; 6 -1 -4; 9 -2 8], dims=2, alg=InsertionSort, lt=(x,y)-&gt;isless(x[2],y[2]))
+3×3 Array{Int64,2}:
+  5   3  7
+ -4  -1  6
+  8  -2  9
+
+julia&gt; sortslices([7 3 5; 6 -1 -4; 9 -2 8], dims=2, rev=true)
+3×3 Array{Int64,2}:
+ 7   5   3
+ 6  -4  -1
+ 9   8  -2</code></pre><p><strong>Higher dimensions</strong></p><p><code>sortslices</code> extends naturally to higher dimensions. E.g., if <code>A</code> is a a 2x2x2 array, <code>sortslices(A, dims=3)</code> will sort slices within the 3rd dimension, passing the 2x2 slices <code>A[:, :, 1]</code> and <code>A[:, :, 2]</code> to the comparison function. Note that while there is no default order on higher-dimensional slices, you may use the <code>by</code> or <code>lt</code> keyword argument to specify such an order.</p><p>If <code>dims</code> is a tuple, the order of the dimensions in <code>dims</code> is relevant and specifies the linear order of the slices. E.g., if <code>A</code> is three dimensional and <code>dims</code> is <code>(1, 2)</code>, the orderings of the first two dimensions are re-arranged such such that the slices (of the remaining third dimension) are sorted. If <code>dims</code> is <code>(2, 1)</code> instead, the same slices will be taken, but the result order will be row-major instead.</p><p><strong>Higher dimensional examples</strong></p><pre><code class="language-none">julia&gt; A = permutedims(reshape([4 3; 2 1; &#39;A&#39; &#39;B&#39;; &#39;C&#39; &#39;D&#39;], (2, 2, 2)), (1, 3, 2))
+2×2×2 Array{Any,3}:
+[:, :, 1] =
+ 4  3
+ 2  1
+
+[:, :, 2] =
+ &#39;A&#39;  &#39;B&#39;
+ &#39;C&#39;  &#39;D&#39;
+
+julia&gt; sortslices(A, dims=(1,2))
+2×2×2 Array{Any,3}:
+[:, :, 1] =
+ 1  3
+ 2  4
+
+[:, :, 2] =
+ &#39;D&#39;  &#39;B&#39;
+ &#39;C&#39;  &#39;A&#39;
+
+julia&gt; sortslices(A, dims=(2,1))
+2×2×2 Array{Any,3}:
+[:, :, 1] =
+ 1  2
+ 3  4
+
+[:, :, 2] =
+ &#39;D&#39;  &#39;C&#39;
+ &#39;B&#39;  &#39;A&#39;
+
+julia&gt; sortslices(reshape([5; 4; 3; 2; 1], (1,1,5)), dims=3, by=x-&gt;x[1,1])
+1×1×5 Array{Int64,3}:
+[:, :, 1] =
+ 1
+
+[:, :, 2] =
+ 2
+
+[:, :, 3] =
+ 3
+
+[:, :, 4] =
+ 4
+
+[:, :, 5] =
+ 5</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/multidimensional.jl#L1650-L1766">source</a></section></article><h2 id="Order-Related-Functions-1"><a class="docs-heading-anchor" href="#Order-Related-Functions-1">Order-Related Functions</a><a class="docs-heading-anchor-permalink" href="#Order-Related-Functions-1" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="Base.issorted" href="#Base.issorted"><code>Base.issorted</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">issorted(v, lt=isless, by=identity, rev:Bool=false, order::Ordering=Forward)</code></pre><p>Test whether a vector is in sorted order. The <code>lt</code>, <code>by</code> and <code>rev</code> keywords modify what order is considered to be sorted just as they do for <a href="sort.html#Base.sort"><code>sort</code></a>.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; issorted([1, 2, 3])
+true
+
+julia&gt; issorted([(1, &quot;b&quot;), (2, &quot;a&quot;)], by = x -&gt; x[1])
+true
+
+julia&gt; issorted([(1, &quot;b&quot;), (2, &quot;a&quot;)], by = x -&gt; x[2])
+false
+
+julia&gt; issorted([(1, &quot;b&quot;), (2, &quot;a&quot;)], by = x -&gt; x[2], rev=true)
+true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L69-L89">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.searchsorted" href="#Base.Sort.searchsorted"><code>Base.Sort.searchsorted</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">searchsorted(a, x; by=&lt;transform&gt;, lt=&lt;comparison&gt;, rev=false)</code></pre><p>Return the range of indices of <code>a</code> which compare as equal to <code>x</code> (using binary search) according to the order specified by the <code>by</code>, <code>lt</code> and <code>rev</code> keywords, assuming that <code>a</code> is already sorted in that order. Return an empty range located at the insertion point if <code>a</code> does not contain values equal to <code>x</code>.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; searchsorted([1, 2, 4, 5, 5, 7], 4) # single match
+3:3
+
+julia&gt; searchsorted([1, 2, 4, 5, 5, 7], 5) # multiple matches
+4:5
+
+julia&gt; searchsorted([1, 2, 4, 5, 5, 7], 3) # no match, insert in the middle
+3:2
+
+julia&gt; searchsorted([1, 2, 4, 5, 5, 7], 9) # no match, insert at end
+7:6
+
+julia&gt; searchsorted([1, 2, 4, 5, 5, 7], 0) # no match, insert at start
+1:0</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L305-L330">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.searchsortedfirst" href="#Base.Sort.searchsortedfirst"><code>Base.Sort.searchsortedfirst</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">searchsortedfirst(a, x; by=&lt;transform&gt;, lt=&lt;comparison&gt;, rev=false)</code></pre><p>Return the index of the first value in <code>a</code> greater than or equal to <code>x</code>, according to the specified order. Return <code>length(a) + 1</code> if <code>x</code> is greater than all values in <code>a</code>. <code>a</code> is assumed to be sorted.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; searchsortedfirst([1, 2, 4, 5, 5, 7], 4) # single match
+3
+
+julia&gt; searchsortedfirst([1, 2, 4, 5, 5, 7], 5) # multiple matches
+4
+
+julia&gt; searchsortedfirst([1, 2, 4, 5, 5, 7], 3) # no match, insert in the middle
+3
+
+julia&gt; searchsortedfirst([1, 2, 4, 5, 5, 7], 9) # no match, insert at end
+7
+
+julia&gt; searchsortedfirst([1, 2, 4, 5, 5, 7], 0) # no match, insert at start
+1</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L332-L356">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.searchsortedlast" href="#Base.Sort.searchsortedlast"><code>Base.Sort.searchsortedlast</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">searchsortedlast(a, x; by=&lt;transform&gt;, lt=&lt;comparison&gt;, rev=false)</code></pre><p>Return the index of the last value in <code>a</code> less than or equal to <code>x</code>, according to the specified order. Return <code>0</code> if <code>x</code> is less than all values in <code>a</code>. <code>a</code> is assumed to be sorted.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; searchsortedlast([1, 2, 4, 5, 5, 7], 4) # single match
+3
+
+julia&gt; searchsortedlast([1, 2, 4, 5, 5, 7], 5) # multiple matches
+5
+
+julia&gt; searchsortedlast([1, 2, 4, 5, 5, 7], 3) # no match, insert in the middle
+2
+
+julia&gt; searchsortedlast([1, 2, 4, 5, 5, 7], 9) # no match, insert at end
+6
+
+julia&gt; searchsortedlast([1, 2, 4, 5, 5, 7], 0) # no match, insert at start
+0</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L358-L382">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.partialsort!" href="#Base.Sort.partialsort!"><code>Base.Sort.partialsort!</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">partialsort!(v, k; by=&lt;transform&gt;, lt=&lt;comparison&gt;, rev=false)</code></pre><p>Partially sort the vector <code>v</code> in place, according to the order specified by <code>by</code>, <code>lt</code> and <code>rev</code> so that the value at index <code>k</code> (or range of adjacent values if <code>k</code> is a range) occurs at the position where it would appear if the array were fully sorted via a non-stable algorithm. If <code>k</code> is a single index, that value is returned; if <code>k</code> is a range, an array of values at those indices is returned. Note that <code>partialsort!</code> does not fully sort the input array.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; a = [1, 2, 4, 3, 4]
+5-element Array{Int64,1}:
+ 1
+ 2
+ 4
+ 3
+ 4
+
+julia&gt; partialsort!(a, 4)
+4
+
+julia&gt; a
+5-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+ 4
+
+julia&gt; a = [1, 2, 4, 3, 4]
+5-element Array{Int64,1}:
+ 1
+ 2
+ 4
+ 3
+ 4
+
+julia&gt; partialsort!(a, 4, rev=true)
+2
+
+julia&gt; a
+5-element Array{Int64,1}:
+ 4
+ 4
+ 3
+ 2
+ 1</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L103-L153">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.partialsort" href="#Base.Sort.partialsort"><code>Base.Sort.partialsort</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">partialsort(v, k, by=&lt;transform&gt;, lt=&lt;comparison&gt;, rev=false)</code></pre><p>Variant of <a href="sort.html#Base.Sort.partialsort!"><code>partialsort!</code></a> which copies <code>v</code> before partially sorting it, thereby returning the same thing as <code>partialsort!</code> but leaving <code>v</code> unmodified.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L158-L163">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.partialsortperm" href="#Base.Sort.partialsortperm"><code>Base.Sort.partialsortperm</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">partialsortperm(v, k; by=&lt;transform&gt;, lt=&lt;comparison&gt;, rev=false)</code></pre><p>Return a partial permutation <code>I</code> of the vector <code>v</code>, so that <code>v[I]</code> returns values of a fully sorted version of <code>v</code> at index <code>k</code>. If <code>k</code> is a range, a vector of indices is returned; if <code>k</code> is an integer, a single index is returned. The order is specified using the same keywords as <code>sort!</code>. The permutation is stable, meaning that indices of equal elements appear in ascending order.</p><p>Note that this function is equivalent to, but more efficient than, calling <code>sortperm(...)[k]</code>.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; v = [3, 1, 2, 1];
+
+julia&gt; v[partialsortperm(v, 1)]
+1
+
+julia&gt; p = partialsortperm(v, 1:3)
+3-element view(::Array{Int64,1}, 1:3) with eltype Int64:
+ 2
+ 4
+ 3
+
+julia&gt; v[p]
+3-element Array{Int64,1}:
+ 1
+ 1
+ 2</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L759-L789">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.Sort.partialsortperm!" href="#Base.Sort.partialsortperm!"><code>Base.Sort.partialsortperm!</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">partialsortperm!(ix, v, k; by=&lt;transform&gt;, lt=&lt;comparison&gt;, rev=false, initialized=false)</code></pre><p>Like <a href="sort.html#Base.Sort.partialsortperm"><code>partialsortperm</code></a>, but accepts a preallocated index vector <code>ix</code> the same size as <code>v</code>, which is used to store (a permutation of) the indices of <code>v</code>.</p><p>If the index vector <code>ix</code> is initialized with the indices of <code>v</code> (or a permutation thereof), <code>initialized</code> should be set to <code>true</code>.</p><p>If <code>initialized</code> is <code>false</code> (the default), then <code>ix</code> is initialized to contain the indices of <code>v</code>.</p><p>If <code>initialized</code> is <code>true</code>, but <code>ix</code> does not contain (a permutation of) the indices of <code>v</code>, the behavior of <code>partialsortperm!</code> is undefined.</p><p>(Typically, the indices of <code>v</code> will be <code>1:length(v)</code>, although if <code>v</code> has an alternative array type with non-one-based indices, such as an <code>OffsetArray</code>, <code>ix</code> must also be an <code>OffsetArray</code> with the same indices, and must contain as values (a permutation of) these same indices.)</p><p>Upon return, <code>ix</code> is guaranteed to have the indices <code>k</code> in their sorted positions, such that</p><pre><code class="language-julia">partialsortperm!(ix, v, k);
+v[ix[k]] == partialsort(v, k)</code></pre><p>The return value is the <code>k</code>th element of <code>ix</code> if <code>k</code> is an integer, or view into <code>ix</code> if <code>k</code> is a range.</p><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; v = [3, 1, 2, 1];
+
+julia&gt; ix = Vector{Int}(undef, 4);
+
+julia&gt; partialsortperm!(ix, v, 1)
+2
+
+julia&gt; ix = [1:4;];
+
+julia&gt; partialsortperm!(ix, v, 2:3, initialized=true)
+2-element view(::Array{Int64,1}, 2:3) with eltype Int64:
+ 4
+ 3</code></pre><pre><code class="language-none"></code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/base/sort.jl#L793-L837">source</a></section></article><h2 id="Sorting-Algorithms-1"><a class="docs-heading-anchor" href="#Sorting-Algorithms-1">Sorting Algorithms</a><a class="docs-heading-anchor-permalink" href="#Sorting-Algorithms-1" title="Permalink"></a></h2><p>There are currently four sorting algorithms available in base Julia:</p><ul><li><a href="sort.html#Base.Sort.InsertionSort"><code>InsertionSort</code></a></li><li><a href="sort.html#Base.Sort.QuickSort"><code>QuickSort</code></a></li><li><a href="sort.html#Base.Sort.PartialQuickSort"><code>PartialQuickSort(k)</code></a></li><li><a href="sort.html#Base.Sort.MergeSort"><code>MergeSort</code></a></li></ul><p><code>InsertionSort</code> is an O(n^2) stable sorting algorithm. It is efficient for very small <code>n</code>, and is used internally by <code>QuickSort</code>.</p><p><code>QuickSort</code> is an O(n log n) sorting algorithm which is in-place, very fast, but not stable – i.e. elements which are considered equal will not remain in the same order in which they originally appeared in the array to be sorted. <code>QuickSort</code> is the default algorithm for numeric values, including integers and floats.</p><p><code>PartialQuickSort(k)</code> is similar to <code>QuickSort</code>, but the output array is only sorted up to index <code>k</code> if <code>k</code> is an integer, or in the range of <code>k</code> if <code>k</code> is an <code>OrdinalRange</code>. For example:</p><pre><code class="language-julia">x = rand(1:500, 100)
+k = 50
+k2 = 50:100
+s = sort(x; alg=QuickSort)
+ps = sort(x; alg=PartialQuickSort(k))
+qs = sort(x; alg=PartialQuickSort(k2))
+map(issorted, (s, ps, qs))             # =&gt; (true, false, false)
+map(x-&gt;issorted(x[1:k]), (s, ps, qs))  # =&gt; (true, true, false)
+map(x-&gt;issorted(x[k2]), (s, ps, qs))   # =&gt; (true, false, true)
+s[1:k] == ps[1:k]                      # =&gt; true
+s[k2] == qs[k2]                        # =&gt; true</code></pre><p><code>MergeSort</code> is an O(n log n) stable sorting algorithm but is not in-place – it requires a temporary array of half the size of the input array – and is typically not quite as fast as <code>QuickSort</code>. It is the default algorithm for non-numeric data.</p><p>The default sorting algorithms are chosen on the basis that they are fast and stable, or <em>appear</em> to be so. For numeric types indeed, <code>QuickSort</code> is selected as it is faster and indistinguishable in this case from a stable sort (unless the array records its mutations in some way). The stability property comes at a non-negligible cost, so if you don&#39;t need it, you may want to explicitly specify your preferred algorithm, e.g. <code>sort!(v, alg=QuickSort)</code>.</p><p>The mechanism by which Julia picks default sorting algorithms is implemented via the <code>Base.Sort.defalg</code> function. It allows a particular algorithm to be registered as the default in all sorting functions for specific arrays. For example, here are the two default methods from <a href="https://github.com/JuliaLang/julia/blob/master/base/sort.jl"><code>sort.jl</code></a>:</p><pre><code class="language-julia">defalg(v::AbstractArray) = MergeSort
+defalg(v::AbstractArray{&lt;:Number}) = QuickSort</code></pre><p>As for numeric arrays, choosing a non-stable default algorithm for array types for which the notion of a stable sort is meaningless (i.e. when two values comparing equal can not be distinguished) may make sense.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="punctuation.html">« Punctuation</a><a class="docs-footer-nextpage" href="iterators.html">Iteration utilities »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Saturday 21 March 2020 14:48">Saturday 21 March 2020</span>. Using Julia version 1.4.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

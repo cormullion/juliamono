@@ -1,0 +1,36 @@
+on:
+  release:
+    types: # This configuration does not affect the page_build event above
+      - created
+
+name: Upload Release Assets
+
+jobs:
+  build:
+    name: Upload Release Assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Create Assets
+        run: |
+          # full dist
+          tar -czvf JuliaMono.tar.gz JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
+          zip JuliaMono.zip JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
+          # only ttf
+          tar -czvf JuliaMono-ttf.tar.gz JuliaMono-*.ttf LICENSE
+          zip JuliaMono-ttf.zip JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
+          # only webfonts
+          tar -czvf JuliaMono-webfonts.tar.gz webfonts/JuliaMono-*.woff2 LICENSE
+          zip JuliaMono-webfonts.zip webfonts/JuliaMono-*.woff2 LICENSE
+      - name: Upload Assets
+        run: |
+          set -x
+          assets=()
+          for asset in JuliaMono*.{tar.gz,zip}; do
+            assets+=("$asset")
+          done
+          tag_name="${GITHUB_REF##*/}"
+          gh release upload "$tag_name" "${assets[@]}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

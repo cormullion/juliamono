@@ -1,0 +1,63 @@
+name: Build and Deploy
+on:
+  push:
+    # NOTE:
+    #   For a **project** site (username.github.io/project/), push things
+    #     to the **master** branch and make sure to set the line below to
+    # `   - master`; also, at the end of the file, change to `BRANCH: gh-pages`
+    #
+    #   For a **personal** site (username.github.io/), push things to a **dev**
+    #     branch  and make sure to set the line  below to `- dev` this is
+    #     because for user pages GitHub pages **requires** the deployment to be
+    #     on the master branch; also, at the end of the file, change to
+    #    `BRANCH: master`
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Install SSH Client
+      uses: webfactory/ssh-agent@v0.2.0
+      with:
+        ssh-private-key: ${{ secrets.FRANKLIN_PRIV }}
+    # NOTE
+    #   Python is necessary for pre-rendering steps as well as to install
+    #   matplotlib which is necessary if you intend to use PyPlot. If you do
+    #   not, then you can remove the `run: pip install matplotlib` line.
+    - name: Install python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - run: pip install matplotlib # if you use PyPlot this is needed
+    - name: Install Julia
+      uses: julia-actions/setup-julia@v1
+      with:
+        version: 1.3.0
+    # NOTE
+    #   The steps below ensure that NodeJS and Franklin are loaded then it
+    #   installs highlight.js which is needed for the prerendering step.
+    #   Then the environment is activated and instantiated to install all
+    #   Julia packages which may be required to successfully build your site.
+    #
+    #   The last line should be `optimize()` though you may want to give it
+    #   specific arguments, see the documentation or ?optimize in the REPL.
+    - run: julia -e '
+            using Pkg; Pkg.add(["NodeJS", "Franklin"]);
+            using NodeJS; run(`$(npm_cmd()) install highlight.js`);
+            using Franklin;
+            Pkg.activate("."); Pkg.instantiate();
+            optimize()'
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        SSH: true
+        # NOTE
+        #   Set this to `BRANCH: gh-pages` for a **project** page and  to
+        #   `BRANCH: master` for a **personal** page
+        BRANCH: gh-pages
+        FOLDER: __site
