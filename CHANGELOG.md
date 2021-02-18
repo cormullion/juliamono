@@ -1,12 +1,12 @@
 # Changelog
 
-## [v0.033] 2021-02-...
+## [v0.033] 2021-02-18
 
 ### Added
 
 - infinite arrows ("= followed by ">" gives ====>") 
-- SS12 stylistic set replaces "＝＝＝＝" with "====" 
-- SemiBold weight is between Medium and Bold
+- SS12 stylistic set replaces "＝＝＝＝" with joined "====" 
+- SemiBold weight between Medium and Bold
 
 ### Changed
 
@@ -15,6 +15,8 @@
 - ∨v are now more different
 
 ### Removed
+
+- git history... The repo was nearly 1.5GB, and getting too big to be on github 😱 
 
 ### Deprecated
 
