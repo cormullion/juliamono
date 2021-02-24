@@ -1,10 +1,36 @@
 # Changelog
 
+## [v0.034] 2021-02-24
+
+### Added
+
+- some tifinagh
+
+### Changed
+
+- U+02cf (acutelowmod) lowered to match U+02ce (thanks pbouffard!)
+
+- box drawing characters tweaked to work better in arrow constructions 
+   2500 (─) + 2192 (→) makes ─→  
+   2190 (←) + 2500 (─) makes ←─
+   21D0 (⇐) + 2550 (═) makes ⇐═
+   2550 (═) + 21D2 (⇒) makes ═⇒
+   2190 (←) + 2192 (→) makes ←→
+   21D0 (⇐) + 21D2 (⇒) makes ⇐⇒
+
+- Mathematical sans and bold sans glyphs (1D5A0- and 1D5D4-) are a bit bolder
+
+- the export option "Use Extension Kerning" is now enabled, in an attempt to reduce unlocatable errors with the message: "feature 'mkmk' lookup 'mkmk_latn_top' mark to base positioning rules cause an offset overflow (0x10218) to a lookup subtable" which I was seeing a lot... 
+
+### Removed
+
+### Deprecated
+
 ## [v0.033] 2021-02-18
 
 ### Added
 
-- infinite arrows ("= followed by ">" gives ====>") 
+- infinite arrows ("= followed by ">" gives joined ====>") 
 - SS12 stylistic set replaces "＝＝＝＝" with joined "====" 
 - SemiBold weight between Medium and Bold
 
