@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.035] 2021-03-................
+
+### Added
+
+- rest of tifinagh
+
+### Changed
+
+- mark anchors added to maths characters so as to allow combining characters on maths glyphs, eg harpoon on union (∪⃑)
+
 ## [v0.034] 2021-02-24
 
 ### Added
