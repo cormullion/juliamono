@@ -33,3 +33,5 @@ Here are the pages from the specimen PDF, to save you downloading it.
 ![specimen page 14](https://github.com/cormullion/juliamono/blob/master/images/specimen_14.png)
 
 ![specimen page 15](https://github.com/cormullion/juliamono/blob/master/images/specimen_15.png)
+
+![specimen page 16](https://github.com/cormullion/juliamono/blob/master/images/specimen_16.png)
