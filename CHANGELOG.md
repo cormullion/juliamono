@@ -1,5 +1,17 @@
 # Changelog
 
+## [v0.036] 2021-03-15
+
+### Added
+
+### Changed
+
+- tidied up arrow combinations (Julia 1.6 introduced some more)
+
+### Removed
+
+### Deprecated
+
 ## [v0.035] 2021-03-08
 
 ### Added
