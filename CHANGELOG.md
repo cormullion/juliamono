@@ -1,5 +1,19 @@
 # Changelog
 
+
+
+## [v0.037]
+
+### Added
+
+### Changed
+
+### Removed
+
+- non-essential files removed from repo
+
+### Deprecated
+
 ## [v0.036] 2021-03-15
 
 ### Added
@@ -33,7 +47,7 @@
 
 - U+02cf (acutelowmod) lowered to match U+02ce (thanks pbouffard!)
 
-- box drawing characters tweaked to work better in arrow constructions 
+- box drawing characters tweaked to work better in arrow constructions
    2500 (─) + 2192 (→) makes ─→  
    2190 (←) + 2500 (─) makes ←─
    21D0 (⇐) + 2550 (═) makes ⇐═
@@ -43,7 +57,7 @@
 
 - Mathematical sans and bold sans glyphs (1D5A0- and 1D5D4-) are a bit bolder
 
-- the export option "Use Extension Kerning" is now enabled, in an attempt to reduce unlocatable errors with the message: "feature 'mkmk' lookup 'mkmk_latn_top' mark to base positioning rules cause an offset overflow (0x10218) to a lookup subtable" which I was seeing a lot... 
+- the export option "Use Extension Kerning" is now enabled, in an attempt to reduce unlocatable errors with the message: "feature 'mkmk' lookup 'mkmk_latn_top' mark to base positioning rules cause an offset overflow (0x10218) to a lookup subtable" which I was seeing a lot...
 
 ### Removed
 
@@ -53,8 +67,8 @@
 
 ### Added
 
-- infinite arrows ("= followed by ">" gives joined ====>") 
-- SS12 stylistic set replaces "＝＝＝＝" with joined "====" 
+- infinite arrows ("= followed by ">" gives joined ====>")
+- SS12 stylistic set replaces "＝＝＝＝" with joined "===="
 - SemiBold weight between Medium and Bold
 
 ### Changed
@@ -65,7 +79,7 @@
 
 ### Removed
 
-- git history... The repo was nearly 1.5GB, and getting too big to be on github 😱 
+- git history... The repo was nearly 1.5GB, and getting too big to be on github 😱
 
 ### Deprecated
 
@@ -95,7 +109,7 @@
 ### Changed
 
 - 0257 lost its hook, I've sewn a new one back on
-- added ink traps to asterisk * (0x2a) 
+- added ink traps to asterisk * (0x2a)
 - tidied up some extrabold versions of some glyphs
 - tweaked some of those pesky script/math glyphs
 
@@ -113,7 +127,7 @@
 
 ### Changed
 
-- made Iacute_J/IJ/ij more consistent 
+- made Iacute_J/IJ/ij more consistent
 - minor changes to U+01D409, U+1D39, U+20E1, U+034D, U+20D7, U+27F9
 - Phisuper (U+1Db2) modified
 - Integrals more integrated
@@ -136,7 +150,7 @@
 
 - adjusted phi latin to be less greek (although there's some debate about this one)
 - fix 0x020c, 0x03CB
- 
+
 ### Removed
 
 ### Deprecated
@@ -149,14 +163,14 @@
 
 ### Changed
 
-- size of rings increased slightly eg in ÅǺḀŮåůẘẙ 
+- size of rings increased slightly eg in ÅǺḀŮåůẘẙ
 
 - resolution of font file doubled to 2000 UPM. I'm hoping this improves some rendering by reducing any problems caused by rounding issues, but who knows.
 
 - removed some mark anchors from script glyphs, for some reason they caused errors
 
-- 0x0276 upper-cased 
- 
+- 0x0276 upper-cased
+
 ### Removed
 
 ### Deprecated
