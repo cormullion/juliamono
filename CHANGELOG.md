@@ -1,8 +1,20 @@
 # Changelog
 
+## [v0.038] 2021-05-06
 
+### Added
 
-## [v0.037]
+- CSS files
+
+### Changed
+
+- tweaked θ and ϵ to improve legibility
+
+### Removed
+
+### Deprecated
+
+## [v0.037] 2021-04-13
 
 ### Added
 
