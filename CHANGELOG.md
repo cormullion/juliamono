@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.0] forthcoming
+
+### Added
+
+### Changed
+
+- tweaked design of U27F3 (clockwise arrow) to look nicer in VS-CODE
+
+### Removed
+
+### Deprecated
+
+
 ## [v0.038] 2021-05-06
 
 ### Added
