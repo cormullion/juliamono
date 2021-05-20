@@ -1,17 +1,19 @@
 # Changelog
 
-## [v1.0] forthcoming
+## [v0.039] 2021-05-20
 
 ### Added
 
 ### Changed
 
 - tweaked design of U27F3 (clockwise arrow) to look nicer in VS-CODE
+- updated Vai cyrillic 
+- realign circled letters U1F170..., don't know why they slipped
+- tuned Fraktur bolds again
 
 ### Removed
 
 ### Deprecated
-
 
 ## [v0.038] 2021-05-06
 
