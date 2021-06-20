@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.040] 2021-06-20
+
+### Added
+
+- some missing Vai glyphs added
+- added 
+- tweaked the design of math operators such U22da ⋚ and U22db ⋛. They at least match their twins better now, although they might be inconsistent with other glyphs (#107)
+- stylistic set SS13 can replace the HTML opening comment sequence with a tidier ligature (#108)
+- added Bismillah UFDFD (﷽), some chess pieces U1FA00-U1FA05, UE818-1b (Avatar elements), UE81C (Sheikah) 
+- UE850-UE85B provide frames for a Julia spinner, for use with ProgressMeter.jl
+- UE843 holds the font's version number
+
+### Changed
+
+### Removed
+
+### Deprecated
+
 ## [v0.039] 2021-05-20
 
 ### Added
