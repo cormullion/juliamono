@@ -1,5 +1,17 @@
 # Changelog
 
+## [v0.041] forthcoming
+
+### Added
+
+- SS14 joins == 
+
+### Changed
+
+### Removed
+
+### Deprecated
+
 ## [v0.040] 2021-06-20
 
 ### Added
