@@ -1,12 +1,14 @@
 # Changelog
 
-## [v0.041] forthcoming
+## [v0.041] 2021-08-04 13:02:44
 
 ### Added
 
 - SS14 joins == 
 
 ### Changed
+
+- fix block characters U2594 and U2595 which had somehow moved
 
 ### Removed
 
@@ -17,7 +19,6 @@
 ### Added
 
 - some missing Vai glyphs added
-- added 
 - tweaked the design of math operators such U22da ⋚ and U22db ⋛. They at least match their twins better now, although they might be inconsistent with other glyphs (#107)
 - stylistic set SS13 can replace the HTML opening comment sequence with a tidier ligature (#108)
 - added Bismillah UFDFD (﷽), some chess pieces U1FA00-U1FA05, UE818-1b (Avatar elements), UE81C (Sheikah) 
