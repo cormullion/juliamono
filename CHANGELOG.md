@@ -1,5 +1,17 @@
 # Changelog
 
+## [v0.042] forthcoming 
+
+### Added
+
+### Changed
+
+- fix U201E and U201F (thanks @esb-dev!)
+
+### Removed
+
+### Deprecated
+
 ## [v0.041] 2021-08-04 13:02:44
 
 ### Added
