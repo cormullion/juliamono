@@ -6,7 +6,7 @@
 
 - added italic fonts JuliaMono-LightItalic, JuliaMono-RegularItalic, JuliaMono-MediumItalic, JuliaMono-SemiBoldItalic, JuliaMono-BoldItalic, JuliaMono-ExtraBoldItalic, JuliaMono-BlackItalic, which match their upright counterparts.
 
-There are currently a work in progress, as yet I'm not sure quite how far to take the "italicization" process.
+Currently, they are a work in progress, as I'm not quite sure yet how far to take the "italicization" process.
 
 ### Changed
 
