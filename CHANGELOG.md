@@ -1,8 +1,12 @@
 # Changelog
 
-## [v0.042] forthcoming 
+## [v0.042] 2021-09-04 15:50:00
 
 ### Added
+
+- added italic fonts JuliaMono-LightItalic, JuliaMono-RegularItalic, JuliaMono-MediumItalic, JuliaMono-SemiBoldItalic, JuliaMono-BoldItalic, JuliaMono-ExtraBoldItalic, JuliaMono-BlackItalic, which match their upright counterparts.
+
+There are currently a work in progress, as yet I'm not sure quite how far to take the "italicization" process.
 
 ### Changed
 
