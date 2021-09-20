@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.043] 2021-09-20 13:00:00
+
+### Added
+
+- slight adjustment to contextual alternates for (_)
+- added a few missing PUA glyphs: eg 
+
+### Changed
+
+- fixed some italics glitches
+- fullwidth characters U+FF01–U+FF5E are now slightly higher, so that you can see the difference between them and their ASCII counterrparts. eg "@＠ AＡ BＢ CＣ DＤ EＥ FＦ GＧ HＨ IＩ JＪ KＫ LＬ MＭ NＮ OＯ PＰ QＱ RＲ SＳ TＴ UＵ VＶ WＷ XＸ YＹ ZＺ [［ \＼ ]］ ^＾ _＿ `｀ aａ bｂ cｃ dｄ eｅ fｆ gｇ hｈ iｉ jｊ kｋ lｌ mｍ nｎ oｏ pｐ qｑ rｒ sｓ tｔ uｕ vｖ wｗ xｘ yｙ zｚ" (fixes #117)
+
+### Removed
+
+### Deprecated
+
 ## [v0.042] 2021-09-04 15:50:00
 
 ### Added
