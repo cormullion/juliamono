@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.044] 2022-02-02 15:00:00
+
+### Added
+
+- ss15 stylistic set, uses roundhand script style for math script (U1D4D0 -> U1D4CF) #124
+
+### Changed
+
+- double-width combining marks (eg U+0361) adjusted (#125)
+
+- U+02BF and U+02BE (ʿʾ) now match
+
+- tweaked a few glyphs
+
+### Removed
+
+### Deprecated
+
 ## [v0.043] 2021-09-20 13:00:00
 
 ### Added
