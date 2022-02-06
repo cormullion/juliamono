@@ -1,18 +1,26 @@
 # Changelog
 
-## [v0.044] 2022-02-02 15:00:00
+(probably best viewed with JuliaMono :))
+
+## [v0.044] 2022-02-06 10:00:00
 
 ### Added
 
-- ss15 stylistic set, uses roundhand script style for math script (U1D4D0 -> U1D4CF) #124
+- ss15 stylistic set, uses old-school roundhand script style for math script (U1D4D0 -> U1D4CF) (fixes #124)
+
+- Saltillo UA78b (Ꞌ) and saltillo UA78C (ꞌ)
+
+- Archaicsampi U0372 Ͳ and archaicsampi U0373 ͳ
 
 ### Changed
 
-- double-width combining marks (eg U+0361) adjusted (#125)
+- updated source to Glyphs3. This was a major undertaking, and I hope I've found all the changes/problems.
 
-- U+02BF and U+02BE (ʿʾ) now match
+- double-width combining marks (eg U+0361) adjusted (fixes #125)
 
-- tweaked a few glyphs
+- U+02BF and U+02BE (ʿʾ) now match (fixes #121)
+
+- tweaked various glyphs
 
 ### Removed
 
@@ -23,12 +31,19 @@
 ### Added
 
 - slight adjustment to contextual alternates for (_)
+
 - added a few missing PUA glyphs: eg 
 
 ### Changed
 
 - fixed some italics glitches
-- fullwidth characters U+FF01–U+FF5E are now slightly higher, so that you can see the difference between them and their ASCII counterrparts. eg "@＠ AＡ BＢ CＣ DＤ EＥ FＦ GＧ HＨ IＩ JＪ KＫ LＬ MＭ NＮ OＯ PＰ QＱ RＲ SＳ TＴ UＵ VＶ WＷ XＸ YＹ ZＺ [［ \＼ ]］ ^＾ _＿ `｀ aａ bｂ cｃ dｄ eｅ fｆ gｇ hｈ iｉ jｊ kｋ lｌ mｍ nｎ oｏ pｐ qｑ rｒ sｓ tｔ uｕ vｖ wｗ xｘ yｙ zｚ" (fixes #117)
+
+- fullwidth characters U+FF01–U+FF5E are now slightly
+  higher, so that you can see the difference between them
+  and their ASCII counterparts. eg "@＠ AＡ BＢ CＣ DＤ EＥ FＦ GＧ
+  HＨ IＩ JＪ KＫ LＬ MＭ NＮ OＯ PＰ QＱ RＲ SＳ TＴ UＵ VＶ WＷ XＸ YＹ ZＺ
+  [［ \＼ ]］ ^＾ _＿ `｀ aａ bｂ cｃ dｄ eｅ fｆ gｇ hｈ iｉ jｊ kｋ lｌ mｍ
+  nｎ oｏ pｐ qｑ rｒ sｓ tｔ uｕ vｖ wｗ xｘ yｙ zｚ" (fixes #117)
 
 ### Removed
 
@@ -54,7 +69,7 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Added
 
-- SS14 joins == 
+- SS14 joins ==
 
 ### Changed
 
@@ -71,7 +86,7 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 - some missing Vai glyphs added
 - tweaked the design of math operators such U22da ⋚ and U22db ⋛. They at least match their twins better now, although they might be inconsistent with other glyphs (#107)
 - stylistic set SS13 can replace the HTML opening comment sequence with a tidier ligature (#108)
-- added Bismillah UFDFD (﷽), some chess pieces U1FA00-U1FA05, UE818-1b (Avatar elements), UE81C (Sheikah) 
+- added Bismillah UFDFD (﷽), some chess pieces U1FA00-U1FA05, UE818-1b (Avatar elements), UE81C (Sheikah)
 - UE850-UE85B provide frames for a Julia spinner, for use with ProgressMeter.jl
 - UE843 holds the font's version number
 
@@ -88,7 +103,7 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 ### Changed
 
 - tweaked design of U27F3 (clockwise arrow) to look nicer in VS-CODE
-- updated Vai cyrillic 
+- updated Vai cyrillic
 - realign circled letters U1F170..., don't know why they slipped
 - tuned Fraktur bolds again
 
