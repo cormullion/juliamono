@@ -2,6 +2,32 @@
 
 (probably best viewed with JuliaMono :))
 
+## [v0.045] forthcoming...
+
+### Added
+
+- Symbols for Legacy Computing: U+1FB00 to 1FBFF (not very useful, but 🤷)
+
+- Tonsky's progress symbols UEE00 to EE0B (https://github.com/tonsky/FiraCode/issues/1324) 
+
+- redraw U+237C 
+
+- tarot cards
+
+### Changed
+
+- makie logo e831 
+
+- small tweaks to various math operators
+
+- fixes for some italic failures
+
+- Math Script Roundhand  (U1D4D0 -> U1D4CF) renamed in anticipation of Variation Selectors working.
+
+### Removed
+
+### Deprecated
+
 ## [v0.044] 2022-02-06 10:00:00
 
 ### Added
