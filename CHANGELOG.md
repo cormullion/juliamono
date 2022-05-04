@@ -2,7 +2,7 @@
 
 (probably best viewed with JuliaMono :))
 
-## [v0.045] forthcoming...
+## [v0.045] 2022-05-
 
 ### Added
 
@@ -14,15 +14,17 @@
 
 - tarot cards
 
+- add halfwidth arrows U+FFE9:U+FFEC ￩￪￫￬ 
+
 ### Changed
 
-- makie logo e831 
+- makie logo U+E831 
 
 - small tweaks to various math operators
 
 - fixes for some italic failures
 
-- Math Script Roundhand  (U1D4D0 -> U1D4CF) renamed in anticipation of Variation Selectors working.
+- Math Script Roundhand  (U1D4D0 -> U1D4CF) renamed in anticipation of Variation Selectors working one day.
 
 ### Removed
 
