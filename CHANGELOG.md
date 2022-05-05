@@ -2,11 +2,11 @@
 
 (probably best viewed with JuliaMono :))
 
-## [v0.045] 2022-05-
+## [v0.045] 2022-05-05
 
 ### Added
 
-- Symbols for Legacy Computing: U+1FB00 to 1FBFF (not very useful, but 🤷)
+- Symbols for Legacy Computing: U+1FB00 to 1FBFF mostly characters from old 1980s computers such as Commodores and Sinclairs... (useful? 🤷)
 
 - Tonsky's progress symbols UEE00 to EE0B (https://github.com/tonsky/FiraCode/issues/1324) 
 
@@ -16,15 +16,17 @@
 
 - add halfwidth arrows U+FFE9:U+FFEC ￩￪￫￬ 
 
+- checksums
+
 ### Changed
 
-- makie logo U+E831 
+- updated makie logo U+E831 to 
 
 - small tweaks to various math operators
 
 - fixes for some italic failures
 
-- Math Script Roundhand  (U1D4D0 -> U1D4CF) renamed in anticipation of Variation Selectors working one day.
+- Math Script Roundhand alternates (U1D4D0 -> U1D4CF) renamed in anticipation of Variation Selectors working one day...
 
 ### Removed
 
