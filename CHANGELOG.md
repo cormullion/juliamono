@@ -2,6 +2,20 @@
 
 (probably best viewed with JuliaMono :))
 
+## [v0.046] - to be released
+
+### Added
+
+### Changed
+
+- small tweaks
+
+### Removed
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.045] 2022-05-05
 
 ### Added
@@ -32,6 +46,8 @@
 
 ### Deprecated
 
+#──────────────────────────────────────────────────────────
+
 ## [v0.044] 2022-02-06 10:00:00
 
 ### Added
@@ -55,6 +71,8 @@
 ### Removed
 
 ### Deprecated
+
+#──────────────────────────────────────────────────────────
 
 ## [v0.043] 2021-09-20 13:00:00
 
@@ -95,6 +113,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Deprecated
 
+#──────────────────────────────────────────────────────────
+
 ## [v0.041] 2021-08-04 13:02:44
 
 ### Added
@@ -108,6 +128,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 ### Removed
 
 ### Deprecated
+
+#──────────────────────────────────────────────────────────
 
 ## [v0.040] 2021-06-20
 
@@ -126,6 +148,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Deprecated
 
+#──────────────────────────────────────────────────────────
+
 ## [v0.039] 2021-05-20
 
 ### Added
@@ -141,6 +165,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Deprecated
 
+#──────────────────────────────────────────────────────────
+
 ## [v0.038] 2021-05-06
 
 ### Added
@@ -155,6 +181,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Deprecated
 
+#──────────────────────────────────────────────────────────
+
 ## [v0.037] 2021-04-13
 
 ### Added
@@ -166,6 +194,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 - non-essential files removed from repo
 
 ### Deprecated
+
+#──────────────────────────────────────────────────────────
 
 ## [v0.036] 2021-03-15
 
@@ -179,6 +209,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Deprecated
 
+#──────────────────────────────────────────────────────────
+
 ## [v0.035] 2021-03-08
 
 ### Added
@@ -189,6 +221,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 ### Changed
 
 - mark anchors added to maths characters so as to allow combining characters on maths glyphs, eg harpoon on union (∪⃑)
+
+#----------------------------------------------------------
 
 ## [v0.034] 2021-02-24
 
@@ -216,6 +250,8 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Deprecated
 
+#──────────────────────────────────────────────────────────
+
 ## [v0.033] 2021-02-18
 
 ### Added
@@ -236,7 +272,7 @@ Currently, they are a work in progress, as I'm not quite sure yet how far to tak
 
 ### Deprecated
 
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#──────────────────────────────────────────────────────────
 
 ## [v0.032] 2021-02-04
 
