@@ -8,6 +8,14 @@
 
 - small updates required for Unicode 15 - mostly transuranian symbols u1f774 ... (🝴🝵🝶🝻🝼🝽🝾🝿🟙) :) 
 
+- added Variation Selector support for switching between Cursive and Roundhand
+
+  eg `u1d4d0`, mathematical bold script capital a, returns Cursive A, "𝓐" , but when u1d4d0 is followed by 0xFE01 (VS2), it returns Roundhand A, "𝓐︁" 
+  
+  This works for Capital letters only. See [this Unicode PDF](https://www.unicode.org/L2/L2020/20275r-math-calligraphic.pdf) for the details.
+  
+- added some Arabic glyphs; should be considered place-holders at present
+
 - raised colon alternate for seven segment displays:
 
 ```
