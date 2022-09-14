@@ -2,13 +2,32 @@
 
 (probably best viewed with JuliaMono :))
 
-## [v0.046] - to be released
+## [v0.046] - 2022-08-14
 
 ### Added
 
+- small updates required for Unicode 15 - mostly transuranian symbols u1f774 ... (🝴🝵🝶🝻🝼🝽🝾🝿🟙) :) 
+
+- raised colon alternate for seven segment displays:
+
+```
+using Dates
+t = now()
+h = hour(t) 
+m = minute(t)
+s = second(t) 
+str = lpad(h, 2, "0") * lpad(m, 2, "0") * lpad(s, 2, "0")
+for (n, c) in enumerate(str)
+    print(Char(0x1fbf0 + parse(Int, c)))
+    n ∈ (2, 4) && print(":")
+end
+
+🯱🯴:🯳🯵:🯱🯸
+```
+
 ### Changed
 
-- small tweaks
+- small nudges and tweaks to many glyphs
 
 ### Removed
 
