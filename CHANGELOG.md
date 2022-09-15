@@ -2,7 +2,7 @@
 
 (probably best viewed with JuliaMono :))
 
-## [v0.046] - 2022-08-14
+## [v0.046] - 2022-08-15
 
 ### Added
 
@@ -38,6 +38,8 @@ end
 - small nudges and tweaks to many glyphs
 
 ### Removed
+
+- ligature for '<' and '-'; otherwise it's not possible to write `z<-1`
 
 ### Deprecated
 
