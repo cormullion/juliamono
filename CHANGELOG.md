@@ -2,6 +2,37 @@
 
 (probably best viewed with JuliaMono :))
 
+## [v0.047] - 2022-12-25
+
+### Added
+
+- Armenian character set (U+0531 - U+0537)
+  ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖ
+  աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքօֆև
+
+- ss03 stylistic set (Alternative J), a J without a top bit, now has lowercase version
+
+- cv01 character variant draws a three (3) with a round top
+
+### Changed
+
+- U+A66E (ꙮ) is updated (very important change :)
+
+- Fraktur S (𝔖) tweaked
+
+- lower case l tweaked
+ 
+- ⍝ (U+235D) Up shoe jot APL tweaked 
+
+- various other small nudges and tweaks
+
+### Removed
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
+
 ## [v0.046] - 2022-08-15
 
 ### Added
