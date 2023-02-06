@@ -2,6 +2,33 @@
 
 (probably best viewed with JuliaMono :))
 
+## [v0.048] - 2023-02-??
+
+### Added
+
+- Cyrillic Small Letters (issue #155)
+  eg U+1C88 U+A64B
+  "ᲀᲁᲂᲃᲄᲅᲆᲇᲈꙊꙋ"
+
+- Kaktovik numerals (U+1D2C0...)
+  "𝋀𝋁𝋂𝋃𝋄𝋅𝋆𝋇𝋈𝋉𝋊𝋋𝋌𝋍𝋎𝋏𝋐𝋑𝋒𝋓"
+
+### Changed
+
+- Peseta sign U+20A7 ₧ was wrong, fixed 
+
+- control codes improved (U+2400...)
+
+- block mosaic glyphs fit better (U+1FB00...) (issue #156)
+
+- various other small nudges and tweaks
+
+### Removed
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.047] - 2022-12-25
 
 ### Added
