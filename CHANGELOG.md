@@ -2,7 +2,7 @@
 
 (probably best viewed with JuliaMono :))
 
-## [v0.048] - 2023-02-??
+## [v0.048] - 2023-02-06
 
 ### Added
 
