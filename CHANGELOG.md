@@ -2,6 +2,31 @@
 
 (probably best viewed with JuliaMono :))
 
+## [v0.049] - 2023-
+
+### Added
+
+- alternate ASCII tilde in cv03 (#163)
+- mastodon logo 0xF0AD1 󰫑
+- prohibited sign 0x1f6c7 🛇
+- 0x0b83 ஃ, 0xA95f ꥟, 0x115C9 𑗉 
+
+### Changed
+
+- æ œ (0x0153) now match better in width (166)
+- inverse shapes ◘◙◚◛ (#160)
+- fixed hexagram errors (#164) 
+- Cyrillic Yery with back Yer (0xA650, 0xA651) (#162)
+- Greek glyphs 0x1F0D, 0x1F1D, 0x1F2D, ... and 0x1F6D (#165)
+- roman numerals redone
+- github workflow tweaked
+
+### Removed
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.048] - 2023-02-06
 
 ### Added
