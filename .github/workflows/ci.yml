@@ -19,7 +19,7 @@ jobs:
           zip JuliaMono.zip JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
           # only ttf
           tar -czvf JuliaMono-ttf.tar.gz JuliaMono-*.ttf LICENSE
-          zip JuliaMono-ttf.zip JuliaMono-*.ttf webfonts/JuliaMono-*.woff2 LICENSE
+          zip JuliaMono-ttf.zip JuliaMono-*.ttf LICENSE
           # only webfonts
           tar -czvf JuliaMono-webfonts.tar.gz webfonts/JuliaMono-*.woff2 LICENSE
           zip JuliaMono-webfonts.zip webfonts/JuliaMono-*.woff2 LICENSE
