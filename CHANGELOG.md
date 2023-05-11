@@ -2,7 +2,7 @@
 
 (probably best viewed with JuliaMono :))
 
-## [v0.049] - 2023-
+## [v0.049] - 2023-05-11
 
 ### Added
 
@@ -13,12 +13,12 @@
 
 ### Changed
 
-- æ œ (0x0153) now match better in width (166)
+- æ œ (0x0153) now match better in width (#166)
 - inverse shapes ◘◙◚◛ (#160)
 - fixed hexagram errors (#164) 
 - Cyrillic Yery with back Yer (0xA650, 0xA651) (#162)
-- Greek glyphs 0x1F0D, 0x1F1D, 0x1F2D, ... and 0x1F6D (#165)
-- roman numerals redone
+- Greek glyphs 0x1F0D, 0x1F1D, 0x1F2D, 0x1F6D adjusted (#165)
+- roman numerals Ⅰ Ⅱ Ⅲ redone
 - github workflow tweaked
 - Braille 235678 ⣶ 0x28f6 was too high, moved down
 
