@@ -20,6 +20,7 @@
 - Greek glyphs 0x1F0D, 0x1F1D, 0x1F2D, ... and 0x1F6D (#165)
 - roman numerals redone
 - github workflow tweaked
+- Braille 235678 ⣶ 0x28f6 was too high, moved down
 
 ### Removed
 
