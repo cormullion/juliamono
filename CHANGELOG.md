@@ -2,6 +2,23 @@
 
 (probably best viewed with JuliaMono :))
 
+## [v0.050] - 2023-06-03
+
+### Added
+
+- stylistic set ss16 - smaller parentheses, brackets, and braces (#173)
+
+### Changed
+
+- diacritics positioning reworked 
+- family linking tweaked, hopefully fixing #172 
+
+### Removed
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.049] - 2023-05-11
 
 ### Added
