@@ -2,7 +2,7 @@
 
 (probably best viewed with JuliaMono)
 
-## [v0.051] - 2023-08-02
+## [v0.051] - 2023-08-04
 
 ### Added
 
@@ -18,6 +18,8 @@ U+00a9 ©, U+014a Ŋ, U+0199 ƙ, U+019e ƞ, U+01a6 Ʀ, U+01ab ƫ, U+024c Ɍ, U+0
 U+1f741 🝁, U+1f747 🝇, U+1f74c 🝌, U+1f74f 🝏, U+1f756 🝖, U+1f758 🝘, U+1f763 🝣, U+1f768 🝨, U+1f76d 🝭, U+1f76e 🝮
 
 - more fiddling to get marks placed correctly. Some progress might be seen...
+
+- the [source files](https://github.com/cormullion/juliamonomaster/) are available in `.glyphs` format instead `.glyphspackage` format. Even Github was complaining about the number of files being changed...
 
 ### Removed
 
