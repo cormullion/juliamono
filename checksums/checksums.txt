@@ -30,4 +30,3 @@ c16d95beefc1352a8414d593867a1f7c65d092f9	JuliaMono-RegularItalic.ttf
 1f513dd8c4f9f16dc0b3ea691f79575dfc8f7f49	JuliaMono-RegularLatin.ttf
 8e57c90514095a9fa761b5d84fc620237159b61d	JuliaMono-SemiBold.ttf
 4c45dad67d6f91de499b268176d9065e26194004	JuliaMono-SemiBoldItalic.ttf
-f5946bcb515a6ce0ed5ec3a2baa12a5468727e67	juliamono-ttf.zip
