@@ -2,6 +2,46 @@
 
 (probably best viewed with JuliaMono)
 
+## [v0.052] - 2023-11-30
+
+### Added
+
+-  (U+F35D) Private Use Area: external link icon: this popular never quite made it into Unicode (proposal [here](https://www.unicode.org/L2/L2018/18303-external-link.pdf) but it's useful 
+
+- added mirrored versions of the non-mirrorable glyphs for BiDi (ie right-to-left): ⅀, ∁, ∂, ∃, ∄, ∑, ∖, √, ∛, ∜, ∝, ∦, ∫, ∬, ∭, ∮, ∯, ∰, ∱, ∲, ∳, ∹, ∻, ∾, ∿, ≀, ≁, ≂, ≄, ≆, ≇, ≈, ≉, ≊, ≋, ≟, ≠, ≢, ⊌, ⊧, ⊪, ⊬, ⊭, ⊮, ⊯, ⊾, ⊿, ⋵, ⋸, ⋹, ⋿, ⌠, ⌡, ⟀, ⟌, ⟓, ⟔, ⦜, ⦝, ⦞, ⦟, ⦢, ⦦, ⦧, ⧂, ⧃, ⧉, ⧎, ⧜, ⧡, ⧣, ⧤, ⧥, ⧴, ⧶, ⧷, ⨊, ⨋, ⨌, ⨍, ⨎, ⨏, ⨐, ⨑, ⨒, ⨓, ⨔, ⨕, ⨖, ⨗, ⨘, ⨙, ⨚, ⨛, ⨜, ⨞, ⨟, ⨠, ⨡, ⨤, ⨦, ⨩, ⨾, ⩗, ⩘, ⩪, ⩫, ⩬, ⩭, ⩯, ⩰, ⩳, ⩴, ⪣, ⫝̸, ⫢, ⫦, ⫳, ⫻, ⫽, 𝛛, 𝜕, 𝝏, 𝞉, 𝟃 (issue #192)
+
+- 点 (U+70B9) 
+
+- some missing Latin-C glyphs: Ⱨ (U+2c67), Ⱪ (U+2c69), Ɱ (U+2c6e), Ⱳ (U+2c72), Ⱬ (U+2c6b), ⱸ (U+2c78), ⱶ (U+2c76), ⱨ (U+2c68), ⱪ (U+2c6a), ⱹ (U+2c79), ⱴ (U+2c74), ⱱ (U+2c71), ⱳ (U+2c73), ⱬ (U+2c6c)  
+
+### Changed
+
+- modified ᲁ, ᲅ (issue #193)
+
+- modified precedence characters so that they look a bit different from ordinary operators ≺, ≻, ≼, ≽, ≾, ≿, ⋨, ⋩, ⪯, ⪰, ⪱, ⪲, ⪳, ⪴, ⪵, ⪶, ⪷, ⪸, ⪹, ⪺ (issue #190)
+
+- modified ᵢ (U+1D62 subscript i) to distinbguish from ₁ (U+2081 subscript 1) on lower resolution displays: dσ_du₁, dσ_duᵢ (issue #184)
+
+- italic l is slightly redesigned to look different from italic 1 (issue #152)
+
+- hopefully fixed diacritics for DIN 91379 (issue #180)
+
+- tweaked consistency of arrows. There appear to be three groups in Unicode:
+
+    U+2B00: ⬀⬁⬂⬃⬄⬅⬆⬇⬈⬉⬊⬋⬌⬍
+
+    U+2B95: ⮕
+
+    U+2794: ➔➕➖➘➙➚➛➜➝➞➟➠➡➢➣➤➥➦➧➨➩➪➫➬➭➮➯➱➲➳➴➵➶➷➸➹➺➻➼➽➾⟵⟶⟷⟸⟹⟺⟻⟼⟽⟾⟿ 
+
+### Removed
+
+- U+FB31 -> U+FB35, U+FAB2 have been removed. These were glyphs that emulated NerdFonts' Private Use Area icons, but they shouldn't have been put there originally, since that's not a PUA, but Hebrew, so they've now been removed from NerdFonts and JuliaMono. 
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.051] - 2023-08-04
 
 ### Added
