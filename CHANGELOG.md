@@ -2,11 +2,32 @@
 
 (probably best viewed with JuliaMono)
 
-## [v0.052] - 2023-11-30
+## [v0.053] - 2023-12-26
 
 ### Added
 
--  (U+F35D) Private Use Area: external link icon: this popular never quite made it into Unicode (proposal [here](https://www.unicode.org/L2/L2018/18303-external-link.pdf) but it's useful 
+- improved support for Hebrew (U+0591 -> U+05F4)
+
+- numbers now accept non-spacing marks (such as a dot U+0307 or a hat U+0302) #196
+
+- U+FFFC (fontbakery.com told me I should add it)
+
+### Changed
+
+- combining diacriticals U+0305, U+0332, U+0333, U+0336, U+033F now extend across the full width of the glyph, as per Unicode spec
+
+### Removed
+
+- soft hyphen (U+00AD) - fontbakery.com told me to remove it
+ 
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
+## [v0.052] - 2023-11-30
+
+-  (U+F35D) Private Use Area: external link icon: this popular icon never quite made it into Unicode (proposal [here](https://www.unicode.org/L2/L2018/18303-external-link.pdf)) but it's useful.
 
 - added mirrored versions of the non-mirrorable glyphs for BiDi (ie right-to-left): ⅀, ∁, ∂, ∃, ∄, ∑, ∖, √, ∛, ∜, ∝, ∦, ∫, ∬, ∭, ∮, ∯, ∰, ∱, ∲, ∳, ∹, ∻, ∾, ∿, ≀, ≁, ≂, ≄, ≆, ≇, ≈, ≉, ≊, ≋, ≟, ≠, ≢, ⊌, ⊧, ⊪, ⊬, ⊭, ⊮, ⊯, ⊾, ⊿, ⋵, ⋸, ⋹, ⋿, ⌠, ⌡, ⟀, ⟌, ⟓, ⟔, ⦜, ⦝, ⦞, ⦟, ⦢, ⦦, ⦧, ⧂, ⧃, ⧉, ⧎, ⧜, ⧡, ⧣, ⧤, ⧥, ⧴, ⧶, ⧷, ⨊, ⨋, ⨌, ⨍, ⨎, ⨏, ⨐, ⨑, ⨒, ⨓, ⨔, ⨕, ⨖, ⨗, ⨘, ⨙, ⨚, ⨛, ⨜, ⨞, ⨟, ⨠, ⨡, ⨤, ⨦, ⨩, ⨾, ⩗, ⩘, ⩪, ⩫, ⩬, ⩭, ⩯, ⩰, ⩳, ⩴, ⪣, ⫝̸, ⫢, ⫦, ⫳, ⫻, ⫽, 𝛛, 𝜕, 𝝏, 𝞉, 𝟃 (issue #192)
 
