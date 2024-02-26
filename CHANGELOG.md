@@ -2,6 +2,22 @@
 
 (probably best viewed with JuliaMono)
 
+## [v0.054] - current master, work in progress
+
+### Added
+
+- support for Unicode 16 (symbols for retro and legacy computing)
+
+### Changed
+
+- Germandbls
+
+### Removed
+
+### Deprecated
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.053] - 2023-12-26
 
 ### Added
