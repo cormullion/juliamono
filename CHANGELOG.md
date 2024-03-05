@@ -2,15 +2,28 @@
 
 (probably best viewed with JuliaMono)
 
-## [v0.054] - current master, work in progress
+## [v0.054] - 2024-03-05
 
 ### Added
 
-- support for Unicode 16 (symbols for retro and legacy computing)
+- retro computing symbols: U+2427 ... U+2429, U+1CC00 ... U+1CEAF
+    These will be introduced in Unicode v16 this year 
+    [PDF here)](https://www.unicode.org/L2/L2021/21235r-terminals-supplement.pdf), 
+    they might need modifying once more information appears...
+
+- supplemental arrows U+1F8B2 ... U+1F8C1
+
+- ss17 replaces Braille Characters with the equivalent Octants (U+1CD00 ... U+1CDE5). It's been suggested that
+    octants might be better than Braille glyphs for more detailed graphics (eg see UnicodePlots), 
+    but this ss doesn't confirm this.
 
 ### Changed
 
-- Germandbls
+- Germandbls U+1E9E design improved
+
+- box drawing characters tweaked
+
+- arrows at U+21c4
 
 ### Removed
 
