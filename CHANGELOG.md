@@ -2,6 +2,37 @@
 
 (probably best viewed with JuliaMono)
 
+## [v0.055] - 2024-05-05 15:34
+
+### Added
+
+- U+E800 (the Julia logo) will appear in color in compliant environments, fixes #201
+
+- cv04, a squarer character variant for `l`, fixes #205
+
+- U+AB30 ... U+AB6B (ꬰ ꬱ ꬳ ꬵ ꬶ ꬷ ꬺ ꬻ ꬼ ꭀ ꭁ ꭂ ꭃ ꭄ ꭅ ꭆ ꭇ ꭈ ꭉ ꭊ ꭋ ꭌ ꭍ ꭎ ꭏ ꭐ ꭑ ꭔ ꭕ ꭖ ꭗ ꭘ ꭙ ꭠ ꭡ ꭢ ꭦ ꭧ ꭨ ꭪ ꭫)
+
+### Changed
+
+- interrobangs U+203D (‽ ⸘) now use more conventional design (#204)
+
+- daggers redrawn (U+2020 † U+2021 ‡ U+2E4B ⹋) (#198)
+
+### Removed
+
+- all CJK half/full width glyphs, fixes #206
+    # details of glyphs removed:
+    println("uni534D")
+    println("uni70B9")
+    println("uni3297")
+    println("uni3299")
+    [println("uni", uppercase(string(c, base=16))) for c in 0x3358:0x3370];
+    [println("uni", uppercase(string(c, base=16))) for c in 0xFE10:0xFE1F];
+    [println("uni", uppercase(string(c, base=16))) for c in 0xFE30:0xFE4F];
+    [println("uni", uppercase(string(c, base=16))) for c in 0xFF00:0xFFEF];
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.054] - 2024-03-05
 
 ### Added
