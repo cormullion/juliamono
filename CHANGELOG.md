@@ -2,6 +2,29 @@
 
 (probably best viewed with JuliaMono)
 
+## [v0.056] - 2024-06-27 16:16:25
+
+### Added
+
+- added anchors to U+25CC
+
+- added ﬓﬗﬔﬕﬖ (U+FB14...) (men_now-arm men_xeh-arm men_ech-arm men_ini-arm vew_now-arm men-arm)
+
+### Changed
+
+- revert the colorization of U+E800 (the Julia logo), reverting #201. This 
+minor addition caused a lot of problems with certain terminals and environments, 
+and the benefits aren’t really worth it. 
+
+- redrew the Braille characters (U+2800...) (again)
+
+- redrew U+A690 U+A691
+
+### Removed
+
+#──────────────────────────────────────────────────────────
+
+
 ## [v0.055] - 2024-05-05 15:34
 
 ### Added
