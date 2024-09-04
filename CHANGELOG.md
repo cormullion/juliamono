@@ -2,6 +2,18 @@
 
 (probably best viewed with JuliaMono)
 
+## [v0.057] - forthcoming release
+
+### Added
+
+### Changed
+
+- U+044F cyrillic R (я) (#213)
+
+### Removed
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.056] - 2024-06-27 16:16:25
 
 ### Added
