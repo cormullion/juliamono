@@ -2,13 +2,16 @@
 
 (probably best viewed with JuliaMono)
 
-## [v0.057] - forthcoming release
+## [v0.057] - 2024-09-18 15:09:41
 
 ### Added
+
+- for compatibility with just-released Unicode 16: U+1CEB0, U+1CEB1, U+1CEB2, U+1CEB3
 
 ### Changed
 
 - U+044F cyrillic R (я) (#213)
+- U+23B7 radical symbol bottom (⎷) redesigned to join better (#215)
 
 ### Removed
 
