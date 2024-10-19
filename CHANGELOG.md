@@ -2,6 +2,25 @@
 
 (probably best viewed with JuliaMono)
 
+## [v0.058] - 2024-10-19 13:43:06
+
+### Added
+
+- mezzo-musical piano-musical rinforzando-musical subito-musical z-musical 
+
+### Changed
+
+- box drawing glyphs and eighth blocks tweaked (again) (#215, #218)
+- swapped glyphs U+167E and U+167F (U+167E is now ᙾ, U+167F is now ᙿ) (issue #219)
+
+### Removed
+
+- removed the CJK punctuation (fix issue #206) glyphs: comma-han period-han dittomark jis anglebracketleft anglebracketright dblanglebracketleft dblanglebracketright cornerbracketleft cornerbracketright whitecornerbracketleft whitecornerbracketright blacklenticularbracketleft blacklenticularbracketright postalmark getamark tortoiseshellbracketleft tortoiseshellbracketright whitelenticularbracketleft whitelenticularbracketright whitetortoiseshellbracketleft whitetortoiseshellbracketright whitesquarebracketleft whitesquarebracketright wavedash quotedoubleprimeReversed quotedoubleprime lowquotedoubleprime postalmarkface one-hangzhou two-hangzhou three-hangzhou wavydash postalmark.circled masumark partalternationmark dot-kata 
+
+- The *-Latin.ttf files are not part of the release. People have had problems when these have been selected inadvertently. The matching woff2 files are still included.
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.057] - 2024-09-18 15:09:41
 
 ### Added
