@@ -2,6 +2,22 @@
 
 (probably best viewed with JuliaMono)
 
+#──────────────────────────────────────────────────────────
+
+## [v0.059] - 2024-12-22 19:57:58
+
+### Added
+
+### Changed
+
+- fixed octant glyphs U+1CD00, U+1CD14, U+1CD7B (issue #222)
+- fixed bag delimiters (issue #220)
+
+### Removed
+
+#──────────────────────────────────────────────────────────
+
+
 ## [v0.058] - 2024-10-19 13:43:06
 
 ### Added
