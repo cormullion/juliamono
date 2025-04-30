@@ -4,6 +4,96 @@
 
 #──────────────────────────────────────────────────────────
 
+## [v0.060] - 2025-04-30 18:00:00
+
+### Added
+
+- “ballpoint pen style” alternative Math Script Characters in ss18 (issue #221)
+
+- some updates for Unicode 17.0. These may change before Unicode 17 is released.
+        ⮖ U+2b96 EQUALS SIGN WITH INFINITY ABOVE
+        ꟱ U+a7f1 MODIFIER LETTER CAPITAL S
+        ꟎ U+a7ce LATIN CAPITAL LETTER PHARYNGEAL VOICED FRICATIVE
+        ꟏ U+a7cf LATIN SMALL LETTER PHARYNGEAL VOICED FRICATIVE
+    Symbols for Legacy Computing
+        𜳺 U+1ccfa SNAKE SYMBOL
+        𜳻 U+1ccfb FLYING SAUCER SYMBOL yes really
+        𜳼 U+1ccfc NOSE SYMBOL
+        𜺺 U+1ceba FRAGILE SYMBOL
+        𜺻 U+1cebb OFFICE BUILDING SYMBOL
+        𜺼 U+1cebc TREE SYMBOL
+        𜺽 U+1cebd APPLE SYMBOL
+        𜺾 U+1cebe CHERRY SYMBOL
+        𜺿 U+1cebf STRAWBERRY SYMBOL
+    Alchemical symbols: Historical symbols for asteroids
+        🝷 U+1f777 VESTA FORM TWO
+        🝸 U+1f778 ASTRAEA FORM TWO
+        🝺 U+1f77a HYGIEA FORM TWO
+        🝹 U+1f779 PARTHENOPE FORM TWO
+        🯺 U+1fbfa ALARM BELL SYMBOL
+    Supplemental Arrows-C
+        🣐 U+1f8d0 LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
+        🣑 U+1f8d1 LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
+        🣒 U+1f8d2 LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
+        🣓 U+1f8d3 SHORT RIGHTWARDS HARPOON ABOVE LONG LEFTWARDS HARPOON
+        🣔 U+1f8d4 LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+        🣕 U+1f8d5 SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+        🣖 U+1f8d6 LONG RIGHTWARDS ARROW THROUGH X
+        🣗 U+1f8d7 LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
+        🣘 U+1f8d8 LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+    Chess symbols
+        🩔 U+1FA54 WHITE CHESS FERZ
+        🩕 U+1FA55 WHITE CHESS ALFIL = white elephant
+        🩖 U+1FA56 BLACK CHESS FERZ
+        🩗 U+1FA57 BLACK CHESS ALFIL
+    Astronomical symbols for asteroids
+        𜻀 U+1CEC0 HEBE
+        𜻁 U+1CEC1 IRIS
+        𜻂 U+1CEC2 FLORA
+        𜻃 U+1CEC3 METIS
+        𜻄 U+1CEC4 PARTHENOPE
+        𜻅 U+1CEC5 VICTORIA
+        𜻆 U+1CEC6 EGERIA
+        𜻇 U+1CEC7 IRENE
+        𜻈 U+1CEC8 EUNOMIA
+        𜻉 U+1CEC9 PSYCHE
+        𜻊 U+1CECA THETIS
+        𜻋 U+1CECB MELPOMENE
+        𜻌 U+1CECC FORTUNA
+        𜻍 U+1CECD ASTRONOMICAL SYMBOL FOR ASTEROID PROSERPINA
+        𜻎 U+1CECE BELLONA
+        𜻏 U+1CECF AMPHITRITE
+        𜻐 U+1CED0 LEUKOTHEA
+    Symbols for geomantic figures
+        𜻠 U+1CEE0 GEOMANTIC FIGURE POPULUS
+        𜻡 U+1CEE1 GEOMANTIC FIGURE TRISTITIA
+        𜻢 U+1CEE2 GEOMANTIC FIGURE ALBUS
+        𜻣 U+1CEE3 GEOMANTIC FIGURE FORTUNA MAJOR
+        𜻤 U+1CEE4 GEOMANTIC FIGURE RUBEUS
+        𜻥 U+1CEE5 GEOMANTIC FIGURE ACQUISITIO
+        𜻦 U+1CEE6 GEOMANTIC FIGURE CONJUNCTIO
+        𜻧 U+1CEE7 GEOMANTIC FIGURE CAPUT DRACONIS
+        𜻨 U+1CEE8 GEOMANTIC FIGURE LAETITIA
+        𜻩 U+1CEE9 GEOMANTIC FIGURE CARCER
+        𜻪 U+1CEEA GEOMANTIC FIGURE AMISSIO
+        𜻫 U+1CEEB GEOMANTIC FIGURE PUELLA
+        𜻬 U+1CEEC GEOMANTIC FIGURE FORTUNA MINOR
+        𜻭 U+1CEED GEOMANTIC FIGURE PUER
+        𜻮 U+1CEEE GEOMANTIC FIGURE CAUDA DRACONIS
+        𜻯 U+1CEEF GEOMANTIC FIGURE VIA
+    Miscellaneous symbol
+        𜻰 U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+
+### Changed
+
+- heights of a few arrows (↑↓⇡⇣) tweaked (issue #226) 
+
+- turkish g now respects ss01 gğ (issue 227)
+
+### Removed
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.059] - 2024-12-22 19:57:58
 
 ### Added
