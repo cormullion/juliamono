@@ -8,9 +8,17 @@
 
 ### Added
 
+- Saudi Riyal ⃁ (Unicode 17) (U+20C1)
+
 ### Changed
 
+- diacritics followed by combining macron below ((e.g., á̱, ê̱, ü̱, …) fixed (issue #232)
 - some mark/component changes
+- U+1fb95 ... U+1fb95 resized (issue #237)
+- U+A7F1 ꟱ made bigger (issue #235)
+- U+1fb68 ... U+1fb6f resized (🭨 ... 🭯) (issue/pr #236)
+- U+227C ≼ improved (issue #238)
+- redrew livre tournois (₶) (U+20b6)
 
 ### Removed
 
