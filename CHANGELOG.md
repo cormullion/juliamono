@@ -4,11 +4,12 @@
 
 #──────────────────────────────────────────────────────────
 
-## [v0.061] - in development
+## [v0.061] - release soon
 
 ### Added
 
 - Saudi Riyal ⃁ (Unicode 17) (U+20C1)
+- subscripts for U+209D:U+209F and U+1DFD0 (𝿐₟₞₝) - might be in Unicode 18...
 
 ### Changed
 
@@ -17,8 +18,12 @@
 - U+1fb95 ... U+1fb95 resized (issue #237)
 - U+A7F1 ꟱ made bigger (issue #235)
 - U+1fb68 ... U+1fb6f resized (🭨 ... 🭯) (issue/pr #236)
-- U+227C ≼ improved (issue #238)
-- redrew livre tournois (₶) (U+20b6)
+- U+227C U+227D U+22E0 U+22DE U+22EF ≼ ≽ ⋠ ⋡ ⋞ ⋟ improved? (issue #238)
+- tweak livre tournois (₶) (U+20b6)
+- tweak 🜲 (U+1f732 )
+- tweak endofproof U+220E ∎ 
+- tweak ogoneks
+- fix underscore position (_) of JuliaMono-Light (#239)
 
 ### Removed
 
