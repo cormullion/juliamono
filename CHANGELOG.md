@@ -4,6 +4,20 @@
 
 #──────────────────────────────────────────────────────────
 
+## [v0.062] - forthcoming
+
+### Added
+
+### Changed
+
+- grave in Italics fixed
+
+- adjusted some circled glyphs: ⊕⊖⊗⊘⊙
+
+### Removed
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.061] - 2025-09-09
 
 ### Added
@@ -14,7 +28,7 @@
 
 ### Changed
 
-- diacritics followed by combining macron below ((e.g., á̱, ê̱, ü̱, …) fixed (issue #232)
+- diacritics followed by combining macron below (e.g., á̱, ê̱, ü̱, …) fixed (issue #232)
 - some mark/component changes
 - U+1fb95 ... U+1fb95 resized (issue #237)
 - U+A7F1 ꟱ made bigger (issue #235)
