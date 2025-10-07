@@ -5,3 +5,5 @@ JuliaMono is a monospaced typeface designed for programming in text editing envi
 ![image](https://github.com/cormullion/juliamonomaster/blob/master/images/specimen_1.png)
 
 Visit [https://juliamono.netlify.app](https://juliamono.netlify.app) to find out more.
+
+JuliaMono is free (but you can [buy me a ☕️](https://buymeacoffee.com/cormullion)!)
