@@ -8,6 +8,10 @@
 
 ### Added
 
+- ss19 kerning
+
+- cv05 <= and >= ligatures
+ 
 ### Changed
 
 - grave in Italics fixed
