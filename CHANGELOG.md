@@ -4,19 +4,22 @@
 
 #──────────────────────────────────────────────────────────
 
-## [v0.062] - forthcoming
+## [v0.062] - 2026-01-13
 
 ### Added
 
-- ss19 kerning
+- cv05 <= and >= ligatures (issue #240)
+- cv06 alternate baseless i (issue 247)
+- cv07 thinner punctuation (, . ; :) (issue #248)
+- mice 🖯 🖰 (U+1F5AF and U+1F5B0) (issue #250)
+- ss19 experimental kerning (not italic weights)
 
-- cv05 <= and >= ligatures
- 
 ### Changed
 
-- grave in Italics fixed
-
-- adjusted some circled glyphs: ⊕⊖⊗⊘⊙
+- grave in Italics fixed (issue #243)
+- arrowheads (˄ U+02c4, ˅ U+02c5) fixed (issue #252)
+- adjusted some circled glyphs: ⊕⊖⊗⊘⊙ (issue #242)
+- white bullet is a tad heavier U+25E6
 
 ### Removed
 
