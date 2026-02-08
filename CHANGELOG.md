@@ -4,6 +4,27 @@
 
 #──────────────────────────────────────────────────────────
 
+## [v0.063] - forthcoming
+
+### Added
+
+- to Private Use Area: subscript and superscript versions of <= >= ≠ 
+       , ₁ⱼₙ󰄎ⱼᵢ
+    uniE860_sub_less_equal
+    uniE861_sub_greater_equal
+    uniE862_sub_not_equal
+    uniE863_sup_less_equal
+    uniE864_sup_greater_equal
+    uniE865_sup_not_equal
+
+    issue #255
+
+### Changed
+
+### Removed
+
+#──────────────────────────────────────────────────────────
+
 ## [v0.062] - 2026-01-13
 
 ### Added
