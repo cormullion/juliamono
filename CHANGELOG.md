@@ -10,16 +10,86 @@
 
 - to Private Use Area: subscript and superscript versions of <= >= ≠ 
        , ₁ⱼₙ󰄎ⱼᵢ
-    uniE860_sub_less_equal
-    uniE861_sub_greater_equal
-    uniE862_sub_not_equal
-    uniE863_sup_less_equal
-    uniE864_sup_greater_equal
+    uniE860_sub_less_equal, uniE861_sub_greater_equal,
+    uniE862_sub_not_equal, uniE863_sup_less_equal, uniE864_sup_greater_equal,
     uniE865_sup_not_equal
-
     issue #255
 
+-   Armenian modifiers
+    0558 ՘ 058b ֋ 058c ֌
+     
+    Hebrew Points 
+    05C8 05C9 ׉
+    
+    Combining Diacritical Marks
+    1ade ᫞ 1adf ᫟ 1aec ᫬ 1aed ᫭ 1aee ᫮ 1aef ᫯ 1af0 ᫰
+
+    modifier letter high and low vertical line
+    208f ₏ 
+    
+    Currency symbols: Rufiyaa, UAE Dirham, Omani Rial
+    20c2 ⃂ 20c3 ⃃ 20c4 ⃄ 
+    
+    English Phonotypic Alphabet:
+    Wiggly Exclamation Marks, Parenthesis With Middle Ring
+    2e60 ⹠ 2e61 ⹡ 2e62 ⹢ 2e63 ⹣
+    
+    Latin capital letter closed omega
+    a7dd ꟝
+    
+    Xhosa
+    a7e2 ꟢
+    
+    Latin capital letter script r
+    ab6c ꭬
+    
+    Latin capital letter script r with ring
+    ab6d ꭭
+
+    Modifier letters Latin Extended-F
+    107bb 𐞻 107bc 𐞼 107bd 𐞽 107be 𐞾 107bf 𐞿
+    
+    Alchemical symbols
+    1ced2 𜻒 1ced3 𜻓 1ced4 𜻔
+    
+    Radix signs for historical mathematics
+    1cedd 𜻝 1cede 𜻞 1cedf 𜻟
+    
+    Historic Leibnizian mathematical operators
+    1cef1 𜻱 1cef2 𜻲 1cef3 𜻳 1cef4 𜻴 1cef5 𜻵
+    
+    Sector and angle symbols, hyperbola
+    1cef6 𜻶 1cef7 𜻷 1cef8 𜻸 1cef9 𜻹 1cefa 𜻺 1cefb 𜻻 1cefc 𜻼 1cefd 𜻽
+    
+    mathematical italic small ligature long s with descender s
+    1d6a6 𝚦 
+    
+    Leibnizian operators
+    1db00 𝬀 1db01 𝬁 1db02 𝬂 1db03 𝬃 1db04 𝬄 1db05 𝬅 1db06 𝬆
+    1db07 𝬇 1db08 𝬈 1db09 𝬉 1db0a 𝬊 1db0b 𝬋 1db0c 𝬌 1db0d 𝬍 1db0e 𝬎 1db0f 𝬏
+    1db10 𝬐 1db11 𝬑 1db12 𝬒 1db13 𝬓 1db14 𝬔 1db15 𝬕 1db16 𝬖 
+    1db17 𝬗 1db18 𝬘 1db19 𝬙 1db1a 𝬚 1db1b 𝬛 1db1c 𝬜 
+    
+    latin small ligature long s with descender s
+    1df95 𝾕 
+    
+    Tomobiki symbol
+    1f1ae 🆮
+    
+    Japanese traditional calendars
+    1f7da 🟚 
+    
+    circles, squares, triangles, rhombuses
+    1f7db 🟛 1f7f1 🟱 1f7f2 🟲 1f7f3 🟳 1f7f4 🟴 1f7f5 🟵 1f7f6 🟶 1f7f7 🟷 1f7f8 🟸
+    1f7f9 🟹 1f7fa 🟺 1f7fb 🟻 1f7fc 🟼 1f7fd 🟽 1f7fe 🟾 1f7ff 🟿
+
 ### Changed
+
+- U+2D31 ⴱ TIFINAGH corrected #258
+
+- chess knights rotations fixed #260
+
+- Arabic "jeem" letter ج fixed #261
 
 ### Removed
 
