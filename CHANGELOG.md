@@ -4,7 +4,7 @@
 
 #──────────────────────────────────────────────────────────
 
-## [v0.063] - forthcoming, to be released as 0.63.
+## Version 0.063 Release 0.63 (15 July 2026)
 
 From now, the GitHub Release version numbers will be semver-compatible
 versions of the font version number. This is because according to the 
