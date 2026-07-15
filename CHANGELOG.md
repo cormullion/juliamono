@@ -4,7 +4,12 @@
 
 #──────────────────────────────────────────────────────────
 
-## [v0.063] - forthcoming
+## [v0.063] - forthcoming, to be released as 0.63.
+
+From now, the GitHub Release version numbers will be semver-compatible
+versions of the font version number. This is because according to the 
+OpenType specification, font version numbers have to have leading zeroes 
+in the minor version. But in semver, minor versions can't have leading zeroes.
 
 ### Added
 
