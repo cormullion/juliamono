@@ -4,12 +4,19 @@
 
 #──────────────────────────────────────────────────────────
 
-## Version 0.063 Release 0.63 (15 July 2026)
+## Version 0.063 released as v0.63.1 (16 July 2026)
+
+Instead of v0.63.0. (#264)
+
+## Version 0.063 released as v0.63.0 (15 July 2026)
 
 From now, the GitHub Release version numbers will be semver-compatible
 versions of the font version number. This is because according to the 
 OpenType specification, font version numbers have to have leading zeroes 
-in the minor version. But in semver, minor versions can't have leading zeroes.
+in the minor version and can't have patch numbers. 
+But in semver, minor version numbers can't have leading zeroes.
+So the font version numbers I've been using until now have not been 
+recognized as valid semver versions. (#262)
 
 ### Added
 
